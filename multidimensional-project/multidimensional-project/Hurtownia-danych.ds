@@ -6,8 +6,9 @@
   <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-8SQ7ACS;Integrated Security=SSPI;Initial Catalog=hurtownia-danych</ConnectionString>
   <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
   <ImpersonationInfo>
-    <ImpersonationMode>ImpersonateCurrentUser</ImpersonationMode>
-    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+    <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+    <Account>AzureAD\MateuszGrzonkas18426</Account>
+    <ImpersonationInfoSecurity>PasswordRemoved</ImpersonationInfoSecurity>
   </ImpersonationInfo>
   <Timeout>PT0S</Timeout>
 </DataSource>

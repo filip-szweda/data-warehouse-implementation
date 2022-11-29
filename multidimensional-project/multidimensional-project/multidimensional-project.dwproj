@@ -6,10 +6,83 @@
     <Name>multidimensional-project.database</Name>
     <FullPath>multidimensional-project.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Hurtownia-danych.cube</Name>
+      <FullPath>Hurtownia-danych.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Hurtownia-danych.partitions</Name>
+          <FullPath>Hurtownia-danych.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Reklama.dim</Name>
+      <FullPath>Reklama.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Data.dim</Name>
+      <FullPath>Data.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Promocja.dim</Name>
+      <FullPath>Promocja.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Danie.dim</Name>
+      <FullPath>Danie.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Serwis Reklamowy.dim</Name>
+      <FullPath>Serwis Reklamowy.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Uzytkownik.dim</Name>
+      <FullPath>Uzytkownik.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Zdegenrowana Promocja.dim</Name>
+      <FullPath>Zdegenrowana Promocja.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Zdegenerowane Zamowienie.dim</Name>
+      <FullPath>Zdegenerowane Zamowienie.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Hurtownia-danych.ds</Name>
+      <FullPath>Hurtownia-danych.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Hurtownia-danych.dsv</Name>
+      <FullPath>Hurtownia-danych.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Hurtownia-danych</Id>
+            <Name>Hurtownia-danych</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-8SQ7ACS;Integrated Security=SSPI;Initial Catalog=hurtownia-danych</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Hurtownia-danych</Id>
+            <Name>Hurtownia-danych</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>

@@ -1,0 +1,110 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>multidimensional-project</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>UTocw+qrubT7a/d7ZG1uxwya5CY=11/29/2022 5:37:13 PM11/29/2022 4:12:13 PM</TimeStamp>
+        <ID>
+          <String>Hurtownia-danych</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>Y+3TwLErFvh3hwLjhyHGULDdom4=11/29/2022 4:12:51 PM11/29/2022 4:12:51 PM</TimeStamp>
+        <ID>
+          <String>Hurtownia-danych</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>dc2z2IsNqRfClHWwLdtBMMXD7B8=11/29/2022 4:16:53 PM11/29/2022 4:16:52 PM</TimeStamp>
+        <ID>
+          <String>Reklama</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ri7KUbUpzSmsfBHmRjsCcA2GRuk=11/29/2022 4:52:36 PM11/29/2022 4:16:53 PM</TimeStamp>
+        <ID>
+          <String>Data</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>aTte1vdiWBcX5sk894WtmXPKOgA=11/29/2022 4:16:53 PM11/29/2022 4:16:53 PM</TimeStamp>
+        <ID>
+          <String>Promocja</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>kUiY2ImqM8X4e7VsOydnTcQ0bMQ=11/29/2022 4:16:53 PM11/29/2022 4:16:53 PM</TimeStamp>
+        <ID>
+          <String>Danie</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>4/evkdISAMzB5qYmQBd73pbNAQg=11/29/2022 4:16:53 PM11/29/2022 4:16:53 PM</TimeStamp>
+        <ID>
+          <String>Serwis Reklamowy</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>kQfinH0kifJox79ZaZ3zDb57Qeg=11/29/2022 4:33:39 PM11/29/2022 4:16:53 PM</TimeStamp>
+        <ID>
+          <String>Uzytkownik</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>kZajtn2mQAcgvO3QLW4PGOURY4U=11/29/2022 6:07:18 PM11/29/2022 6:07:18 PM</TimeStamp>
+        <ID>
+          <String>Zdegenrowana Promocja</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>iQ5SKnf/OfhuCKg0BE5/UDxyTLQ=11/29/2022 6:13:30 PM11/29/2022 6:10:34 PM</TimeStamp>
+        <ID>
+          <String>Zamowienie</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>bNraPkoXexQ5IWq/S0+YW9sm8JM=11/29/2022 6:32:23 PM11/29/2022 4:16:52 PM1qpmRlll5NviEAVTFduc6AEc778=11/29/2022 6:28:31 PM11/29/2022 4:16:52 PM</TimeStamp>
+        <ID>
+          <String>Hurtownia-danych</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>felenasddE0eXjXyI1YabRzZnxI=11/29/2022 3:41:45 PM11/29/2022 3:41:44 PM</TimeStamp>
+      <ID>
+        <String>multidimensional-project</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-11-29T17:35:47.383333Z</LastDeployed>
+</DeploymentSnapshot>
