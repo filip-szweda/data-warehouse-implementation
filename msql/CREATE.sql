@@ -1,4 +1,4 @@
-USE [hurtownia-danych]
+ÔªøUSE [hurtownia-danych]
 
 CREATE TABLE [danie] (
 	[id_dania] int PRIMARY KEY IDENTITY(1, 1) NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE [data] (
 	[rok] varchar(10) NOT NULL,
 	[miesiac] varchar(10) NOT NULL,
 	[dzien] varchar(2) NOT NULL,
-	CHECK ([miesiac] in ('styczeÒ','luty','marzec','kwiecieÒ','maj','czerwiec','lipiec','sierpieÒ','wrzesieÒ','paüdziernik','listopad','grudzieÒ')),
+	CHECK ([miesiac] in ('stycze≈Ñ','luty','marzec','kwiecie≈Ñ','maj','czerwiec','lipiec','sierpie≈Ñ','wrzesie≈Ñ','pa≈∫dziernik','listopad','grudzie≈Ñ')),
 	CHECK ([dzien] in ('01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16',
 						'17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'))
 )
