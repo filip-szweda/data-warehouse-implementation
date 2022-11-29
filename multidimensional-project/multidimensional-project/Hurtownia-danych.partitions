@@ -1,0 +1,105 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="149dd4a2-6588-4513-a69d-c7e836b6f4c4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Hurtownia-danych</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Klikniecia</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="043d4918-6027-45c9-9385-fb33d642a8c5">
+          <ID>Klikniecia</ID>
+          <Name>Klikniecia</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="6b2a8920-e4eb-4555-ac3e-51aa5e229305">
+            <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
+            <TableID>dbo_klikniecia</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Klikniecia w Trakcie Promocji</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a31a2bd7-bd44-4e4f-b288-f1d1fa01080b">
+          <ID>Klikniecia w Trakcie Promocji</ID>
+          <Name>Klikniecia w Trakcie Promocji</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a2f7044c-8381-450f-b91e-1c5db8b2abc7">
+            <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
+            <TableID>dbo_klikniecia_w_trakcie_promocji</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Promocja</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="cc9ca355-4706-46c5-b6d1-697454eed078">
+          <ID>Promocja</ID>
+          <Name>Promocja</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8b7c3012-838f-47df-ad5a-b15dcc334948">
+            <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
+            <TableID>dbo_promocja</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Reklama</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="1a291607-42f0-4eda-b153-7737d2bc0f87">
+          <ID>Reklama</ID>
+          <Name>Reklama</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="16c9c69b-9335-4b44-8f08-43b7b1ecfbff">
+            <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
+            <TableID>dbo_reklama</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Zamowienie</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2996ecbc-b4c1-455a-a7f4-e3d8a00ac18e">
+          <ID>Zamowienie</ID>
+          <Name>Zamowienie</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8e49ce32-5beb-491b-9f89-6fae70031128">
+            <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
+            <TableID>dbo_zamowienie</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

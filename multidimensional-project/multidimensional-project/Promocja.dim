@@ -1,0 +1,139 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="36bfb9ab-4ac6-418b-8b61-1a07d35a484c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Promocja</ID>
+  <Name>Promocja</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="4000c786-f034-40b7-926a-68c22b8b30b2">
+    <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="254eda4b-90e5-424d-9b88-3faa09e2eef5">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="41e2e1fb-d7ed-47a4-96c9-a6d73b1829ce">
+      <ID>Id Promocji</ID>
+      <Name>Id Promocji</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="99bc2120-4684-4e8d-8664-036b56ccaee4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="718fc350-282e-4c00-b637-6d7d630dd948">
+            <TableID>dbo_promocja</TableID>
+            <ColumnID>id_promocji</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="255f74e7-3d37-4fa2-a552-313d9ca43592">
+          <AttributeID>Id Daty Rozpoczecia</AttributeID>
+          <Name>Id Daty Rozpoczecia</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="239c0e23-2096-46e9-a32e-730726b32d13">
+          <AttributeID>Id Dania</AttributeID>
+          <Name>Id Dania</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ce1832a5-524a-49f4-b8c8-f34499f94d51">
+          <AttributeID>Id Daty Zakonczenia</AttributeID>
+          <Name>Id Daty Zakonczenia</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6467e55d-cc45-4cf0-9306-7ed5c1c92680">
+      <ID>Id Daty Rozpoczecia</ID>
+      <Name>Id Daty Rozpoczecia</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1b48bff7-7cb9-4a60-ac88-1d7d1587dafa">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b8a7cc18-8a9d-4ec1-addb-e9404dda75dc">
+            <TableID>dbo_promocja</TableID>
+            <ColumnID>id_daty_rozpoczecia</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8fc9446a-594b-4adc-b58c-19de84583585">
+      <ID>Id Dania</ID>
+      <Name>Id Dania</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f44c455-e8d7-4d1a-898f-4672d8df4e3d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="daeff309-3208-4f05-bcb1-a3e63d595554">
+            <TableID>dbo_promocja</TableID>
+            <ColumnID>id_dania</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="46ee4e90-f09e-4ad4-adfe-3077dde2577d">
+      <ID>Id Daty Zakonczenia</ID>
+      <Name>Id Daty Zakonczenia</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d11563df-4b12-4f7f-8406-d2a5e93c0a38">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2b0c188b-a62f-42f2-a521-14cac799488f">
+            <TableID>dbo_promocja</TableID>
+            <ColumnID>id_daty_zakonczenia</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
