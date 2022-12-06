@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.hurtownia-danych"
+  DTS:DTSID="{66C24B54-89EC-4ACE-B457-387B9848839C}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=hurtownia-danych;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-etl-process-{66C24B54-89EC-4ACE-B457-387B9848839C}localhost.hurtownia-danych;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
