@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.baza-zamowien"
+  DTS:DTSID="{DD2CA1E7-1830-495F-851F-972443195656}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=baza-zamowien;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-etl-process-{DD2CA1E7-1830-495F-851F-972443195656}localhost.baza-zamowien;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
