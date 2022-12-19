@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{AE00041D-7561-4288-8D66-529F24D66813}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{9A2F2046-A991-4DDB-9BB8-9BF612290796}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -64,7 +64,7 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -112,7 +112,7 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Output].Columns[NAZWA]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -130,7 +130,7 @@
                       name="ID_DANIA" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Output].ExternalColumns[NAZWA]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="NAZWA" />
@@ -169,7 +169,7 @@
                       name="ID_DANIA" />
                     <outputColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Error Output].Columns[NAZWA]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Error Output].Columns[NAZWA]"
@@ -1082,7 +1082,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]"
@@ -1093,11 +1093,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Populating danie table\OLE DB Destination"
+              refId="Package\Populating danie table\Insert Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="Insert Destination"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1121,7 +1121,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -1130,7 +1130,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -1142,7 +1142,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1150,7 +1150,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Populating danie table\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Populating danie table\Insert Destination.Connections[OleDbConnection]"
                   connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1158,55 +1158,55 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NR_DANIA]"
+                      refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].Columns[NR_DANIA]"
                       cachedDataType="i4"
                       cachedName="NR_DANIA"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_dania]"
+                      externalMetadataColumnId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_dania]"
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NR_DANIA]" />
                     <inputColumn
-                      refId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NAZWA]"
-                      cachedCodepage="1252"
+                      refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].Columns[NAZWA]"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
-                      externalMetadataColumnId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
+                      externalMetadataColumnId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]" />
                     <inputColumn
-                      refId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[przedzial_cenowy]"
-                      cachedCodepage="1252"
+                      refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].Columns[przedzial_cenowy]"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="przedzial_cenowy"
-                      externalMetadataColumnId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[przedzial_cenowy]"
+                      externalMetadataColumnId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[przedzial_cenowy]"
                       lineageId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dania]"
+                      refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dania]"
                       dataType="i4"
                       name="id_dania" />
                     <externalMetadataColumn
-                      refId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_dania]"
+                      refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_dania]"
                       dataType="i4"
                       name="nr_dania" />
                     <externalMetadataColumn
-                      refId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1252"
+                      refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="nazwa" />
                     <externalMetadataColumn
-                      refId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[przedzial_cenowy]"
-                      codePage="1252"
+                      refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[przedzial_cenowy]"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="przedzial_cenowy" />
@@ -1215,25 +1215,319 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating danie table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Populating danie table\Insert Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating danie table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Populating danie table\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Populating danie table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Populating danie table\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Populating danie table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Populating danie table\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Populating danie table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Populating danie table\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating danie table\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[danie] SET [nazwa] = ? WHERE [nr_dania] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating danie table\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].Columns[NAZWA]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="NAZWA"
+                      externalMetadataColumnId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]" />
+                    <inputColumn
+                      refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].Columns[NR_DANIA]"
+                      cachedDataType="i4"
+                      cachedName="NR_DANIA"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NR_DANIA]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating danie table\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating danie table\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating danie table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating danie table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating danie table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating danie table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating danie table\Slowly Changing Dimension"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [nazwa], [nr_dania], [przedzial_cenowy] FROM [dbo].[danie]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating danie table\Slowly Changing Dimension.Connections[LookupConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[NAZWA]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="NAZWA"
+                      externalMetadataColumnId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[nazwa]"
+                      lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[NR_DANIA]"
+                      cachedDataType="i4"
+                      cachedName="NR_DANIA"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[nr_dania]"
+                      lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NR_DANIA]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[przedzial_cenowy]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="przedzial_cenowy"
+                      externalMetadataColumnId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[przedzial_cenowy]"
+                      lineageId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[nazwa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="nazwa" />
+                    <externalMetadataColumn
+                      refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[nr_dania]"
+                      dataType="i4"
+                      name="nr_dania" />
+                    <externalMetadataColumn
+                      refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[przedzial_cenowy]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="przedzial_cenowy" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating danie table\Slowly Changing Dimension.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating danie table\Slowly Changing Dimension.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating danie table\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating danie table\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating danie table\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating danie table\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -1295,7 +1589,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating danie table\Sort by nr dania.Inputs[Sort Input].Columns[NAZWA]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1350,7 +1644,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]"
@@ -1371,13 +1665,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </components>
           <paths>
             <path
+              refId="Package\Populating danie table.Paths[Changing Attribute Updates Output]"
+              endId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\Populating danie table\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\Populating danie table.Paths[New Output]"
+              endId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\Populating danie table\Slowly Changing Dimension.Outputs[New Output]" />
+            <path
               refId="Package\Populating danie table.Paths[OLE DB Source Output]"
               endId="Package\Populating danie table\Sort by nr dania.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Populating danie table.Paths[Output 0]"
-              endId="Package\Populating danie table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
               name="Output 0"
               startId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0]" />
             <path
@@ -1455,7 +1759,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -1464,7 +1768,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -1485,7 +1789,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\Droping old values.Inputs[Lookup Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -1576,7 +1880,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -1621,7 +1925,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -1637,7 +1941,7 @@ where [refTable].[nazwa] = ?</property>
                       name="id_serwisu_reklamowego" />
                     <externalMetadataColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="nazwa" />
@@ -1702,7 +2006,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -1732,7 +2036,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1754,7 +2058,7 @@ where [refTable].[nazwa] = ?</property>
                       name="KOSZT" />
                     <externalMetadataColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SERWIS_REKLAMOWY]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="SERWIS_REKLAMOWY" />
@@ -1791,7 +2095,7 @@ where [refTable].[nazwa] = ?</property>
                       specialFlags="2" />
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
@@ -1826,7 +2130,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\Sort.Inputs[Sort Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -1854,7 +2158,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\Sort.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating serwis_reklamowy table\Sort.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
@@ -1908,16 +2212,261 @@ where [refTable].[nazwa] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="244,42"
-          Id="Package\Populating serwis_reklamowy table"
-          TopLeft="105,51" />
-        <NodeLayout
           Size="184,42"
           Id="Package\Populating danie table"
           TopLeft="391,51" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\Populating serwis_reklamowy table"
+          TopLeft="105,51" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Populating danie table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Populating danie table\OLE DB Command"
+          TopLeft="229,415.5" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Populating danie table\Slowly Changing Dimension"
+          TopLeft="207.5,313.5" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Populating danie table\Calculating PriceRange"
+          TopLeft="219,211.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Populating danie table\Insert Destination"
+          TopLeft="5.50000000000006,415.5" />
+        <NodeLayout
+          Size="155,44"
+          Id="Package\Populating danie table\Sort by nr dania"
+          TopLeft="234.5,107.5" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Populating danie table\BazaZamowien(Dania)"
+          TopLeft="220,5.49999999999989" />
+        <EdgeLayout
+          Id="Package\Populating danie table.Paths[Sort Output]"
+          TopLeft="312,151.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating danie table.Paths[Output 0]"
+          TopLeft="312,253.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating danie table.Paths[OLE DB Source Output]"
+          TopLeft="312,47.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating danie table.Paths[New Output]"
+          TopLeft="278.5,355.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-191.5,60"
+              Start="0,0"
+              End="-191.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2735042735043"
+                    Point2="0,24.2735042735043"
+                    Point3="-4,24.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-187.5,24.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-187.5,24.2735042735043"
+                    Point2="-191.5,24.2735042735043"
+                    Point3="-191.5,28.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-191.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-122.84138671875,29.2735042735043,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating danie table.Paths[Changing Attribute Updates Output]"
+          TopLeft="345.5,355.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-33.4999999999999,60"
+              Start="0,0"
+              End="-33.4999999999999,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2735042735043"
+                    Point2="0,24.2735042735043"
+                    Point3="-4,24.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-29.4999999999999,24.2735042735043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29.4999999999999,24.2735042735043"
+                    Point2="-33.4999999999999,24.2735042735043"
+                    Point3="-33.4999999999999,28.2735042735043" />
+                  <mssgle:LineSegment
+                    End="-33.4999999999999,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-95.28390625,29.2735042735043,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating danie table\Slowly Changing Dimension">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{66C24B54-89EC-4ACE-B457-387B9848839C}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[danie]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;nazwa&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Sort by nr dania.Outputs[Sort Output].Columns[NR_DANIA]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;nr_dania&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;przedzial_cenowy&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;true&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;true&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating danie table\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating danie table\BazaZamowien(Dania)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Populating serwis_reklamowy table">
     <LayoutInfo>
@@ -1935,28 +2484,6 @@ where [refTable].[nazwa] = ?</property>
           Size="150,42"
           Id="Package\Populating serwis_reklamowy table\OLE DB Source"
           TopLeft="448,36" />
-        <EdgeLayout
-          Id="Package\Populating serwis_reklamowy table.Paths[OLE DB Source Output]"
-          TopLeft="520,78">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="167,42"
           Id="Package\Populating serwis_reklamowy table\Droping old values"
@@ -1975,6 +2502,28 @@ where [refTable].[nazwa] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating serwis_reklamowy table.Paths[OLE DB Source Output]"
+          TopLeft="520,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2042,7 +2591,7 @@ where [refTable].[nazwa] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2052,138 +2601,10 @@ where [refTable].[nazwa] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Populating danie table">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="184,42"
-          Id="Package\Populating danie table\BazaZamowien(Dania)"
-          TopLeft="461,28" />
-        <NodeLayout
-          Size="186,42"
-          Id="Package\Populating danie table\Calculating PriceRange"
-          TopLeft="463.333333333333,229.833333333333" />
-        <NodeLayout
-          Size="155,44"
-          Id="Package\Populating danie table\Sort by nr dania"
-          TopLeft="483.333333333333,130" />
-        <EdgeLayout
-          Id="Package\Populating danie table.Paths[OLE DB Source Output]"
-          TopLeft="556.916666666667,70">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populating danie table.Paths[Sort Output]"
-          TopLeft="558.583333333333,174">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.8333333333334"
-              Start="0,0"
-              End="0,48.3333333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.3333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Populating danie table\OLE DB Destination"
-          TopLeft="479,359" />
-        <EdgeLayout
-          Id="Package\Populating danie table.Paths[Output 0]"
-          TopLeft="556.333333333333,271.833333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8.16666666666686,87.1666666666666"
-              Start="0,0"
-              End="8.16666666666686,79.6666666666666">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.5833333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.5833333333333"
-                    Point2="0,43.5833333333333"
-                    Point3="4,43.5833333333333" />
-                  <mssgle:LineSegment
-                    End="4.16666666666686,43.5833333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.16666666666686,43.5833333333333"
-                    Point2="8.16666666666686,43.5833333333333"
-                    Point3="8.16666666666686,47.5833333333333" />
-                  <mssgle:LineSegment
-                    End="8.16666666666686,79.6666666666666" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating danie table\BazaZamowien(Dania)">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating danie table\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

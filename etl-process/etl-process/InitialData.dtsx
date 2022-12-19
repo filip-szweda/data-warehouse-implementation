@@ -11,37 +11,10 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{04A1BC38-E9E0-4EBE-B070-DF853E9F303E}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{17C936A3-4BD6-43EF-A952-97048BFE81CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.auxiliary]"
-      DTS:CreationName="OLEDB"
-      DTS:DelayValidation="True"
-      DTS:DTSID="{7065984B-2FC6-4420-A6F2-90DDCEE46E92}"
-      DTS:ObjectName="localhost.auxiliary">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=auxiliary;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[localhost.bookstoreDW]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{8A4DB535-1CB5-45A0-B33C-D74B031E268A}"
-      DTS:ObjectName="localhost.bookstoreDW">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=bookstoreDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -87,7 +60,7 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -108,7 +81,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -271,7 +244,7 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -423,7 +396,7 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="204.8,41.6"
+          Size="205,42"
           Id="Package\Create and insert into date"
           TopLeft="386,129" />
       </GraphLayout>
@@ -435,11 +408,11 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150,42"
           Id="Package\Create and insert into date\OLE DB Source"
           TopLeft="288,103" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171,42"
           Id="Package\Create and insert into date\OLE DB Destination"
           TopLeft="275,242" />
         <EdgeLayout

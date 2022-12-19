@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{1206747A-BBDB-41ED-95F3-551442D3AE9D}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{17C936A3-4BD6-43EF-A952-97048BFE81CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -60,7 +60,7 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -81,7 +81,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -102,6 +102,32 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rok]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="rok"
+                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rok]"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[rok]" />
+                    <inputColumn
+                      refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[miesiac]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="miesiac"
+                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[miesiac]"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[miesiac]" />
+                    <inputColumn
+                      refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dzien]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="dzien"
+                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dzien]"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[dzien]" />
+                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
@@ -110,19 +136,19 @@
                       name="id_daty" />
                     <externalMetadataColumn
                       refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rok]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="10"
                       name="rok" />
                     <externalMetadataColumn
                       refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[miesiac]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="10"
                       name="miesiac" />
                     <externalMetadataColumn
                       refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dzien]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="2"
                       name="dzien" />
@@ -182,7 +208,7 @@
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">DECLARE  @Start datetime
 		 ,@End  datetime
 DECLARE @AllDates table
-		(Date datetime)
+		(data datetime)
 
 SELECT @Start = '2020-01-01', @End = '2024-12-31';
 
@@ -192,39 +218,25 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
      Nbrs_0( n ) AS ( SELECT 1 FROM Nbrs_1 n1 CROSS JOIN Nbrs_1 n2 ),
      Nbrs  ( n ) AS ( SELECT 1 FROM Nbrs_0 n1 CROSS JOIN Nbrs_0 n2 )
 
-	SELECT @Start+n-1 as "Date", CAST(YEAR(@Start+n-1) AS VARCHAR(4)) as Year, month(@Start+n-1) as monthId, case month(@Start+n-1)
-WHEN 1 THEN 'January'
-WHEN 2 THEN 'February'
-WHEN 3 THEN 'March'
-WHEN 4 THEN 'April'
-WHEN 5 THEN 'May'
-WHEN 6 THEN 'June'
-WHEN 7 THEN 'July'
-WHEN 8 THEN 'August'
-WHEN 9 THEN 'September'
-WHEN 10 THEN 'October'
-WHEN 11 THEN 'November'
-WHEN 12 THEN 'December'
-END as "Month", DATEPART("dw", @Start+n-1) as weekDayId, CASE DATEPART("dw", @Start+n-1)
-WHEN 1 THEN 'Sunday'
-WHEN 2 THEN 'Monday'
-WHEN 3 THEN 'Tuesday'
-WHEN 4 THEN 'Wednesday'
-WHEN 5 THEN 'Thursday'
-WHEN 6 THEN 'Friday'
-WHEN 7 THEN  'Saturday'
-END as weekDay, CASE DATEPART("dw", @Start+n-1)
-WHEN 1 THEN 'day off'
-WHEN 2 THEN 'working day'
-WHEN 3 THEN 'working day'
-WHEN 4 THEN 'working day'
-WHEN 5 THEN 'working day'
-WHEN 6 THEN 'working day'
-WHEN 7 THEN 'day off'
-END as workingDay
-		FROM ( SELECT ROW_NUMBER() OVER (ORDER BY n)
-			FROM Nbrs ) D ( n )
-	WHERE n &lt;= DATEDIFF(day,@Start,@End)+1 ;</property>
+	SELECT
+	CAST(YEAR(@Start+n-1) AS VARCHAR(4)) as rok,
+	CASE MONTH(@Start+n-1)
+		WHEN 1 THEN 'styczeń'
+		WHEN 2 THEN 'luty'
+		WHEN 3 THEN 'marzec'
+		WHEN 4 THEN 'kwiecień'
+		WHEN 5 THEN 'maj'
+		WHEN 6 THEN 'czerwiec'
+		WHEN 7 THEN 'lipiec'
+		WHEN 8 THEN 'sierpień'
+		WHEN 9 THEN 'wrzesień'
+		WHEN 10 THEN 'październik'
+		WHEN 11 THEN 'listopad'
+		WHEN 12 THEN 'grudzień'
+	END as "miesiac",
+	IIF(DAY(@Start+n-1) &lt; 10, CONCAT('0', CAST(DAY(@Start+n-1) AS VARCHAR(2))), CAST(DAY(@Start+n-1) AS VARCHAR(2))) as dzien
+	FROM ( SELECT ROW_NUMBER() OVER (ORDER BY n) FROM Nbrs ) D ( n )
+	WHERE n &lt;= DATEDIFF(day,@Start,@End)+1;</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -232,7 +244,7 @@ END as workingDay
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -261,115 +273,59 @@ END as workingDay
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
-                      name="Date"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]"
-                      codePage="1252"
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[rok]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year]"
+                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rok]"
                       length="4"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Year]"
-                      name="Year"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[rok]"
+                      name="rok"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[monthId]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[monthId]"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[monthId]"
-                      name="monthId"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Month]"
-                      codePage="1252"
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[miesiac]"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Month]"
-                      length="9"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[Month]"
-                      name="Month"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[weekDayId]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[weekDayId]"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[weekDayId]"
-                      name="weekDayId"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[weekDay]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[weekDay]"
-                      length="9"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[weekDay]"
-                      name="weekDay"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[workingDay]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[workingDay]"
+                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[miesiac]"
                       length="11"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[workingDay]"
-                      name="workingDay"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[miesiac]"
+                      name="miesiac"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[dzien]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dzien]"
+                      length="2"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[dzien]"
+                      name="dzien"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
-                      dataType="dbTimeStamp"
-                      name="Date" />
-                    <externalMetadataColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Year]"
-                      codePage="1252"
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rok]"
+                      codePage="1250"
                       dataType="str"
                       length="4"
-                      name="Year" />
+                      name="rok" />
                     <externalMetadataColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[monthId]"
-                      dataType="i4"
-                      name="monthId" />
-                    <externalMetadataColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Month]"
-                      codePage="1252"
-                      dataType="str"
-                      length="9"
-                      name="Month" />
-                    <externalMetadataColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[weekDayId]"
-                      dataType="i4"
-                      name="weekDayId" />
-                    <externalMetadataColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[weekDay]"
-                      codePage="1252"
-                      dataType="str"
-                      length="9"
-                      name="weekDay" />
-                    <externalMetadataColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[workingDay]"
-                      codePage="1252"
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[miesiac]"
+                      codePage="1250"
                       dataType="str"
                       length="11"
-                      name="workingDay" />
+                      name="miesiac" />
+                    <externalMetadataColumn
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dzien]"
+                      codePage="1250"
+                      dataType="str"
+                      length="3"
+                      name="dzien" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -378,48 +334,26 @@ END as workingDay
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
-                      name="Date" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year]"
-                      codePage="1252"
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rok]"
+                      codePage="1250"
                       dataType="str"
                       length="4"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Year]"
-                      name="Year" />
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rok]"
+                      name="rok" />
                     <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[monthId]"
-                      dataType="i4"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[monthId]"
-                      name="monthId" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Month]"
-                      codePage="1252"
-                      dataType="str"
-                      length="9"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Month]"
-                      name="Month" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[weekDayId]"
-                      dataType="i4"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[weekDayId]"
-                      name="weekDayId" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[weekDay]"
-                      codePage="1252"
-                      dataType="str"
-                      length="9"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[weekDay]"
-                      name="weekDay" />
-                    <outputColumn
-                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[workingDay]"
-                      codePage="1252"
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[miesiac]"
+                      codePage="1250"
                       dataType="str"
                       length="11"
-                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[workingDay]"
-                      name="workingDay" />
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[miesiac]"
+                      name="miesiac" />
+                    <outputColumn
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dzien]"
+                      codePage="1250"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dzien]"
+                      name="dzien" />
                     <outputColumn
                       refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -480,33 +414,21 @@ END as workingDay
         <NodeLayout
           Size="171,42"
           Id="Package\Create and insert into date\OLE DB Destination"
-          TopLeft="295,242" />
+          TopLeft="275,242" />
         <EdgeLayout
           Id="Package\Create and insert into date.Paths[OLE DB Source Output]"
-          TopLeft="363,145">
+          TopLeft="361.9,144.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="17.5,97"
+              EndConnector="0,97.4"
               Start="0,0"
-              End="17.5,89.5">
+              End="0,89.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,44.5"
-                    Point2="0,48.5"
-                    Point3="4,48.5" />
-                  <mssgle:LineSegment
-                    End="13.5,48.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.5,48.5"
-                    Point2="17.5,48.5"
-                    Point3="17.5,52.5" />
-                  <mssgle:LineSegment
-                    End="17.5,89.5" />
+                    End="0,89.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -519,14 +441,6 @@ END as workingDay
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Create and insert into date\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Create and insert into date\OLE DB Destination">
     <Properties>
       <Property>
@@ -536,6 +450,14 @@ END as workingDay
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Create and insert into date\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
