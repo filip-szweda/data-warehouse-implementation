@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{9A2F2046-A991-4DDB-9BB8-9BF612290796}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{D2B56593-BB8C-463F-87E1-37C0245ABC36}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -64,7 +64,7 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -112,7 +112,7 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Output].Columns[NAZWA]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -130,7 +130,7 @@
                       name="ID_DANIA" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Output].ExternalColumns[NAZWA]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="NAZWA" />
@@ -169,7 +169,7 @@
                       name="ID_DANIA" />
                     <outputColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Error Output].Columns[NAZWA]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Error Output].Columns[NAZWA]"
@@ -1082,7 +1082,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]"
@@ -1121,7 +1121,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -1173,7 +1173,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NR_DANIA]" />
                     <inputColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].Columns[NAZWA]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1181,7 +1181,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]" />
                     <inputColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].Columns[przedzial_cenowy]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="przedzial_cenowy"
@@ -1200,13 +1200,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="nr_dania" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="nazwa" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[przedzial_cenowy]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="przedzial_cenowy" />
@@ -1260,7 +1260,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
               </properties>
               <connections>
                 <connection
@@ -1280,7 +1280,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].Columns[NAZWA]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1298,7 +1298,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="Param_0">
@@ -1400,7 +1400,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
               </properties>
               <connections>
                 <connection
@@ -1417,7 +1417,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[NAZWA]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1446,7 +1446,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[przedzial_cenowy]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="przedzial_cenowy"
@@ -1464,7 +1464,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="nazwa" />
@@ -1474,7 +1474,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="nr_dania" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[przedzial_cenowy]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="przedzial_cenowy" />
@@ -1589,7 +1589,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating danie table\Sort by nr dania.Inputs[Sort Input].Columns[NAZWA]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1644,7 +1644,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]"
@@ -1759,7 +1759,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -1768,7 +1768,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -1789,7 +1789,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\Droping old values.Inputs[Lookup Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -1880,7 +1880,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -1925,7 +1925,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -1941,7 +1941,7 @@ where [refTable].[nazwa] = ?</property>
                       name="id_serwisu_reklamowego" />
                     <externalMetadataColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="nazwa" />
@@ -2006,7 +2006,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -2036,7 +2036,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2058,7 +2058,7 @@ where [refTable].[nazwa] = ?</property>
                       name="KOSZT" />
                     <externalMetadataColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="SERWIS_REKLAMOWY" />
@@ -2095,7 +2095,7 @@ where [refTable].[nazwa] = ?</property>
                       specialFlags="2" />
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
@@ -2130,7 +2130,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\Sort.Inputs[Sort Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -2158,7 +2158,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\Sort.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating serwis_reklamowy table\Sort.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
@@ -2198,6 +2198,868 @@ where [refTable].[nazwa] = ?</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populating user table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F235B008-67B5-4AB7-AC0D-1CBC8ACB245C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populating user table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populating user table\Add imie_nazwisko column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add imie_nazwisko column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating user table\Add imie_nazwisko column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating user table\Add imie_nazwisko column.Inputs[Derived Column Input].Columns[firstName]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="firstName"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[firstName]" />
+                    <inputColumn
+                      refId="Package\Populating user table\Add imie_nazwisko column.Inputs[Derived Column Input].Columns[lastName]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="lastName"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[lastName]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Populating user table\Add imie_nazwisko column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Output].Columns[imie_nazwisko]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="60"
+                      lineageId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Output].Columns[imie_nazwisko]"
+                      name="imie_nazwisko"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Populating user table\XML Source.Outputs[user].Columns[firstName]} + #{Package\Populating user table\XML Source.Outputs[user].Columns[lastName]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">firstName + lastName</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Populating user table\Add imie_nazwisko column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating user table\Convert to unicode"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Convert to unicode"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating user table\Convert to unicode.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating user table\Convert to unicode.Inputs[Data Conversion Input].Columns[nr_kierunkowy]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="nr_kierunkowy"
+                      lineageId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_kierunkowy]" />
+                    <inputColumn
+                      refId="Package\Populating user table\Convert to unicode.Inputs[Data Conversion Input].Columns[nr_telefonu]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="nr_telefonu"
+                      lineageId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_telefonu]" />
+                    <inputColumn
+                      refId="Package\Populating user table\Convert to unicode.Inputs[Data Conversion Input].Columns[imie_nazwisko]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="imie_nazwisko"
+                      lineageId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[imie_nazwisko]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Populating user table\Convert to unicode.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_kierunkowy]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_kierunkowy]"
+                      name="nr_kierunkowy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_kierunkowy]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_telefonu]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_telefonu]"
+                      name="nr_telefonu"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_telefonu]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[imie_nazwisko]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="60"
+                      lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[imie_nazwisko]"
+                      name="imie_nazwisko"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[imie_nazwisko]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Populating user table\Convert to unicode.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating user table\Droping old values"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Droping old values"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[uzytkownik]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[uzytkownik]) [refTable]
+where [refTable].[imie_nazwisko] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[imie_nazwisko]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating user table\Droping old values.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating user table\Droping old values.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating user table\Droping old values.Inputs[Lookup Input].Columns[imie_nazwisko]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="imie_nazwisko"
+                      lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[imie_nazwisko]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">imie_nazwisko</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating user table\Droping old values.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating user table\Droping old values.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating user table\Droping old values.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating user table\Droping old values.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating user table\Droping old values.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating user table\Droping old values.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating user table\Droping old values.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\Droping old values.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating user table\Droping old values.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\Droping old values.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating user table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[uzytkownik]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating user table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nr_kierunkowy]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="nr_kierunkowy"
+                      externalMetadataColumnId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_kierunkowy]"
+                      lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_kierunkowy]" />
+                    <inputColumn
+                      refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nr_telefonu]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="nr_telefonu"
+                      externalMetadataColumnId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_telefonu]"
+                      lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_telefonu]" />
+                    <inputColumn
+                      refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[imie_nazwisko]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="imie_nazwisko"
+                      externalMetadataColumnId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[imie_nazwisko]"
+                      lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[imie_nazwisko]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_uzytkownika]"
+                      dataType="i4"
+                      name="id_uzytkownika" />
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[imie_nazwisko]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="imie_nazwisko" />
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_kierunkowy]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="nr_kierunkowy" />
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_telefonu]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="nr_telefonu" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating user table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating user table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating user table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating user table\Remove unnecessary columns"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Remove unnecessary columns"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 1].Columns[nr_kierunkowy]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="nr_kierunkowy"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_kierunkowy]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_kierunkowy]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 1].Columns[nr_telefonu]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="nr_telefonu"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_telefonu]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_telefonu]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 1].Columns[imie_nazwisko]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="imie_nazwisko"
+                      lineageId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Output].Columns[imie_nazwisko]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[imie_nazwisko]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 2]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_kierunkowy]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_kierunkowy]"
+                      name="nr_kierunkowy" />
+                    <outputColumn
+                      refId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_telefonu]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[nr_telefonu]"
+                      name="nr_telefonu" />
+                    <outputColumn
+                      refId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[imie_nazwisko]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1].Columns[imie_nazwisko]"
+                      name="imie_nazwisko" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating user table\XML Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element."
+              name="XML Source"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="The XML data used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLData">C:\Users\MateuszGrzonkas18426\Documents\HD\data-warehouse-implementation\data-warehouse-implementation\etl-process\etl-process\source_xml\users_t1.xml</property>
+                <property
+                  dataType="System.String"
+                  description="The variable used by the XML source adapter to specify XML data."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how the XML source adapter gets XML data."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The XML schema definition used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">C:\Users\MateuszGrzonkas18426\Documents\HD\data-warehouse-implementation\data-warehouse-implementation\etl-process\etl-process\source_xml\api_users.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifies whether or not to use inline schema."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how XML integer types are mapped."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Populating user table\XML Source.Outputs[user]"
+                  name="user">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">user</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user].Columns[firstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[firstName]"
+                      length="30"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[firstName]"
+                      name="firstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user].Columns[lastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[lastName]"
+                      length="30"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[lastName]"
+                      name="lastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_kierunkowy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[countryCode]"
+                      length="255"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_kierunkowy]"
+                      name="nr_kierunkowy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_telefonu]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[phoneNumber]"
+                      length="255"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_telefonu]"
+                      name="nr_telefonu"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[firstName]"
+                      dataType="wstr"
+                      length="30"
+                      name="firstName">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[lastName]"
+                      dataType="wstr"
+                      length="30"
+                      name="lastName">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[countryCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="countryCode">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[phoneNumber]"
+                      dataType="wstr"
+                      length="255"
+                      name="phoneNumber">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating user table\XML Source.Outputs[user Error Output]"
+                  isErrorOut="true"
+                  name="user Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">user</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[firstName]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user Error Output].ExternalColumns[firstName]"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[firstName]"
+                      name="firstName" />
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[lastName]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user Error Output].ExternalColumns[lastName]"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[lastName]"
+                      name="lastName" />
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[countryCode]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user Error Output].ExternalColumns[countryCode]"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[countryCode]"
+                      name="countryCode" />
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[phoneNumber]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user Error Output].ExternalColumns[phoneNumber]"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[phoneNumber]"
+                      name="phoneNumber" />
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].ExternalColumns[firstName]"
+                      dataType="nText"
+                      name="firstName" />
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].ExternalColumns[lastName]"
+                      dataType="nText"
+                      name="lastName" />
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].ExternalColumns[countryCode]"
+                      dataType="nText"
+                      name="countryCode" />
+                    <externalMetadataColumn
+                      refId="Package\Populating user table\XML Source.Outputs[user Error Output].ExternalColumns[phoneNumber]"
+                      dataType="nText"
+                      name="phoneNumber" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populating user table.Paths[Data Conversion Output]"
+              endId="Package\Populating user table\Droping old values.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Populating user table.Paths[Derived Column Output]"
+              endId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Populating user table\Add imie_nazwisko column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating user table.Paths[Lookup No Match Output]"
+              endId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Populating user table\Droping old values.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Populating user table.Paths[Union All Output 1]"
+              endId="Package\Populating user table\Convert to unicode.Inputs[Data Conversion Input]"
+              name="Union All Output 1"
+              startId="Package\Populating user table\Remove unnecessary columns.Outputs[Union All Output 1]" />
+            <path
+              refId="Package\Populating user table.Paths[user]"
+              endId="Package\Populating user table\Add imie_nazwisko column.Inputs[Derived Column Input]"
+              name="user"
+              startId="Package\Populating user table\XML Source.Outputs[user]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2219,6 +3081,10 @@ where [refTable].[nazwa] = ?</property>
           Size="244,42"
           Id="Package\Populating serwis_reklamowy table"
           TopLeft="105,51" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Populating user table"
+          TopLeft="628,50" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2605,6 +3471,222 @@ where [refTable].[nazwa] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populating user table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Populating user table\XML Source"
+          TopLeft="179.5,26.5" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Populating user table\Add imie_nazwisko column"
+          TopLeft="163,128" />
+        <EdgeLayout
+          Id="Package\Populating user table.Paths[user]"
+          TopLeft="246.5,68.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.5,59.5"
+              Start="0,0"
+              End="19.5,52">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.75"
+                    Point2="0,29.75"
+                    Point3="4,29.75" />
+                  <mssgle:LineSegment
+                    End="15.5,29.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5,29.75"
+                    Point2="19.5,29.75"
+                    Point3="19.5,33.75" />
+                  <mssgle:LineSegment
+                    End="19.5,52" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="221,42"
+          Id="Package\Populating user table\Remove unnecessary columns"
+          TopLeft="155,227.5" />
+        <EdgeLayout
+          Id="Package\Populating user table.Paths[Derived Column Output]"
+          TopLeft="265.75,170">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.5"
+              Start="0,0"
+              End="0,50">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Populating user table\Convert to unicode"
+          TopLeft="178,334" />
+        <EdgeLayout
+          Id="Package\Populating user table.Paths[Union All Output 1]"
+          TopLeft="263.75,269.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.5000000000001"
+              Start="0,0"
+              End="0,57.0000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.0000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Populating user table\Droping old values"
+          TopLeft="203.333333333333,441.333333333333" />
+        <EdgeLayout
+          Id="Package\Populating user table.Paths[Data Conversion Output]"
+          TopLeft="262,376">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24.8333333333334,65.3333333333333"
+              Start="0,0"
+              End="24.8333333333334,57.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.6666666666666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.6666666666666"
+                    Point2="0,32.6666666666666"
+                    Point3="4,32.6666666666666" />
+                  <mssgle:LineSegment
+                    End="20.8333333333334,32.6666666666666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.8333333333334,32.6666666666666"
+                    Point2="24.8333333333334,32.6666666666666"
+                    Point3="24.8333333333334,36.6666666666666" />
+                  <mssgle:LineSegment
+                    End="24.8333333333334,57.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Populating user table\OLE DB Destination"
+          TopLeft="193.076923076923,544.615384615385" />
+        <EdgeLayout
+          Id="Package\Populating user table.Paths[Lookup No Match Output]"
+          TopLeft="286.833333333333,483.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.25641025641028,61.2820512820513"
+              Start="0,0"
+              End="-8.25641025641028,53.7820512820513">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.6410256410257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.6410256410257"
+                    Point2="0,30.6410256410257"
+                    Point3="-4,30.6410256410257" />
+                  <mssgle:LineSegment
+                    End="-4.25641025641028,30.6410256410257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.25641025641028,30.6410256410257"
+                    Point2="-8.25641025641028,30.6410256410257"
+                    Point3="-8.25641025641028,34.6410256410257" />
+                  <mssgle:LineSegment
+                    End="-8.25641025641028,53.7820512820513" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-59.9345918469551,35.6410256410257,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating user table\Droping old values">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[uzytkownik]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating user table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
