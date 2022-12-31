@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="76"
-  DTS:VersionGUID="{E06AB211-5CD8-49C1-9552-6EE5FA98AC23}">
+  DTS:VersionBuild="77"
+  DTS:VersionGUID="{4777D78D-983D-48B7-8A40-BB5110DF8E71}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -3320,7 +3320,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[NR_TELEFONU]"
-                      length="15"
+                      length="10"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[NR_TELEFONU]"
                       name="NR_TELEFONU"
                       truncationRowDisposition="FailComponent" />
@@ -3339,7 +3339,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       refId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[NR_TELEFONU]"
                       codePage="1250"
                       dataType="str"
-                      length="15"
+                      length="10"
                       name="NR_TELEFONU" />
                   </externalMetadataColumns>
                 </output>
@@ -3362,7 +3362,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       refId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[NR_TELEFONU]"
                       codePage="1250"
                       dataType="str"
-                      length="15"
+                      length="10"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[NR_TELEFONU]"
                       name="NR_TELEFONU" />
                     <outputColumn
@@ -4682,7 +4682,7 @@ where [refTable].[ID_DANIA] = ?</property>
                       refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input].Columns[NR_TELEFONU]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="15"
+                      cachedLength="10"
                       cachedName="NR_TELEFONU"
                       lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[NR_TELEFONU]" />
                   </inputColumns>
@@ -5045,7 +5045,7 @@ where [refTable].[ID_DANIA] = ?</property>
                       refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Inputs[Sort Input].Columns[NR_TELEFONU]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="15"
+                      cachedLength="10"
                       cachedName="NR_TELEFONU"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[NR_TELEFONU]">
                       <properties>
@@ -5100,7 +5100,7 @@ where [refTable].[ID_DANIA] = ?</property>
                       refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[NR_TELEFONU]"
                       codePage="1250"
                       dataType="str"
-                      length="15"
+                      length="10"
                       lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[NR_TELEFONU]"
                       name="NR_TELEFONU">
                       <properties>
@@ -6037,69 +6037,99 @@ where [refTable].[ID_DANIA] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Populating zamowienie table\Calculating Data data"
+          TopLeft="203.846153846154,746.923076923077" />
+        <NodeLayout
+          Size="256.8,41.6"
+          Id="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania"
+          TopLeft="155.519230769231,281.057692307692" />
+        <NodeLayout
           Size="213.6,41.6"
           Id="Package\Populating zamowienie table\BazaZamowien(Zamowienia)"
           TopLeft="60,60" />
         <NodeLayout
-          Size="257.6,41.6"
-          Id="Package\Populating zamowienie table\BazaZamowien(PrzedmiotyZamowien)"
-          TopLeft="295,60" />
+          Size="200.8,41.6"
+          Id="Package\Populating zamowienie table\Looking up Promocja data"
+          TopLeft="185.903846153846,478.057692307692" />
+        <NodeLayout
+          Size="216,41.6"
+          Id="Package\Populating zamowienie table\Sorting by id_zamowienia (2)"
+          TopLeft="308.384615384615,130.153846153846" />
+        <NodeLayout
+          Size="269.6,41.6"
+          Id="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji"
+          TopLeft="158.951048951049,609.300699300699" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\Populating zamowienie table\Looking up id_dania"
+          TopLeft="206,677.4" />
+        <NodeLayout
+          Size="330.4,41.6"
+          Id="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien"
+          TopLeft="121.230769230769,208.076923076923" />
+        <NodeLayout
+          Size="232.8,41.6"
+          Id="Package\Populating zamowienie table\Calculating czy_objete_promocja"
+          TopLeft="173.468531468531,544.755244755245" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Populating zamowienie table\Calculating laczna_cena"
+          TopLeft="189.807692307692,347.184615384615" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Populating zamowienie table\Looking up id_daty"
+          TopLeft="213,811.8" />
         <NodeLayout
           Size="216,41.6"
           Id="Package\Populating zamowienie table\Sorting by id_zamowienia (1)"
           TopLeft="61.3846153846153,130.923076923077" />
         <NodeLayout
-          Size="216,41.6"
-          Id="Package\Populating zamowienie table\Sorting by id_zamowienia (2)"
-          TopLeft="308.384615384615,130.153846153846" />
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[OLE DB Source Output]"
-          TopLeft="168.092307692308,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29.3230769230769"
-              Start="0,0"
-              End="0,21.8230769230769">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.8230769230769" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[OLE DB Source Output1]"
-          TopLeft="420.092307692308,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.5538461538462"
-              Start="0,0"
-              End="0,21.0538461538462">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.0538461538462" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="170.4,41.6"
+          Id="Package\Populating zamowienie table\OLE DB Destination"
+          TopLeft="214,888.200000000001" />
         <NodeLayout
-          Size="330.4,41.6"
-          Id="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien"
-          TopLeft="121.230769230769,208.076923076923" />
+          Size="257.6,41.6"
+          Id="Package\Populating zamowienie table\BazaZamowien(PrzedmiotyZamowien)"
+          TopLeft="295,60" />
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\Populating zamowienie table\Looking up id_uzytkownika"
+          TopLeft="188,411.4" />
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Sort Output1]"
+          TopLeft="416.384615384615,171.753846153846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-76.2205128205129,36.3230769230769"
+              Start="0,0"
+              End="-76.2205128205129,28.8230769230769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.6888155699722" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.6888155699722"
+                    Point2="0,21.6888155699722"
+                    Point3="-4,21.6888155699722" />
+                  <mssgle:LineSegment
+                    End="-72.2205128205129,21.6888155699722" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-72.2205128205129,21.6888155699722"
+                    Point2="-76.2205128205129,21.6888155699722"
+                    Point3="-76.2205128205129,25.6888155699722" />
+                  <mssgle:LineSegment
+                    End="-76.2205128205129,28.8230769230769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Sort Output]"
           TopLeft="169.384615384615,172.523076923077">
@@ -6135,31 +6165,19 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Sort Output1]"
-          TopLeft="416.384615384615,171.753846153846">
+          Id="Package\Populating zamowienie table.Paths[OLE DB Source Output1]"
+          TopLeft="420.092307692308,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-76.2205128205129,36.3230769230769"
+              EndConnector="0,28.5538461538462"
               Start="0,0"
-              End="-76.2205128205129,28.8230769230769">
+              End="0,21.0538461538462">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.6888155699722" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.6888155699722"
-                    Point2="0,21.6888155699722"
-                    Point3="-4,21.6888155699722" />
-                  <mssgle:LineSegment
-                    End="-72.2205128205129,21.6888155699722" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-72.2205128205129,21.6888155699722"
-                    Point2="-76.2205128205129,21.6888155699722"
-                    Point3="-76.2205128205129,25.6888155699722" />
-                  <mssgle:LineSegment
-                    End="-76.2205128205129,28.8230769230769" />
+                    End="0,21.0538461538462" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6168,14 +6186,28 @@ where [refTable].[ID_DANIA] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="190.4,41.6"
-          Id="Package\Populating zamowienie table\Calculating laczna_cena"
-          TopLeft="189.807692307692,347.184615384615" />
-        <NodeLayout
-          Size="256.8,41.6"
-          Id="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania"
-          TopLeft="155.519230769231,281.057692307692" />
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[OLE DB Source Output]"
+          TopLeft="168.092307692308,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.3230769230769"
+              Start="0,0"
+              End="0,21.8230769230769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.8230769230769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Merge Join Output]"
           TopLeft="285.175,249.676923076923">
@@ -6199,195 +6231,27 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Lookup Match Output]"
-          TopLeft="284.463461538462,322.657692307692">
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output4]"
+          TopLeft="298.1,853.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,24.5269230769231"
+              EndConnector="0,34.8000000000008"
               Start="0,0"
-              End="0,17.0269230769231">
+              End="0,27.3000000000008">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.0269230769231" />
+                    End="0,27.3000000000008" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,2.70877403846157,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,7.84531250000038,96.3827734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="200.8,41.6"
-          Id="Package\Populating zamowienie table\Looking up Promocja data"
-          TopLeft="185.903846153846,478.057692307692" />
-        <NodeLayout
-          Size="232.8,41.6"
-          Id="Package\Populating zamowienie table\Calculating czy_objete_promocja"
-          TopLeft="173.468531468531,544.755244755245" />
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Lookup Match Output1]"
-          TopLeft="288.086188811189,519.657692307692">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25.0975524475524"
-              Start="0,0"
-              End="0,17.5975524475524">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5975524475524" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,2.9940887237762,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="269.6,41.6"
-          Id="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji"
-          TopLeft="158.951048951049,609.300699300699" />
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Derived Column Output]"
-          TopLeft="291.80979020979,586.355244755245">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,22.9454545454545"
-              Start="0,0"
-              End="0,15.4454545454545">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.4454545454545" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Populating zamowienie table\Calculating Data data"
-          TopLeft="203.846153846154,746.923076923077" />
-        <NodeLayout
-          Size="168,41.6"
-          Id="Package\Populating zamowienie table\Looking up id_daty"
-          TopLeft="213,811.8" />
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Derived Column Output1]"
-          TopLeft="295.223076923077,788.523076923077">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23.276923076923"
-              Start="0,0"
-              End="0,15.776923076923">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.776923076923" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Populating zamowienie table\OLE DB Destination"
-          TopLeft="214,888.200000000001" />
-        <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\Populating zamowienie table\Looking up id_dania"
-          TopLeft="206,677.4" />
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Derived Column Output2]"
-          TopLeft="293.075524475524,650.900699300699">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.499300699301"
-              Start="0,0"
-              End="0,18.999300699301">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.999300699301" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
-          TopLeft="292.923076923077,719">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.9230769230766"
-              Start="0,0"
-              End="0,20.4230769230766">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4230769230766" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,4.40685096153828,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="205.6,41.6"
-          Id="Package\Populating zamowienie table\Looking up id_uzytkownika"
-          TopLeft="188,411.4" />
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Derived Column Output3]"
-          TopLeft="287.903846153846,388.784615384615">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,22.6153846153846"
-              Start="0,0"
-              End="0,15.1153846153846">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.1153846153846" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6415,34 +6279,275 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Lookup Match Output4]"
-          TopLeft="298.1,853.4">
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
+          TopLeft="292.923076923077,719">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34.8000000000008"
+              EndConnector="0,27.9230769230766"
               Start="0,0"
-              End="0,27.3000000000008">
+              End="0,20.4230769230766">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.3000000000008" />
+                    End="0,20.4230769230766" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.84531250000038,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,4.40685096153828,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output1]"
+          TopLeft="288.086188811189,519.657692307692">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.0975524475524"
+              Start="0,0"
+              End="0,17.5975524475524">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5975524475524" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,2.9940887237762,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output]"
+          TopLeft="284.463461538462,322.657692307692">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.5269230769231"
+              Start="0,0"
+              End="0,17.0269230769231">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.0269230769231" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,2.70877403846157,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Derived Column Output3]"
+          TopLeft="287.903846153846,388.784615384615">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.6153846153846"
+              Start="0,0"
+              End="0,15.1153846153846">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.1153846153846" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Derived Column Output2]"
+          TopLeft="293.075524475524,650.900699300699">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.499300699301"
+              Start="0,0"
+              End="0,18.999300699301">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.999300699301" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Derived Column Output1]"
+          TopLeft="295.223076923077,788.523076923077">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.276923076923"
+              Start="0,0"
+              End="0,15.776923076923">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.776923076923" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Derived Column Output]"
+          TopLeft="291.80979020979,586.355244755245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.9454545454545"
+              Start="0,0"
+              End="0,15.4454545454545">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.4454545454545" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DANIA]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Populating zamowienie table\BazaZamowien(Zamowienia)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating zamowienie table\Looking up Promocja data">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[PROMOCJE]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating zamowienie table\Looking up id_dania">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[danie]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating zamowienie table\Looking up id_daty">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[data]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating zamowienie table\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6468,117 +6573,12 @@ where [refTable].[ID_DANIA] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DANIA]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\Looking up Promocja data">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[PROMOCJE]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\Looking up id_daty">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[data]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\Looking up id_dania">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[danie]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Populating zamowienie table\Looking up id_uzytkownika">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6588,7 +6588,7 @@ where [refTable].[ID_DANIA] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
