@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{2C96F0F6-DB92-4FAD-B79A-9A9D15F44923}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{AB0982C8-8BFA-4549-BFAF-25B632781C56}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -3383,141 +3383,56 @@ where [refTable].[imie_nazwisko] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating zamowienie table\Derived Column"
+              refId="Package\Populating zamowienie table\Calculating czy_objete_promocja"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
+              name="Calculating czy_objete_promocja"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Populating zamowienie table\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Derived Column.Inputs[Derived Column Input].Columns[LICZBA]"
-                      cachedDataType="i4"
-                      cachedName="LICZBA"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[LICZBA]" />
-                    <inputColumn
-                      refId="Package\Populating zamowienie table\Derived Column.Inputs[Derived Column Input].Columns[cena_pojedynczego_dania]"
-                      cachedDataType="r8"
-                      cachedName="cena_pojedynczego_dania"
-                      lineageId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Populating zamowienie table\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Populating zamowienie table\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Derived Column.Outputs[Derived Column Output].Columns[laczna_cena]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Populating zamowienie table\Derived Column.Outputs[Derived Column Output].Columns[laczna_cena]"
-                      name="laczna_cena"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">#{Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[LICZBA]} * #{Package\Populating zamowienie table\Lookup.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">LICZBA * cena_pojedynczego_dania</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating zamowienie table\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Populating zamowienie table\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Populating zamowienie table\Derived Column 1"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 1"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Populating zamowienie table\Derived Column 1.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 1.Inputs[Derived Column Input].Columns[DATA_UTWORZENIA]"
+                      refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Inputs[Derived Column Input].Columns[DATA_UTWORZENIA]"
                       cachedDataType="dbDate"
                       cachedName="DATA_UTWORZENIA"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]" />
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]" />
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 1.Inputs[Derived Column Input].Columns[ID_PROMOCJI]"
+                      refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Inputs[Derived Column Input].Columns[ID_PROMOCJI]"
                       cachedDataType="i4"
                       cachedName="ID_PROMOCJI"
-                      lineageId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[ID_PROMOCJI]" />
+                      lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[ID_PROMOCJI]" />
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 1.Inputs[Derived Column Input].Columns[DATA_ROZPOCZECIA]"
+                      refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Inputs[Derived Column Input].Columns[DATA_ROZPOCZECIA]"
                       cachedDataType="dbDate"
                       cachedName="DATA_ROZPOCZECIA"
-                      lineageId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA]" />
+                      lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA]" />
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 1.Inputs[Derived Column Input].Columns[DATA_ZAKONCZENIA]"
+                      refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Inputs[Derived Column Input].Columns[DATA_ZAKONCZENIA]"
                       cachedDataType="dbDate"
                       cachedName="DATA_ZAKONCZENIA"
-                      lineageId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA]" />
+                      lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Output]"
+                  refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Populating zamowienie table\Derived Column 1.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Output].Columns[czy_objete_promocja]"
+                      refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output].Columns[czy_objete_promocja]"
                       dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Output].Columns[czy_objete_promocja]"
+                      lineageId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output].Columns[czy_objete_promocja]"
                       name="czy_objete_promocja"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -3525,7 +3440,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[ID_PROMOCJI]} &lt; 1 ? 0 : #{Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA]} &gt; #{Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]} ? 0 : #{Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]} &gt; #{Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA]} ? 0 : 1</property>
+                          name="Expression">#{Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[ID_PROMOCJI]} &lt; 1 ? 0 : #{Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA]} &gt; #{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]} ? 0 : #{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]} &gt; #{Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA]} ? 0 : 1</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -3538,23 +3453,23 @@ where [refTable].[imie_nazwisko] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Error Output]"
+                  refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Populating zamowienie table\Derived Column 1.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3563,46 +3478,261 @@ where [refTable].[imie_nazwisko] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating zamowienie table\Derived Column 2"
+              refId="Package\Populating zamowienie table\Calculating Data data"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 2"
+              name="Calculating Data data"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Populating zamowienie table\Derived Column 2.Inputs[Derived Column Input]"
+                  refId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 2.Inputs[Derived Column Input].Columns[LICZBA]"
-                      cachedDataType="i4"
-                      cachedName="LICZBA"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[LICZBA]" />
-                    <inputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 2.Inputs[Derived Column Input].Columns[czy_objete_promocja]"
-                      cachedDataType="i4"
-                      cachedName="czy_objete_promocja"
-                      lineageId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Output].Columns[czy_objete_promocja]" />
+                      refId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input].Columns[DATA_UTWORZENIA]"
+                      cachedDataType="dbDate"
+                      cachedName="DATA_UTWORZENIA"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating zamowienie table\Derived Column 2.Outputs[Derived Column Output]"
+                  refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Populating zamowienie table\Derived Column 2.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 2.Outputs[Derived Column Output].Columns[liczba_wykorzystan_promocji]"
+                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]"
+                      name="dzien"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,10,1250)([DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) &lt; 10 ? "0" + (DT_STR,10,1250)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) : (DT_STR,10,1250)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,10,1250)(DAY(DATA_UTWORZENIA) &lt; 10 ? "0" + (DT_STR,10,1250)DAY(DATA_UTWORZENIA) : (DT_STR,10,1250)DAY(DATA_UTWORZENIA))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]"
+                      name="rok"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,10,1250)[YEAR](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,10,1250)YEAR(DATA_UTWORZENIA)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]"
+                      name="miesiac"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,10,1250)([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,10,1250)(MONTH(DATA_UTWORZENIA) == 1 ? "styczeń" : (MONTH(DATA_UTWORZENIA) == 2 ? "luty" : (MONTH(DATA_UTWORZENIA) == 3 ? "marzec" : (MONTH(DATA_UTWORZENIA) == 4 ? "kwiecień" : (MONTH(DATA_UTWORZENIA) == 5 ? "maj" : (MONTH(DATA_UTWORZENIA) == 6 ? "czerwiec" : (MONTH(DATA_UTWORZENIA) == 7 ? "lipiec" : (MONTH(DATA_UTWORZENIA) == 8 ? "sierpień" : (MONTH(DATA_UTWORZENIA) == 9 ? "wrzesień" : (MONTH(DATA_UTWORZENIA) == 10 ? "październik" : (MONTH(DATA_UTWORZENIA) == 11 ? "listopad" : (MONTH(DATA_UTWORZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating zamowienie table\Calculating laczna_cena"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calculating laczna_cena"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating zamowienie table\Calculating laczna_cena.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\Calculating laczna_cena.Inputs[Derived Column Input].Columns[LICZBA]"
+                      cachedDataType="i4"
+                      cachedName="LICZBA"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[LICZBA]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\Calculating laczna_cena.Inputs[Derived Column Input].Columns[cena_pojedynczego_dania]"
+                      cachedDataType="r8"
+                      cachedName="cena_pojedynczego_dania"
+                      lineageId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Populating zamowienie table\Calculating laczna_cena.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Output].Columns[laczna_cena]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Output].Columns[laczna_cena]"
+                      name="laczna_cena"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[LICZBA]} * #{Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LICZBA * cena_pojedynczego_dania</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Populating zamowienie table\Calculating laczna_cena.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calculating liczba_wykorzystan_promocji"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Inputs[Derived Column Input].Columns[LICZBA]"
+                      cachedDataType="i4"
+                      cachedName="LICZBA"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[LICZBA]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Inputs[Derived Column Input].Columns[czy_objete_promocja]"
+                      cachedDataType="i4"
+                      cachedName="czy_objete_promocja"
+                      lineageId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output].Columns[czy_objete_promocja]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Output].Columns[liczba_wykorzystan_promocji]"
                       dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Populating zamowienie table\Derived Column 2.Outputs[Derived Column Output].Columns[liczba_wykorzystan_promocji]"
+                      lineageId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Output].Columns[liczba_wykorzystan_promocji]"
                       name="liczba_wykorzystan_promocji"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -3610,7 +3740,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[LICZBA]} * #{Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Output].Columns[czy_objete_promocja]}</property>
+                          name="Expression">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[LICZBA]} * #{Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output].Columns[czy_objete_promocja]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -3623,23 +3753,23 @@ where [refTable].[imie_nazwisko] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating zamowienie table\Derived Column 2.Outputs[Derived Column Error Output]"
+                  refId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Populating zamowienie table\Derived Column 2.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3648,11 +3778,11 @@ where [refTable].[imie_nazwisko] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating zamowienie table\Lookup"
+              refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
+              name="Looking up cena_pojedynczego_dania"
               usesDispositions="true"
               version="6">
               <properties>
@@ -3704,7 +3834,7 @@ where [refTable].[ID_DANIA] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_DANIA]};</property>
+                  name="ParameterMap">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3716,7 +3846,7 @@ where [refTable].[ID_DANIA] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Populating zamowienie table\Lookup.Connections[OleDbConnection]"
+                  refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Connections[OleDbConnection]"
                   connectionManagerID="{DD2CA1E7-1830-495F-851F-972443195656}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.baza-zamowien]"
                   description="Connection manager used to access lookup data."
@@ -3724,14 +3854,14 @@ where [refTable].[ID_DANIA] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Populating zamowienie table\Lookup.Inputs[Lookup Input]"
+                  refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Lookup.Inputs[Lookup Input].Columns[ID_DANIA]"
+                      refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Inputs[Lookup Input].Columns[ID_DANIA]"
                       cachedDataType="i4"
                       cachedName="ID_DANIA"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_DANIA]">
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3749,18 +3879,18 @@ where [refTable].[ID_DANIA] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Match Output]"
+                  refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]"
+                      refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]"
                       dataType="r8"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]"
+                      lineageId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]"
                       name="cena_pojedynczego_dania"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -3774,30 +3904,30 @@ where [refTable].[ID_DANIA] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating zamowienie table\Lookup.Outputs[Lookup No Match Output]"
+                  refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Error Output]"
+                  refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3806,357 +3936,11 @@ where [refTable].[ID_DANIA] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating zamowienie table\Lookup 1"
+              refId="Package\Populating zamowienie table\Looking up id_dania"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup 1"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[uzytkownik]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[uzytkownik]) [refTable]
-where [refTable].[nr_telefonu] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[NR_TELEFONU]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Populating zamowienie table\Lookup 1.Connections[OleDbConnection]"
-                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Populating zamowienie table\Lookup 1.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Populating zamowienie table\Lookup 1.Inputs[Lookup Input].Columns[NR_TELEFONU]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="NR_TELEFONU"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[NR_TELEFONU]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">nr_telefonu</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup 1.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup Match Output].Columns[id_uzytkownika]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup Match Output].Columns[id_uzytkownika]"
-                      name="id_uzytkownika"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">id_uzytkownika</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup 1.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup 1.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Populating zamowienie table\Lookup 2"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup 2"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[PROMOCJE]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[PROMOCJE]) [refTable]
-where [refTable].[ID_DANIA] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_PROMOCJI" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WARTOSC" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_ROZPOCZECIA" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_ZAKONCZENIA" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_DANIA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_DANIA]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Populating zamowienie table\Lookup 2.Connections[OleDbConnection]"
-                  connectionManagerID="{DD2CA1E7-1830-495F-851F-972443195656}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.baza-zamowien]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Populating zamowienie table\Lookup 2.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Populating zamowienie table\Lookup 2.Inputs[Lookup Input].Columns[ID_DANIA]"
-                      cachedDataType="i4"
-                      cachedName="ID_DANIA"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_DANIA]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">ID_DANIA</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup 2.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[ID_PROMOCJI]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[ID_PROMOCJI]"
-                      name="ID_PROMOCJI"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">ID_PROMOCJI</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA]"
-                      name="DATA_ROZPOCZECIA"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">DATA_ROZPOCZECIA</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA]"
-                      name="DATA_ZAKONCZENIA"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">DATA_ZAKONCZENIA</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup 2.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup 2.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Populating zamowienie table\Lookup 3"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup 3"
+              name="Looking up id_dania"
               usesDispositions="true"
               version="6">
               <properties>
@@ -4208,7 +3992,7 @@ where [refTable].[id_dania] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_DANIA]};</property>
+                  name="ParameterMap">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4220,7 +4004,7 @@ where [refTable].[id_dania] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Populating zamowienie table\Lookup 3.Connections[OleDbConnection]"
+                  refId="Package\Populating zamowienie table\Looking up id_dania.Connections[OleDbConnection]"
                   connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
                   description="Connection manager used to access lookup data."
@@ -4228,15 +4012,15 @@ where [refTable].[id_dania] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Populating zamowienie table\Lookup 3.Inputs[Lookup Input]"
+                  refId="Package\Populating zamowienie table\Looking up id_dania.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Lookup 3.Inputs[Lookup Input].Columns[id_dania]"
+                      refId="Package\Populating zamowienie table\Looking up id_dania.Inputs[Lookup Input].Columns[id_dania]"
                       cachedDataType="i4"
                       cachedName="ID_DANIA"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_DANIA]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]"
                       name="id_dania"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
@@ -4257,39 +4041,39 @@ where [refTable].[id_dania] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating zamowienie table\Lookup 3.Outputs[Lookup Match Output]"
+                  refId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup 3.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Looking up id_dania.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating zamowienie table\Lookup 3.Outputs[Lookup No Match Output]"
+                  refId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup 3.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Looking up id_dania.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating zamowienie table\Lookup 3.Outputs[Lookup Error Output]"
+                  refId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Populating zamowienie table\Lookup 3.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Looking up id_dania.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 3.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Lookup 3.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Lookup 3.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Lookup 3.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4298,11 +4082,553 @@ where [refTable].[id_dania] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating zamowienie table\Merge Join"
+              refId="Package\Populating zamowienie table\Looking up id_daty"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Looking up id_daty"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[data]) [refTable]
+where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]};#{Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]};#{Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating zamowienie table\Looking up id_daty.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[rok]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="rok"
+                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">rok</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[dzien]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="dzien"
+                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">dzien</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[miesiac]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="miesiac"
+                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">miesiac</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output].Columns[id_daty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output].Columns[id_daty]"
+                      name="id_daty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_daty</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating zamowienie table\Looking up id_uzytkownika"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Looking up id_uzytkownika"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[uzytkownik]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[uzytkownik]) [refTable]
+where [refTable].[nr_telefonu] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[NR_TELEFONU]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input].Columns[NR_TELEFONU]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="NR_TELEFONU"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[NR_TELEFONU]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">nr_telefonu</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output].Columns[id_uzytkownika]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output].Columns[id_uzytkownika]"
+                      name="id_uzytkownika"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_uzytkownika</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating zamowienie table\Looking up Promocja data"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Looking up Promocja data"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[PROMOCJE]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[PROMOCJE]) [refTable]
+where [refTable].[ID_DANIA] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_PROMOCJI" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WARTOSC" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_ROZPOCZECIA" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_ZAKONCZENIA" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_DANIA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating zamowienie table\Looking up Promocja data.Connections[OleDbConnection]"
+                  connectionManagerID="{DD2CA1E7-1830-495F-851F-972443195656}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.baza-zamowien]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating zamowienie table\Looking up Promocja data.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\Looking up Promocja data.Inputs[Lookup Input].Columns[ID_DANIA]"
+                      cachedDataType="i4"
+                      cachedName="ID_DANIA"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_DANIA</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating zamowienie table\Looking up Promocja data.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[ID_PROMOCJI]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[ID_PROMOCJI]"
+                      name="ID_PROMOCJI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ID_PROMOCJI</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA]"
+                      name="DATA_ROZPOCZECIA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DATA_ROZPOCZECIA</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA]"
+                      name="DATA_ZAKONCZENIA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DATA_ZAKONCZENIA</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating zamowienie table\Looking up Promocja data.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating zamowienie table\Looking up Promocja data.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien"
               componentClassID="Microsoft.MergeJoin"
               contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
-              name="Merge Join"
+              name="Merge Joining Zamowienia with PrzedmiotyZamowien"
               version="1">
               <properties>
                 <property
@@ -4325,66 +4651,66 @@ where [refTable].[id_dania] = ?</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Left Input]"
+                  refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input]"
                   hasSideEffects="true"
                   name="Merge Join Left Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Left Input].Columns[ID_ZAMOWIENIA]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input].Columns[ID_ZAMOWIENIA]"
                       cachedDataType="i4"
                       cachedName="ID_ZAMOWIENIA"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Populating zamowienie table\Sort.Outputs[Sort Output].Columns[ID_ZAMOWIENIA]" />
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[ID_ZAMOWIENIA]" />
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Left Input].Columns[DATA_UTWORZENIA]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input].Columns[DATA_UTWORZENIA]"
                       cachedDataType="dbDate"
                       cachedName="DATA_UTWORZENIA"
-                      lineageId="Package\Populating zamowienie table\Sort.Outputs[Sort Output].Columns[DATA_UTWORZENIA]" />
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[DATA_UTWORZENIA]" />
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Left Input].Columns[NR_TELEFONU]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input].Columns[NR_TELEFONU]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="15"
                       cachedName="NR_TELEFONU"
-                      lineageId="Package\Populating zamowienie table\Sort.Outputs[Sort Output].Columns[NR_TELEFONU]" />
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[NR_TELEFONU]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Right Input]"
+                  refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Right Input]"
                   hasSideEffects="true"
                   name="Merge Join Right Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Right Input].Columns[ID_ZAMOWIENIA]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Right Input].Columns[ID_ZAMOWIENIA]"
                       cachedDataType="i4"
                       cachedName="ID_ZAMOWIENIA"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[ID_ZAMOWIENIA]" />
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[ID_ZAMOWIENIA]" />
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Right Input].Columns[ID_DANIA]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Right Input].Columns[ID_DANIA]"
                       cachedDataType="i4"
                       cachedName="ID_DANIA"
-                      lineageId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[ID_DANIA]" />
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[ID_DANIA]" />
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Right Input].Columns[LICZBA]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Right Input].Columns[LICZBA]"
                       cachedDataType="i4"
                       cachedName="LICZBA"
-                      lineageId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[LICZBA]" />
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[LICZBA]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output]"
+                  refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output]"
                   isSorted="true"
                   name="Merge Join Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_ZAMOWIENIA]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_ZAMOWIENIA]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_ZAMOWIENIA]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_ZAMOWIENIA]"
                       name="ID_ZAMOWIENIA"
                       sortKeyPosition="1">
                       <properties>
@@ -4392,61 +4718,61 @@ where [refTable].[id_dania] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Left Input].Columns[ID_ZAMOWIENIA]}</property>
+                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input].Columns[ID_ZAMOWIENIA]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]"
                       dataType="dbDate"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]"
                       name="DATA_UTWORZENIA">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Left Input].Columns[DATA_UTWORZENIA]}</property>
+                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input].Columns[DATA_UTWORZENIA]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[NR_TELEFONU]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[NR_TELEFONU]"
                       codePage="1250"
                       dataType="str"
                       length="15"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[NR_TELEFONU]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[NR_TELEFONU]"
                       name="NR_TELEFONU">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Left Input].Columns[NR_TELEFONU]}</property>
+                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input].Columns[NR_TELEFONU]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_DANIA]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[ID_DANIA]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]"
                       name="ID_DANIA">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Right Input].Columns[ID_DANIA]}</property>
+                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Right Input].Columns[ID_DANIA]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[LICZBA]"
+                      refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[LICZBA]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output].Columns[LICZBA]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[LICZBA]"
                       name="LICZBA">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Right Input].Columns[LICZBA]}</property>
+                          name="InputColumnID">#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Right Input].Columns[LICZBA]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4455,11 +4781,205 @@ where [refTable].[id_dania] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating zamowienie table\Sort"
+              refId="Package\Populating zamowienie table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[zamowienie]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating zamowienie table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_uzytkownika]"
+                      cachedDataType="i4"
+                      cachedName="id_uzytkownika"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_uzytkownika]"
+                      lineageId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output].Columns[id_uzytkownika]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[czy_objete_promocja]"
+                      cachedDataType="i4"
+                      cachedName="czy_objete_promocja"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[czy_objete_promocja]"
+                      lineageId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output].Columns[czy_objete_promocja]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[liczba_wykorzystan_promocji]"
+                      cachedDataType="i4"
+                      cachedName="liczba_wykorzystan_promocji"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_wykorzystan_promocji]"
+                      lineageId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Output].Columns[liczba_wykorzystan_promocji]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_daty]"
+                      cachedDataType="i4"
+                      cachedName="id_daty"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_daty]"
+                      lineageId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output].Columns[id_daty]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_ZAMOWIENIA]"
+                      cachedDataType="i4"
+                      cachedName="ID_ZAMOWIENIA"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_zamowienia]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_ZAMOWIENIA]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_DANIA]"
+                      cachedDataType="i4"
+                      cachedName="ID_DANIA"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dania]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cena_pojedynczego_dania]"
+                      cachedDataType="r8"
+                      cachedName="cena_pojedynczego_dania"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cena_pojedynczego_dania]"
+                      lineageId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[laczna_cena]"
+                      cachedDataType="r8"
+                      cachedName="laczna_cena"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[laczna_cena]"
+                      lineageId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Output].Columns[laczna_cena]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LICZBA]"
+                      cachedDataType="i4"
+                      cachedName="LICZBA"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_zamowionego_dania]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[LICZBA]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_zamowienia]"
+                      dataType="i4"
+                      name="nr_zamowienia" />
+                    <externalMetadataColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_zamowionego_dania]"
+                      dataType="i4"
+                      name="liczba_zamowionego_dania" />
+                    <externalMetadataColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cena_pojedynczego_dania]"
+                      dataType="cy"
+                      name="cena_pojedynczego_dania" />
+                    <externalMetadataColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[laczna_cena]"
+                      dataType="cy"
+                      name="laczna_cena" />
+                    <externalMetadataColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[czy_objete_promocja]"
+                      dataType="i4"
+                      name="czy_objete_promocja" />
+                    <externalMetadataColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_wykorzystan_promocji]"
+                      dataType="i4"
+                      name="liczba_wykorzystan_promocji" />
+                    <externalMetadataColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dania]"
+                      dataType="i4"
+                      name="id_dania" />
+                    <externalMetadataColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_uzytkownika]"
+                      dataType="i4"
+                      name="id_uzytkownika" />
+                    <externalMetadataColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_daty]"
+                      dataType="i4"
+                      name="id_daty" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating zamowienie table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating zamowienie table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1)"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
+              name="Sorting by id_zamowienia (1)"
               version="1">
               <properties>
                 <property
@@ -4474,11 +4994,11 @@ where [refTable].[id_dania] = ?</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Populating zamowienie table\Sort.Inputs[Sort Input]"
+                  refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Sort.Inputs[Sort Input].Columns[ID_ZAMOWIENIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Inputs[Sort Input].Columns[ID_ZAMOWIENIA]"
                       cachedDataType="i4"
                       cachedName="ID_ZAMOWIENIA"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[ID_ZAMOWIENIA]">
@@ -4494,7 +5014,7 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Sort.Inputs[Sort Input].Columns[DATA_UTWORZENIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Inputs[Sort Input].Columns[DATA_UTWORZENIA]"
                       cachedDataType="dbDate"
                       cachedName="DATA_UTWORZENIA"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_UTWORZENIA]">
@@ -4510,7 +5030,7 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Sort.Inputs[Sort Input].Columns[NR_TELEFONU]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Inputs[Sort Input].Columns[NR_TELEFONU]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="15"
@@ -4533,14 +5053,14 @@ where [refTable].[id_dania] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating zamowienie table\Sort.Outputs[Sort Output]"
+                  refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Sort.Outputs[Sort Output].Columns[ID_ZAMOWIENIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[ID_ZAMOWIENIA]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Sort.Outputs[Sort Output].Columns[ID_ZAMOWIENIA]"
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[ID_ZAMOWIENIA]"
                       name="ID_ZAMOWIENIA"
                       sortKeyPosition="1">
                       <properties>
@@ -4552,9 +5072,9 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Sort.Outputs[Sort Output].Columns[DATA_UTWORZENIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[DATA_UTWORZENIA]"
                       dataType="dbDate"
-                      lineageId="Package\Populating zamowienie table\Sort.Outputs[Sort Output].Columns[DATA_UTWORZENIA]"
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[DATA_UTWORZENIA]"
                       name="DATA_UTWORZENIA">
                       <properties>
                         <property
@@ -4565,11 +5085,11 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Sort.Outputs[Sort Output].Columns[NR_TELEFONU]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[NR_TELEFONU]"
                       codePage="1250"
                       dataType="str"
                       length="15"
-                      lineageId="Package\Populating zamowienie table\Sort.Outputs[Sort Output].Columns[NR_TELEFONU]"
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[NR_TELEFONU]"
                       name="NR_TELEFONU">
                       <properties>
                         <property
@@ -4585,11 +5105,11 @@ where [refTable].[id_dania] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating zamowienie table\Sort 1"
+              refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2)"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 1"
+              name="Sorting by id_zamowienia (2)"
               version="1">
               <properties>
                 <property
@@ -4604,11 +5124,11 @@ where [refTable].[id_dania] = ?</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Populating zamowienie table\Sort 1.Inputs[Sort Input]"
+                  refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Sort 1.Inputs[Sort Input].Columns[ID_ZAMOWIENIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Inputs[Sort Input].Columns[ID_ZAMOWIENIA]"
                       cachedDataType="i4"
                       cachedName="ID_ZAMOWIENIA"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(PrzedmiotyZamowien).Outputs[OLE DB Source Output].Columns[ID_ZAMOWIENIA]">
@@ -4624,7 +5144,7 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Sort 1.Inputs[Sort Input].Columns[ID_PRZEDMIOTU_ZAMOWIENIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Inputs[Sort Input].Columns[ID_PRZEDMIOTU_ZAMOWIENIA]"
                       cachedDataType="i4"
                       cachedName="ID_PRZEDMIOTU_ZAMOWIENIA"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(PrzedmiotyZamowien).Outputs[OLE DB Source Output].Columns[ID_PRZEDMIOTU_ZAMOWIENIA]">
@@ -4640,7 +5160,7 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Sort 1.Inputs[Sort Input].Columns[ID_DANIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Inputs[Sort Input].Columns[ID_DANIA]"
                       cachedDataType="i4"
                       cachedName="ID_DANIA"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(PrzedmiotyZamowien).Outputs[OLE DB Source Output].Columns[ID_DANIA]">
@@ -4656,7 +5176,7 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Sort 1.Inputs[Sort Input].Columns[LICZBA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Inputs[Sort Input].Columns[LICZBA]"
                       cachedDataType="i4"
                       cachedName="LICZBA"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(PrzedmiotyZamowien).Outputs[OLE DB Source Output].Columns[LICZBA]">
@@ -4677,14 +5197,14 @@ where [refTable].[id_dania] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output]"
+                  refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[ID_ZAMOWIENIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[ID_ZAMOWIENIA]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[ID_ZAMOWIENIA]"
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[ID_ZAMOWIENIA]"
                       name="ID_ZAMOWIENIA"
                       sortKeyPosition="1">
                       <properties>
@@ -4696,9 +5216,9 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[ID_PRZEDMIOTU_ZAMOWIENIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[ID_PRZEDMIOTU_ZAMOWIENIA]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[ID_PRZEDMIOTU_ZAMOWIENIA]"
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[ID_PRZEDMIOTU_ZAMOWIENIA]"
                       name="ID_PRZEDMIOTU_ZAMOWIENIA">
                       <properties>
                         <property
@@ -4709,9 +5229,9 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[ID_DANIA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[ID_DANIA]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[ID_DANIA]"
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[ID_DANIA]"
                       name="ID_DANIA">
                       <properties>
                         <property
@@ -4722,9 +5242,9 @@ where [refTable].[id_dania] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[LICZBA]"
+                      refId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[LICZBA]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output].Columns[LICZBA]"
+                      lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output].Columns[LICZBA]"
                       name="LICZBA">
                       <properties>
                         <property
@@ -4743,59 +5263,74 @@ where [refTable].[id_dania] = ?</property>
           <paths>
             <path
               refId="Package\Populating zamowienie table.Paths[Derived Column Output]"
-              endId="Package\Populating zamowienie table\Lookup 1.Inputs[Lookup Input]"
+              endId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Populating zamowienie table\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Derived Column Output1]"
-              endId="Package\Populating zamowienie table\Derived Column 2.Inputs[Derived Column Input]"
+              endId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\Populating zamowienie table\Derived Column 1.Outputs[Derived Column Output]" />
+              startId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Derived Column Output2]"
-              endId="Package\Populating zamowienie table\Lookup 3.Inputs[Lookup Input]"
+              endId="Package\Populating zamowienie table\Looking up id_dania.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Populating zamowienie table\Derived Column 2.Outputs[Derived Column Output]" />
+              startId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating zamowienie table.Paths[Derived Column Output3]"
+              endId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Lookup Match Output]"
-              endId="Package\Populating zamowienie table\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\Populating zamowienie table\Calculating laczna_cena.Inputs[Derived Column Input]"
               name="Lookup Match Output"
-              startId="Package\Populating zamowienie table\Lookup.Outputs[Lookup Match Output]" />
+              startId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Lookup Match Output1]"
-              endId="Package\Populating zamowienie table\Lookup 2.Inputs[Lookup Input]"
+              endId="Package\Populating zamowienie table\Looking up Promocja data.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Populating zamowienie table\Lookup 1.Outputs[Lookup Match Output]" />
+              startId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
-              endId="Package\Populating zamowienie table\Derived Column 1.Inputs[Derived Column Input]"
+              endId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Inputs[Derived Column Input]"
               name="Lookup Match Output"
-              startId="Package\Populating zamowienie table\Lookup 2.Outputs[Lookup Match Output]" />
+              startId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating zamowienie table.Paths[Lookup Match Output3]"
+              endId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating zamowienie table.Paths[Lookup Match Output4]"
+              endId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Merge Join Output]"
-              endId="Package\Populating zamowienie table\Lookup.Inputs[Lookup Input]"
+              endId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Inputs[Lookup Input]"
               name="Merge Join Output"
-              startId="Package\Populating zamowienie table\Merge Join.Outputs[Merge Join Output]" />
+              startId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[OLE DB Source Output]"
-              endId="Package\Populating zamowienie table\Sort.Inputs[Sort Input]"
+              endId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[OLE DB Source Output1]"
-              endId="Package\Populating zamowienie table\Sort 1.Inputs[Sort Input]"
+              endId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Populating zamowienie table\BazaZamowien(PrzedmiotyZamowien).Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Sort Output]"
-              endId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Left Input]"
+              endId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input]"
               name="Sort Output"
-              startId="Package\Populating zamowienie table\Sort.Outputs[Sort Output]" />
+              startId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Sort Output1]"
-              endId="Package\Populating zamowienie table\Merge Join.Inputs[Merge Join Right Input]"
+              endId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Right Input]"
               name="Sort Output"
-              startId="Package\Populating zamowienie table\Sort 1.Outputs[Sort Output]" />
+              startId="Package\Populating zamowienie table\Sorting by id_zamowienia (2).Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5498,27 +6033,27 @@ where [refTable].[id_dania] = ?</property>
           Id="Package\Populating zamowienie table\BazaZamowien(PrzedmiotyZamowien)"
           TopLeft="295,60" />
         <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Populating zamowienie table\Sort"
-          TopLeft="116,134" />
+          Size="216,41.6"
+          Id="Package\Populating zamowienie table\Sorting by id_zamowienia (1)"
+          TopLeft="61.3846153846153,130.923076923077" />
         <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Populating zamowienie table\Sort 1"
-          TopLeft="363,134" />
+          Size="216,41.6"
+          Id="Package\Populating zamowienie table\Sorting by id_zamowienia (2)"
+          TopLeft="308.384615384615,130.153846153846" />
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[OLE DB Source Output]"
-          TopLeft="165.8,101.6">
+          TopLeft="168.092307692308,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.4"
+              EndConnector="0,29.3230769230769"
               Start="0,0"
-              End="0,24.9">
+              End="0,21.8230769230769">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.9" />
+                    End="0,21.8230769230769" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5529,18 +6064,18 @@ where [refTable].[id_dania] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[OLE DB Source Output1]"
-          TopLeft="420,101.6">
+          TopLeft="420.092307692308,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.4"
+              EndConnector="0,28.5538461538462"
               Start="0,0"
-              End="0,24.9">
+              End="0,21.0538461538462">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.9" />
+                    End="0,21.0538461538462" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5550,35 +6085,35 @@ where [refTable].[id_dania] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Populating zamowienie table\Merge Join"
-          TopLeft="232,215" />
+          Size="330.4,41.6"
+          Id="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien"
+          TopLeft="121.230769230769,208.076923076923" />
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Sort Output]"
-          TopLeft="164.8,175.6">
+          TopLeft="169.384615384615,172.523076923077">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="132,39.4"
+              EndConnector="63.3128205128206,35.5538461538461"
               Start="0,0"
-              End="132,31.9">
+              End="63.3128205128206,28.0538461538461">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.7" />
+                    End="0,17.2295013901761" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.7"
-                    Point2="0,19.7"
-                    Point3="4,19.7" />
+                    Point1="0,17.2295013901761"
+                    Point2="0,21.2295013901761"
+                    Point3="4,21.2295013901761" />
                   <mssgle:LineSegment
-                    End="128,19.7" />
+                    End="59.3128205128206,21.2295013901761" />
                   <mssgle:CubicBezierSegment
-                    Point1="128,19.7"
-                    Point2="132,19.7"
-                    Point3="132,23.7" />
+                    Point1="59.3128205128206,21.2295013901761"
+                    Point2="63.3128205128206,21.2295013901761"
+                    Point3="63.3128205128206,25.2295013901761" />
                   <mssgle:LineSegment
-                    End="132,31.9" />
+                    End="63.3128205128206,28.0538461538461" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5589,30 +6124,30 @@ where [refTable].[id_dania] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Sort Output1]"
-          TopLeft="416.2,175.6">
+          TopLeft="416.384615384615,171.753846153846">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-99.1333333333333,39.4"
+              EndConnector="-76.2205128205129,36.3230769230769"
               Start="0,0"
-              End="-99.1333333333333,31.9">
+              End="-76.2205128205129,28.8230769230769">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.3517073170732" />
+                    End="0,17.6888155699722" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.3517073170732"
-                    Point2="0,23.3517073170732"
-                    Point3="-4,23.3517073170732" />
+                    Point1="0,17.6888155699722"
+                    Point2="0,21.6888155699722"
+                    Point3="-4,21.6888155699722" />
                   <mssgle:LineSegment
-                    End="-95.1333333333333,23.3517073170732" />
+                    End="-72.2205128205129,21.6888155699722" />
                   <mssgle:CubicBezierSegment
-                    Point1="-95.1333333333333,23.3517073170732"
-                    Point2="-99.1333333333333,23.3517073170732"
-                    Point3="-99.1333333333333,27.3517073170732" />
+                    Point1="-72.2205128205129,21.6888155699722"
+                    Point2="-76.2205128205129,21.6888155699722"
+                    Point3="-76.2205128205129,25.6888155699722" />
                   <mssgle:LineSegment
-                    End="-99.1333333333333,31.9" />
+                    End="-76.2205128205129,28.8230769230769" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5622,27 +6157,27 @@ where [refTable].[id_dania] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Populating zamowienie table\Derived Column"
-          TopLeft="227.5,411.8" />
+          Size="190.4,41.6"
+          Id="Package\Populating zamowienie table\Calculating laczna_cena"
+          TopLeft="189.807692307692,347.184615384615" />
         <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Populating zamowienie table\Lookup"
-          TopLeft="244.75,318.75" />
+          Size="256.8,41.6"
+          Id="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania"
+          TopLeft="155.519230769231,281.057692307692" />
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Merge Join Output]"
-          TopLeft="298.975,256.6">
+          TopLeft="285.175,249.676923076923">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,62.1499999999999"
+              EndConnector="0,31.3807692307692"
               Start="0,0"
-              End="0,54.6499999999999">
+              End="0,23.8807692307692">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.6499999999999" />
+                    End="0,23.8807692307692" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5653,46 +6188,46 @@ where [refTable].[id_dania] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Lookup Match Output]"
-          TopLeft="302.525,360.35">
+          TopLeft="284.463461538462,322.657692307692">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.45"
+              EndConnector="0,24.5269230769231"
               Start="0,0"
-              End="0,43.95">
+              End="0,17.0269230769231">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.95" />
+                    End="0,17.0269230769231" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,16.1703125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,2.70877403846157,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="121.6,41.6"
-          Id="Package\Populating zamowienie table\Lookup 1"
-          TopLeft="246,485" />
+          Size="205.6,41.6"
+          Id="Package\Populating zamowienie table\Looking up id_uzytkownika"
+          TopLeft="183.692307692308,413.461538461538" />
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Derived Column Output]"
-          TopLeft="305.35,453.4">
+          TopLeft="285.75,388.784615384615">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31.5999999999997"
+              EndConnector="0,24.6769230769228"
               Start="0,0"
-              End="0,24.0999999999997">
+              End="0,17.1769230769228">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.0999999999997" />
+                    End="0,17.1769230769228" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5702,79 +6237,79 @@ where [refTable].[id_dania] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="121.6,41.6"
-          Id="Package\Populating zamowienie table\Lookup 2"
-          TopLeft="239.75,565.75" />
+          Size="200.8,41.6"
+          Id="Package\Populating zamowienie table\Looking up Promocja data"
+          TopLeft="185.903846153846,478.057692307692" />
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Lookup Match Output1]"
-          TopLeft="303.675,526.6">
+          TopLeft="286.398076923077,455.061538461538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.1500000000003"
+              EndConnector="0,22.9961538461541"
               Start="0,0"
-              End="0,31.6500000000003">
+              End="0,15.4961538461541">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.6500000000003" />
+                    End="0,15.4961538461541" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.0203125000002,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,1.94338942307704,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Populating zamowienie table\Derived Column 1"
-          TopLeft="226.545454545455,630.909090909091" />
+          Size="232.8,41.6"
+          Id="Package\Populating zamowienie table\Calculating czy_objete_promocja"
+          TopLeft="173.468531468531,544.755244755245" />
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
-          TopLeft="304.147727272727,607.35">
+          TopLeft="288.086188811189,519.657692307692">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,23.5590909090909"
+              EndConnector="0,25.0975524475524"
               Start="0,0"
-              End="0,16.0590909090909">
+              End="0,17.5975524475524">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.0590909090909" />
+                    End="0,17.5975524475524" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,2.22485795454543,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,2.9940887237762,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Populating zamowienie table\Derived Column 2"
-          TopLeft="228.181818181818,705.454545454545" />
+          Size="269.6,41.6"
+          Id="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji"
+          TopLeft="158.951048951049,609.300699300699" />
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Derived Column Output1]"
-          TopLeft="308.563636363636,672.509090909091">
+          TopLeft="291.80979020979,586.355244755245">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.9454545454545"
+              EndConnector="0,22.9454545454545"
               Start="0,0"
-              End="0,25.4454545454545">
+              End="0,15.4454545454545">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.4454545454545" />
+                    End="0,15.4454545454545" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5784,29 +6319,111 @@ where [refTable].[id_dania] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="121.6,41.6"
-          Id="Package\Populating zamowienie table\Lookup 3"
-          TopLeft="250,784.888888888889" />
+          Size="172.8,41.6"
+          Id="Package\Populating zamowienie table\Looking up id_dania"
+          TopLeft="203.076923076923,674.888888888889" />
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Derived Column Output2]"
-          TopLeft="310.090909090909,747.054545454545">
+          TopLeft="291.613986013986,650.900699300699">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.8343434343433"
+              EndConnector="0,23.9881895881896"
               Start="0,0"
-              End="0,30.3343434343433">
+              End="0,16.4881895881896">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.3343434343433" />
+                    End="0,16.4881895881896" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Populating zamowienie table\Calculating Data data"
+          TopLeft="203.846153846154,746.923076923077" />
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output3]"
+          TopLeft="291.461538461538,716.488888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.434188034188"
+              Start="0,0"
+              End="0,22.934188034188">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.934188034188" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,5.66240651709398,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Populating zamowienie table\Looking up id_daty"
+          TopLeft="213,811.8" />
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Derived Column Output3]"
+          TopLeft="295.223076923077,788.523076923077">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.276923076923"
+              Start="0,0"
+              End="0,15.776923076923">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.776923076923" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Populating zamowienie table\OLE DB Destination"
+          TopLeft="214,888.200000000001" />
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output4]"
+          TopLeft="298.1,853.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.8000000000008"
+              Start="0,0"
+              End="0,27.3000000000008">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3000000000008" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,7.84531250000038,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5839,7 +6456,7 @@ where [refTable].[id_dania] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\Lookup">
+    design-time-name="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5862,7 +6479,7 @@ where [refTable].[id_dania] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\Lookup 1">
+    design-time-name="Package\Populating zamowienie table\Looking up id_uzytkownika">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5885,7 +6502,7 @@ where [refTable].[id_dania] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\Lookup 2">
+    design-time-name="Package\Populating zamowienie table\Looking up Promocja data">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5908,7 +6525,7 @@ where [refTable].[id_dania] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\Lookup 3">
+    design-time-name="Package\Populating zamowienie table\Looking up id_dania">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5927,6 +6544,42 @@ where [refTable].[id_dania] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating zamowienie table\Looking up id_daty">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[data]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating zamowienie table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
