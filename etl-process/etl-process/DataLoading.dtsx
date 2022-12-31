@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="54"
-  DTS:VersionGUID="{F048F5C3-85CA-444B-A5C5-D4922B9DA479}">
+  DTS:VersionBuild="76"
+  DTS:VersionGUID="{E06AB211-5CD8-49C1-9552-6EE5FA98AC23}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -4303,13 +4303,13 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT nr_telefonu, id_uzytkownika from [dbo].[uzytkownik]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[uzytkownik]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT nr_telefonu, id_uzytkownika from [dbo].[uzytkownik]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[uzytkownik]) [refTable]
 where [refTable].[nr_telefonu] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -4341,7 +4341,7 @@ where [refTable].[nr_telefonu] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4406,7 +4406,7 @@ where [refTable].[nr_telefonu] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output].Columns[id_uzytkownika]"
                       name="id_uzytkownika"
-                      truncationRowDisposition="IgnoreFailure">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4865,30 +4865,6 @@ where [refTable].[ID_DANIA] = ?</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_uzytkownika]"
-                      cachedDataType="i4"
-                      cachedName="id_uzytkownika"
-                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_uzytkownika]"
-                      lineageId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output].Columns[id_uzytkownika]" />
-                    <inputColumn
-                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[czy_objete_promocja]"
-                      cachedDataType="i4"
-                      cachedName="czy_objete_promocja"
-                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[czy_objete_promocja]"
-                      lineageId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output].Columns[czy_objete_promocja]" />
-                    <inputColumn
-                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[liczba_wykorzystan_promocji]"
-                      cachedDataType="i4"
-                      cachedName="liczba_wykorzystan_promocji"
-                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_wykorzystan_promocji]"
-                      lineageId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Output].Columns[liczba_wykorzystan_promocji]" />
-                    <inputColumn
-                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_daty]"
-                      cachedDataType="i4"
-                      cachedName="id_daty"
-                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_daty]"
-                      lineageId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output].Columns[id_daty]" />
-                    <inputColumn
                       refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_ZAMOWIENIA]"
                       cachedDataType="i4"
                       cachedName="ID_ZAMOWIENIA"
@@ -4896,11 +4872,11 @@ where [refTable].[ID_DANIA] = ?</property>
                       externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_zamowienia]"
                       lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_ZAMOWIENIA]" />
                     <inputColumn
-                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_DANIA]"
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LICZBA]"
                       cachedDataType="i4"
-                      cachedName="ID_DANIA"
-                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dania]"
-                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]" />
+                      cachedName="LICZBA"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_zamowionego_dania]"
+                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[LICZBA]" />
                     <inputColumn
                       refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cena_pojedynczego_dania]"
                       cachedDataType="r8"
@@ -4914,11 +4890,35 @@ where [refTable].[ID_DANIA] = ?</property>
                       externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[laczna_cena]"
                       lineageId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Output].Columns[laczna_cena]" />
                     <inputColumn
-                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LICZBA]"
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[czy_objete_promocja]"
                       cachedDataType="i4"
-                      cachedName="LICZBA"
-                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_zamowionego_dania]"
-                      lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[LICZBA]" />
+                      cachedName="czy_objete_promocja"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[czy_objete_promocja]"
+                      lineageId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output].Columns[czy_objete_promocja]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[liczba_wykorzystan_promocji]"
+                      cachedDataType="i4"
+                      cachedName="liczba_wykorzystan_promocji"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_wykorzystan_promocji]"
+                      lineageId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Output].Columns[liczba_wykorzystan_promocji]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_dania]"
+                      cachedDataType="i4"
+                      cachedName="id_dania"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_dania]"
+                      lineageId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Match Output].Columns[id_dania]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_uzytkownika]"
+                      cachedDataType="i4"
+                      cachedName="id_uzytkownika"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_uzytkownika]"
+                      lineageId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output].Columns[id_uzytkownika]" />
+                    <inputColumn
+                      refId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_daty]"
+                      cachedDataType="i4"
+                      cachedName="id_daty"
+                      externalMetadataColumnId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_daty]"
+                      lineageId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output].Columns[id_daty]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5275,24 +5275,24 @@ where [refTable].[ID_DANIA] = ?</property>
           <paths>
             <path
               refId="Package\Populating zamowienie table.Paths[Derived Column Output]"
-              endId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Populating zamowienie table.Paths[Derived Column Output1]"
               endId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Populating zamowienie table.Paths[Derived Column Output2]"
+              refId="Package\Populating zamowienie table.Paths[Derived Column Output1]"
               endId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Populating zamowienie table.Paths[Derived Column Output3]"
+              refId="Package\Populating zamowienie table.Paths[Derived Column Output2]"
               endId="Package\Populating zamowienie table\Looking up id_dania.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating zamowienie table.Paths[Derived Column Output3]"
+              endId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Populating zamowienie table\Calculating laczna_cena.Outputs[Derived Column Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Lookup Match Output]"
               endId="Package\Populating zamowienie table\Calculating laczna_cena.Inputs[Derived Column Input]"
@@ -5300,24 +5300,24 @@ where [refTable].[ID_DANIA] = ?</property>
               startId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Lookup Match Output1]"
-              endId="Package\Populating zamowienie table\Looking up Promocja data.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
               endId="Package\Populating zamowienie table\Calculating czy_objete_promocja.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Populating zamowienie table.Paths[Lookup Match Output3]"
-              endId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Lookup Match Output"
-              startId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Populating zamowienie table.Paths[Lookup Match Output4]"
+              refId="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
               endId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating zamowienie table.Paths[Lookup Match Output3]"
+              endId="Package\Populating zamowienie table\Looking up Promocja data.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating zamowienie table.Paths[Lookup Match Output4]"
+              endId="Package\Populating zamowienie table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Merge Join Output]"
               endId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Inputs[Lookup Input]"
@@ -6223,65 +6223,15 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="205.6,41.6"
-          Id="Package\Populating zamowienie table\Looking up id_uzytkownika"
-          TopLeft="183.692307692308,413.461538461538" />
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Derived Column Output]"
-          TopLeft="285.75,388.784615384615">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24.6769230769228"
-              Start="0,0"
-              End="0,17.1769230769228">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.1769230769228" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="200.8,41.6"
           Id="Package\Populating zamowienie table\Looking up Promocja data"
           TopLeft="185.903846153846,478.057692307692" />
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Lookup Match Output1]"
-          TopLeft="286.398076923077,455.061538461538">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,22.9961538461541"
-              Start="0,0"
-              End="0,15.4961538461541">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.4961538461541" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,1.94338942307704,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="232.8,41.6"
           Id="Package\Populating zamowienie table\Calculating czy_objete_promocja"
           TopLeft="173.468531468531,544.755244755245" />
         <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output1]"
           TopLeft="288.086188811189,519.657692307692">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6309,7 +6259,7 @@ where [refTable].[ID_DANIA] = ?</property>
           Id="Package\Populating zamowienie table\Calculating liczba_wykorzystan_promocji"
           TopLeft="158.951048951049,609.300699300699" />
         <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Derived Column Output1]"
+          Id="Package\Populating zamowienie table.Paths[Derived Column Output]"
           TopLeft="291.80979020979,586.355244755245">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6339,7 +6289,7 @@ where [refTable].[ID_DANIA] = ?</property>
           Id="Package\Populating zamowienie table\Looking up id_daty"
           TopLeft="213,811.8" />
         <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Derived Column Output2]"
+          Id="Package\Populating zamowienie table.Paths[Derived Column Output1]"
           TopLeft="295.223076923077,788.523076923077">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6364,36 +6314,12 @@ where [refTable].[ID_DANIA] = ?</property>
           Size="170.4,41.6"
           Id="Package\Populating zamowienie table\OLE DB Destination"
           TopLeft="214,888.200000000001" />
-        <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Lookup Match Output3]"
-          TopLeft="298.1,853.4">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.8000000000008"
-              Start="0,0"
-              End="0,27.3000000000008">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.3000000000008" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.84531250000038,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="172.8,41.6"
           Id="Package\Populating zamowienie table\Looking up id_dania"
           TopLeft="206,677.4" />
         <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Derived Column Output3]"
+          Id="Package\Populating zamowienie table.Paths[Derived Column Output2]"
           TopLeft="293.075524475524,650.900699300699">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6415,7 +6341,7 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Populating zamowienie table.Paths[Lookup Match Output4]"
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
           TopLeft="292.923076923077,719">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6434,7 +6360,81 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-57.0600390625,2.21153846153828,114.120078125,16"
+              BoundingBox="-48.19138671875,4.40685096153828,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\Populating zamowienie table\Looking up id_uzytkownika"
+          TopLeft="188,411.4" />
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Derived Column Output3]"
+          TopLeft="287.903846153846,388.784615384615">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.6153846153846"
+              Start="0,0"
+              End="0,15.1153846153846">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.1153846153846" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output3]"
+          TopLeft="288.551923076923,453">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.0576923076923"
+              Start="0,0"
+              End="0,17.5576923076923">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5576923076923" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,2.97415865384613,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating zamowienie table.Paths[Lookup Match Output4]"
+          TopLeft="298.1,853.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.8000000000008"
+              Start="0,0"
+              End="0,27.3000000000008">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3000000000008" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,7.84531250000038,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6479,29 +6479,6 @@ where [refTable].[ID_DANIA] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[DANIA]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating zamowienie table\Looking up id_uzytkownika">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -6584,6 +6561,29 @@ where [refTable].[ID_DANIA] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[danie]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating zamowienie table\Looking up id_uzytkownika">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[uzytkownik]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
