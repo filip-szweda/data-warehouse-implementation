@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>etl-process</Name>
-    <LastWriteTime>2022-12-19T19:25:26.2207723Z</LastWriteTime>
+    <LastWriteTime>2022-12-29T10:19:46.6263057Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>InitialData.dtsx</Name>
-      <LastWriteTime>2022-12-19T19:28:09.2319525Z</LastWriteTime>
+      <LastWriteTime>2022-12-29T10:19:46.6263057Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DataLoading.dtsx</Name>
-      <LastWriteTime>2022-12-19T19:21:15.9108112Z</LastWriteTime>
+      <LastWriteTime>2022-12-31T12:01:39.1168118Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{D2B56593-BB8C-463F-87E1-37C0245ABC36}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{FED159D8-4373-42E3-8A61-2186311ECD18}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -64,7 +64,7 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -112,7 +112,7 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Output].Columns[NAZWA]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -130,7 +130,7 @@
                       name="ID_DANIA" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Output].ExternalColumns[NAZWA]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="NAZWA" />
@@ -169,7 +169,7 @@
                       name="ID_DANIA" />
                     <outputColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Error Output].Columns[NAZWA]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Error Output].Columns[NAZWA]"
@@ -1082,7 +1082,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]"
@@ -1121,7 +1121,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -1173,7 +1173,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NR_DANIA]" />
                     <inputColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].Columns[NAZWA]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1181,7 +1181,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]" />
                     <inputColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].Columns[przedzial_cenowy]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="przedzial_cenowy"
@@ -1200,13 +1200,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="nr_dania" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="nazwa" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[przedzial_cenowy]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="przedzial_cenowy" />
@@ -1260,7 +1260,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
               </properties>
               <connections>
                 <connection
@@ -1280,7 +1280,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].Columns[NAZWA]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1298,7 +1298,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="Param_0">
@@ -1400,7 +1400,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
               </properties>
               <connections>
                 <connection
@@ -1417,7 +1417,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[NAZWA]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1446,7 +1446,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[przedzial_cenowy]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="przedzial_cenowy"
@@ -1464,7 +1464,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[nazwa]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="nazwa" />
@@ -1474,7 +1474,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="nr_dania" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[przedzial_cenowy]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="przedzial_cenowy" />
@@ -1589,7 +1589,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating danie table\Sort by nr dania.Inputs[Sort Input].Columns[NAZWA]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1644,7 +1644,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]"
@@ -1759,7 +1759,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -1768,7 +1768,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -1789,7 +1789,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\Droping old values.Inputs[Lookup Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -1880,7 +1880,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -1925,7 +1925,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -1941,7 +1941,7 @@ where [refTable].[nazwa] = ?</property>
                       name="id_serwisu_reklamowego" />
                     <externalMetadataColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="nazwa" />
@@ -2006,7 +2006,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -2036,7 +2036,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2058,7 +2058,7 @@ where [refTable].[nazwa] = ?</property>
                       name="KOSZT" />
                     <externalMetadataColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SERWIS_REKLAMOWY]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="SERWIS_REKLAMOWY" />
@@ -2095,7 +2095,7 @@ where [refTable].[nazwa] = ?</property>
                       specialFlags="2" />
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
@@ -2130,7 +2130,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\Sort.Inputs[Sort Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -2158,7 +2158,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\Sort.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating serwis_reklamowy table\Sort.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
@@ -2343,7 +2343,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_kierunkowy]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2365,7 +2365,7 @@ where [refTable].[nazwa] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_telefonu]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2387,7 +2387,7 @@ where [refTable].[nazwa] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[imie_nazwisko]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2486,7 +2486,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -2495,7 +2495,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -2516,7 +2516,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating user table\Droping old values.Inputs[Lookup Input].Columns[imie_nazwisko]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="60"
                       cachedName="imie_nazwisko"
@@ -2606,7 +2606,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  name="DefaultCodePage">1250</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -2651,7 +2651,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nr_kierunkowy]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="nr_kierunkowy"
@@ -2659,7 +2659,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_kierunkowy]" />
                     <inputColumn
                       refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nr_telefonu]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="nr_telefonu"
@@ -2667,7 +2667,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       lineageId="Package\Populating user table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_telefonu]" />
                     <inputColumn
                       refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[imie_nazwisko]"
-                      cachedCodepage="1252"
+                      cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="60"
                       cachedName="imie_nazwisko"
@@ -2682,19 +2682,19 @@ where [refTable].[imie_nazwisko] = ?</property>
                       name="id_uzytkownika" />
                     <externalMetadataColumn
                       refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[imie_nazwisko]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="100"
                       name="imie_nazwisko" />
                     <externalMetadataColumn
                       refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_kierunkowy]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="10"
                       name="nr_kierunkowy" />
                     <externalMetadataColumn
                       refId="Package\Populating user table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_telefonu]"
-                      codePage="1252"
+                      codePage="1250"
                       dataType="str"
                       length="10"
                       name="nr_telefonu" />
@@ -2739,11 +2739,11 @@ where [refTable].[imie_nazwisko] = ?</property>
                   name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 1].Columns[nr_kierunkowy]"
+                      refId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 1].Columns[countryCode]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="nr_kierunkowy"
-                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_kierunkowy]">
+                      cachedName="countryCode"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[countryCode]">
                       <properties>
                         <property
                           containsID="true"
@@ -2753,11 +2753,11 @@ where [refTable].[imie_nazwisko] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 1].Columns[nr_telefonu]"
+                      refId="Package\Populating user table\Remove unnecessary columns.Inputs[Union All Input 1].Columns[phoneNumber]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="nr_telefonu"
-                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_telefonu]">
+                      cachedName="phoneNumber"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[phoneNumber]">
                       <properties>
                         <property
                           containsID="true"
@@ -2835,7 +2835,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                   dataType="System.String"
                   description="The XML data used by the XML source adapter."
                   expressionType="Notify"
-                  name="XMLData">C:\Users\MateuszGrzonkas18426\Documents\HD\data-warehouse-implementation\data-warehouse-implementation\etl-process\etl-process\source_xml\users_t1.xml</property>
+                  name="XMLData">D:\workspaces\data-generator-for-data-sources\out\api\users_t1.xml</property>
                 <property
                   dataType="System.String"
                   description="The variable used by the XML source adapter to specify XML data."
@@ -2848,7 +2848,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                   dataType="System.String"
                   description="The XML schema definition used by the XML source adapter."
                   expressionType="Notify"
-                  name="XMLSchemaDefinition">C:\Users\MateuszGrzonkas18426\Documents\HD\data-warehouse-implementation\data-warehouse-implementation\etl-process\etl-process\source_xml\api_users.xsd</property>
+                  name="XMLSchemaDefinition">D:\workspaces\data-generator-for-data-sources\data_schemas\api\api_users.xsd</property>
                 <property
                   dataType="System.Boolean"
                   description="Identifies whether or not to use inline schema."
@@ -2891,24 +2891,24 @@ where [refTable].[imie_nazwisko] = ?</property>
                       name="lastName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_kierunkowy]"
+                      refId="Package\Populating user table\XML Source.Outputs[user].Columns[countryCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[countryCode]"
                       length="255"
-                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_kierunkowy]"
-                      name="nr_kierunkowy"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[countryCode]"
+                      name="countryCode"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_telefonu]"
+                      refId="Package\Populating user table\XML Source.Outputs[user].Columns[phoneNumber]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Populating user table\XML Source.Outputs[user].ExternalColumns[phoneNumber]"
                       length="255"
-                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[nr_telefonu]"
-                      name="nr_telefonu"
+                      lineageId="Package\Populating user table\XML Source.Outputs[user].Columns[phoneNumber]"
+                      name="phoneNumber"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -3074,15 +3074,15 @@ where [refTable].[imie_nazwisko] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="184,42"
+          Size="184,41.6"
           Id="Package\Populating danie table"
           TopLeft="391,51" />
         <NodeLayout
-          Size="244,42"
+          Size="244,41.6"
           Id="Package\Populating serwis_reklamowy table"
           TopLeft="105,51" />
         <NodeLayout
-          Size="178,42"
+          Size="177.6,41.6"
           Id="Package\Populating user table"
           TopLeft="628,50" />
       </GraphLayout>
@@ -3480,39 +3480,43 @@ where [refTable].[imie_nazwisko] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="134,42"
-          Id="Package\Populating user table\XML Source"
-          TopLeft="179.5,26.5" />
+          Size="167.2,41.6"
+          Id="Package\Populating user table\Droping old values"
+          TopLeft="174.761904275336,441.333333333333" />
         <NodeLayout
-          Size="206,42"
+          Size="168,41.6"
+          Id="Package\Populating user table\Convert to unicode"
+          TopLeft="178,334" />
+        <NodeLayout
+          Size="220.8,41.6"
+          Id="Package\Populating user table\Remove unnecessary columns"
+          TopLeft="155,227.5" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Populating user table\XML Source"
+          TopLeft="198.785714614148,28.0294117861553" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Populating user table\OLE DB Destination"
+          TopLeft="171.648351283425,542.321266936152" />
+        <NodeLayout
+          Size="206.4,41.6"
           Id="Package\Populating user table\Add imie_nazwisko column"
           TopLeft="163,128" />
         <EdgeLayout
           Id="Package\Populating user table.Paths[user]"
-          TopLeft="246.5,68.5">
+          TopLeft="266.092857307074,69.6294117861553">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19.5,59.5"
+              EndConnector="0,58.3705882138447"
               Start="0,0"
-              End="19.5,52">
+              End="0,50.8705882138447">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.75"
-                    Point2="0,29.75"
-                    Point3="4,29.75" />
-                  <mssgle:LineSegment
-                    End="15.5,29.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15.5,29.75"
-                    Point2="19.5,29.75"
-                    Point3="19.5,33.75" />
-                  <mssgle:LineSegment
-                    End="19.5,52" />
+                    End="0,50.8705882138447" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3521,36 +3525,6 @@ where [refTable].[imie_nazwisko] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="221,42"
-          Id="Package\Populating user table\Remove unnecessary columns"
-          TopLeft="155,227.5" />
-        <EdgeLayout
-          Id="Package\Populating user table.Paths[Derived Column Output]"
-          TopLeft="265.75,170">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57.5"
-              Start="0,0"
-              End="0,50">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Populating user table\Convert to unicode"
-          TopLeft="178,334" />
         <EdgeLayout
           Id="Package\Populating user table.Paths[Union All Output 1]"
           TopLeft="263.75,269.5">
@@ -3573,36 +3547,44 @@ where [refTable].[imie_nazwisko] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="167,42"
-          Id="Package\Populating user table\Droping old values"
-          TopLeft="203.333333333333,441.333333333333" />
         <EdgeLayout
-          Id="Package\Populating user table.Paths[Data Conversion Output]"
-          TopLeft="262,376">
+          Id="Package\Populating user table.Paths[Lookup No Match Output]"
+          TopLeft="257.805127779381,482.933333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="24.8333333333334,65.3333333333333"
+              EndConnector="0,59.3879336028189"
               Start="0,0"
-              End="24.8333333333334,57.8333333333333">
+              End="0,51.8879336028189">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.6666666666666" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.6666666666666"
-                    Point2="0,32.6666666666666"
-                    Point3="4,32.6666666666666" />
+                    End="0,51.8879336028189" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.1392793014095,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating user table.Paths[Derived Column Output]"
+          TopLeft="265.75,170">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.5"
+              Start="0,0"
+              End="0,50">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="20.8333333333334,32.6666666666666" />
-                  <mssgle:CubicBezierSegment
-                    Point1="20.8333333333334,32.6666666666666"
-                    Point2="24.8333333333334,32.6666666666666"
-                    Point3="24.8333333333334,36.6666666666666" />
-                  <mssgle:LineSegment
-                    End="24.8333333333334,57.8333333333333" />
+                    End="0,50" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3611,44 +3593,26 @@ where [refTable].[imie_nazwisko] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Populating user table\OLE DB Destination"
-          TopLeft="193.076923076923,544.615384615385" />
         <EdgeLayout
-          Id="Package\Populating user table.Paths[Lookup No Match Output]"
-          TopLeft="286.833333333333,483.333333333333">
+          Id="Package\Populating user table.Paths[Data Conversion Output]"
+          TopLeft="260.180952137668,375.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.25641025641028,61.2820512820513"
+              EndConnector="0,65.733333333333"
               Start="0,0"
-              End="-8.25641025641028,53.7820512820513">
+              End="0,58.233333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.6410256410257" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.6410256410257"
-                    Point2="0,30.6410256410257"
-                    Point3="-4,30.6410256410257" />
-                  <mssgle:LineSegment
-                    End="-4.25641025641028,30.6410256410257" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.25641025641028,30.6410256410257"
-                    Point2="-8.25641025641028,30.6410256410257"
-                    Point3="-8.25641025641028,34.6410256410257" />
-                  <mssgle:LineSegment
-                    End="-8.25641025641028,53.7820512820513" />
+                    End="0,58.233333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-59.9345918469551,35.6410256410257,111.6127734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3660,7 +3624,7 @@ where [refTable].[imie_nazwisko] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3670,7 +3634,7 @@ where [refTable].[imie_nazwisko] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
