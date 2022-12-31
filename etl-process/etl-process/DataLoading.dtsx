@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{AB0982C8-8BFA-4549-BFAF-25B632781C56}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{1BF69A20-37AB-44FE-AC28-513DF048BF21}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -3513,7 +3513,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="10"
+                      length="2"
                       lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]"
                       name="dzien"
                       truncationRowDisposition="FailComponent">
@@ -3522,13 +3522,13 @@ where [refTable].[imie_nazwisko] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,10,1250)([DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) &lt; 10 ? "0" + (DT_STR,10,1250)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) : (DT_STR,10,1250)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}))</property>
+                          name="Expression">(DT_STR,2,1250)([DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) &lt; 10 ? "0" + (DT_STR,2,1250)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) : (DT_STR,2,1250)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,10,1250)(DAY(DATA_UTWORZENIA) &lt; 10 ? "0" + (DT_STR,10,1250)DAY(DATA_UTWORZENIA) : (DT_STR,10,1250)DAY(DATA_UTWORZENIA))</property>
+                          name="FriendlyExpression">(DT_STR,2,1250)(DAY(DATA_UTWORZENIA) &lt; 10 ? "0" + (DT_STR,2,1250)DAY(DATA_UTWORZENIA) : (DT_STR,2,1250)DAY(DATA_UTWORZENIA))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3537,7 +3537,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="10"
+                      length="11"
                       lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]"
                       name="rok"
                       truncationRowDisposition="FailComponent">
@@ -3546,13 +3546,13 @@ where [refTable].[imie_nazwisko] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,10,1250)[YEAR](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]})</property>
+                          name="Expression">(DT_STR,11,1250)[YEAR](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,10,1250)YEAR(DATA_UTWORZENIA)</property>
+                          name="FriendlyExpression">(DT_STR,11,1250)YEAR(DATA_UTWORZENIA)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3561,7 +3561,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="10"
+                      length="11"
                       lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]"
                       name="miesiac"
                       truncationRowDisposition="FailComponent">
@@ -3570,13 +3570,13 @@ where [refTable].[imie_nazwisko] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,10,1250)([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="Expression">(DT_STR,11,1250)([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,10,1250)(MONTH(DATA_UTWORZENIA) == 1 ? "styczeń" : (MONTH(DATA_UTWORZENIA) == 2 ? "luty" : (MONTH(DATA_UTWORZENIA) == 3 ? "marzec" : (MONTH(DATA_UTWORZENIA) == 4 ? "kwiecień" : (MONTH(DATA_UTWORZENIA) == 5 ? "maj" : (MONTH(DATA_UTWORZENIA) == 6 ? "czerwiec" : (MONTH(DATA_UTWORZENIA) == 7 ? "lipiec" : (MONTH(DATA_UTWORZENIA) == 8 ? "sierpień" : (MONTH(DATA_UTWORZENIA) == 9 ? "wrzesień" : (MONTH(DATA_UTWORZENIA) == 10 ? "październik" : (MONTH(DATA_UTWORZENIA) == 11 ? "listopad" : (MONTH(DATA_UTWORZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="FriendlyExpression">(DT_STR,11,1250)(MONTH(DATA_UTWORZENIA) == 1 ? "styczeń" : (MONTH(DATA_UTWORZENIA) == 2 ? "luty" : (MONTH(DATA_UTWORZENIA) == 3 ? "marzec" : (MONTH(DATA_UTWORZENIA) == 4 ? "kwiecień" : (MONTH(DATA_UTWORZENIA) == 5 ? "maj" : (MONTH(DATA_UTWORZENIA) == 6 ? "czerwiec" : (MONTH(DATA_UTWORZENIA) == 7 ? "lipiec" : (MONTH(DATA_UTWORZENIA) == 8 ? "sierpień" : (MONTH(DATA_UTWORZENIA) == 9 ? "wrzesień" : (MONTH(DATA_UTWORZENIA) == 10 ? "październik" : (MONTH(DATA_UTWORZENIA) == 11 ? "listopad" : (MONTH(DATA_UTWORZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3881,7 +3881,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <output
                   refId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Inputs[Lookup Input]">
@@ -3892,7 +3892,7 @@ where [refTable].[ID_DANIA] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania.Outputs[Lookup Match Output].Columns[cena_pojedynczego_dania]"
                       name="cena_pojedynczego_dania"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4022,7 +4022,7 @@ where [refTable].[id_dania] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[ID_DANIA]"
                       name="id_dania"
-                      truncationRowDisposition="FailComponent"
+                      truncationRowDisposition="IgnoreFailure"
                       usageType="readWrite">
                       <properties>
                         <property
@@ -4043,7 +4043,7 @@ where [refTable].[id_dania] = ?</property>
                 <output
                   refId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Populating zamowienie table\Looking up id_dania.Inputs[Lookup Input]">
@@ -4162,28 +4162,10 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[rok]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="rok"
-                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">rok</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[dzien]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="10"
+                      cachedLength="2"
                       cachedName="dzien"
                       lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]">
                       <properties>
@@ -4198,10 +4180,28 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[rok]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="rok"
+                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">rok</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[miesiac]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="10"
+                      cachedLength="11"
                       cachedName="miesiac"
                       lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]">
                       <properties>
@@ -4223,7 +4223,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                 <output
                   refId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input]">
@@ -4234,7 +4234,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Populating zamowienie table\Looking up id_daty.Outputs[Lookup Match Output].Columns[id_daty]"
                       name="id_daty"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4383,7 +4383,7 @@ where [refTable].[nr_telefonu] = ?</property>
                 <output
                   refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input]">
@@ -4394,7 +4394,7 @@ where [refTable].[nr_telefonu] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Populating zamowienie table\Looking up id_uzytkownika.Outputs[Lookup Match Output].Columns[id_uzytkownika]"
                       name="id_uzytkownika"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4541,7 +4541,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <output
                   refId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Populating zamowienie table\Looking up Promocja data.Inputs[Lookup Input]">
@@ -4552,7 +4552,7 @@ where [refTable].[ID_DANIA] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[ID_PROMOCJI]"
                       name="ID_PROMOCJI"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4566,7 +4566,7 @@ where [refTable].[ID_DANIA] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA]"
                       name="DATA_ROZPOCZECIA"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4580,7 +4580,7 @@ where [refTable].[ID_DANIA] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA]"
                       name="DATA_ZAKONCZENIA"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4830,7 +4830,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -5388,26 +5388,26 @@ where [refTable].[ID_DANIA] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-101.590467525502,47.5764725401328"
+              EndConnector="-67.4571341921684,47.5764725401328"
               Start="0,0"
-              End="-101.590467525502,40.0764725401328">
+              End="-67.4571341921684,40.0764725401328">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.7882362700664" />
+                    End="0,24.3328545425567" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.7882362700664"
-                    Point2="0,23.7882362700664"
-                    Point3="-4,23.7882362700664" />
+                    Point1="0,24.3328545425567"
+                    Point2="0,28.3328545425567"
+                    Point3="-4,28.3328545425567" />
                   <mssgle:LineSegment
-                    End="-97.5904675255017,23.7882362700664" />
+                    End="-63.4571341921684,28.3328545425567" />
                   <mssgle:CubicBezierSegment
-                    Point1="-97.5904675255017,23.7882362700664"
-                    Point2="-101.590467525502,23.7882362700664"
-                    Point3="-101.590467525502,27.7882362700664" />
+                    Point1="-63.4571341921684,28.3328545425567"
+                    Point2="-67.4571341921684,28.3328545425567"
+                    Point3="-67.4571341921684,32.3328545425567" />
                   <mssgle:LineSegment
-                    End="-101.590467525502,40.0764725401328" />
+                    End="-67.4571341921684,40.0764725401328" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6422,7 +6422,7 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.84531250000038,96.3827734375,11.609375"
+              BoundingBox="-57.0600390625,5.65000000000038,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
