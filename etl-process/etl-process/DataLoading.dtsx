@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="77"
-  DTS:VersionGUID="{4777D78D-983D-48B7-8A40-BB5110DF8E71}">
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{C0D5B308-892F-4BCA-AB1C-4E1C2857F8C7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1689,6 +1689,1366 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               endId="Package\Populating danie table\Calculating PriceRange.Inputs[Input 0]"
               name="Sort Output"
               startId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populating promocja table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{41D36E92-266D-4901-9EA9-B129C2736806}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populating promocja table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populating promocja table\BazaZamowien(Zamowienia)"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="BazaZamowien(Zamowienia)"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[PROMOCJE]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Connections[OleDbConnection]"
+                  connectionManagerID="{DD2CA1E7-1830-495F-851F-972443195656}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.baza-zamowien]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[nr_promocji]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[ID_PROMOCJI]"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[nr_promocji]"
+                      name="nr_promocji"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[wartosc_procentowa]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[WARTOSC]"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[wartosc_procentowa]"
+                      name="wartosc_procentowa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[DATA_ROZPOCZECIA]"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]"
+                      name="DATA_ROZPOCZECIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[DATA_ZAKONCZENIA]"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]"
+                      name="DATA_ZAKONCZENIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[ID_DANIA]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[ID_DANIA]"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[ID_DANIA]"
+                      name="ID_DANIA"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[ID_PROMOCJI]"
+                      dataType="i4"
+                      name="ID_PROMOCJI" />
+                    <externalMetadataColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[WARTOSC]"
+                      dataType="i4"
+                      name="WARTOSC" />
+                    <externalMetadataColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[DATA_ROZPOCZECIA]"
+                      dataType="dbDate"
+                      name="DATA_ROZPOCZECIA" />
+                    <externalMetadataColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[DATA_ZAKONCZENIA]"
+                      dataType="dbDate"
+                      name="DATA_ZAKONCZENIA" />
+                    <externalMetadataColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[ID_DANIA]"
+                      dataType="i4"
+                      name="ID_DANIA" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[ID_PROMOCJI]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[ID_PROMOCJI]"
+                      name="ID_PROMOCJI" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[WARTOSC]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[WARTOSC]"
+                      name="WARTOSC" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[DATA_ROZPOCZECIA]"
+                      dataType="dbDate"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[DATA_ROZPOCZECIA]"
+                      name="DATA_ROZPOCZECIA" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[DATA_ZAKONCZENIA]"
+                      dataType="dbDate"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[DATA_ZAKONCZENIA]"
+                      name="DATA_ZAKONCZENIA" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[ID_DANIA]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[ID_DANIA]"
+                      name="ID_DANIA" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calculating data_rozpoczecia d-m-y"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Inputs[Derived Column Input].Columns[DATA_ROZPOCZECIA]"
+                      cachedDataType="dbDate"
+                      cachedName="DATA_ROZPOCZECIA"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[dzien]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[dzien]"
+                      name="dzien"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,2,1250)([DAY](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) &lt; 10 ? "0" + (DT_STR,2,1250)[DAY](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) : (DT_STR,2,1250)[DAY](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,2,1250)(DAY(DATA_ROZPOCZECIA) &lt; 10 ? "0" + (DT_STR,2,1250)DAY(DATA_ROZPOCZECIA) : (DT_STR,2,1250)DAY(DATA_ROZPOCZECIA))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[rok]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[rok]"
+                      name="rok"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,11,1250)[YEAR](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,11,1250)YEAR(DATA_ROZPOCZECIA)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[miesiac]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[miesiac]"
+                      name="miesiac"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,11,1250)([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,11,1250)(MONTH(DATA_ROZPOCZECIA) == 1 ? "styczeń" : (MONTH(DATA_ROZPOCZECIA) == 2 ? "luty" : (MONTH(DATA_ROZPOCZECIA) == 3 ? "marzec" : (MONTH(DATA_ROZPOCZECIA) == 4 ? "kwiecień" : (MONTH(DATA_ROZPOCZECIA) == 5 ? "maj" : (MONTH(DATA_ROZPOCZECIA) == 6 ? "czerwiec" : (MONTH(DATA_ROZPOCZECIA) == 7 ? "lipiec" : (MONTH(DATA_ROZPOCZECIA) == 8 ? "sierpień" : (MONTH(DATA_ROZPOCZECIA) == 9 ? "wrzesień" : (MONTH(DATA_ROZPOCZECIA) == 10 ? "październik" : (MONTH(DATA_ROZPOCZECIA) == 11 ? "listopad" : (MONTH(DATA_ROZPOCZECIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calculating data_zakonczenia d-m-y"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input].Columns[DATA_ZAKONCZENIA]"
+                      cachedDataType="dbDate"
+                      cachedName="DATA_ZAKONCZENIA"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input].Columns[dzien]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="dzien"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[dzien]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,2,1250)([DAY](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) &lt; 10 ? "0" + (DT_STR,2,1250)[DAY](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) : (DT_STR,2,1250)[DAY](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,2,1250)(DAY(DATA_ZAKONCZENIA) &lt; 10 ? "0" + (DT_STR,2,1250)DAY(DATA_ZAKONCZENIA) : (DT_STR,2,1250)DAY(DATA_ZAKONCZENIA))</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input].Columns[rok]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="rok"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[rok]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,11,1250)[YEAR](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,11,1250)YEAR(DATA_ZAKONCZENIA)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input].Columns[miesiac]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="miesiac"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[miesiac]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,11,1250)([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,11,1250)(MONTH(DATA_ZAKONCZENIA) == 1 ? "styczeń" : (MONTH(DATA_ZAKONCZENIA) == 2 ? "luty" : (MONTH(DATA_ZAKONCZENIA) == 3 ? "marzec" : (MONTH(DATA_ZAKONCZENIA) == 4 ? "kwiecień" : (MONTH(DATA_ZAKONCZENIA) == 5 ? "maj" : (MONTH(DATA_ZAKONCZENIA) == 6 ? "czerwiec" : (MONTH(DATA_ZAKONCZENIA) == 7 ? "lipiec" : (MONTH(DATA_ZAKONCZENIA) == 8 ? "sierpień" : (MONTH(DATA_ZAKONCZENIA) == 9 ? "wrzesień" : (MONTH(DATA_ZAKONCZENIA) == 10 ? "październik" : (MONTH(DATA_ZAKONCZENIA) == 11 ? "listopad" : (MONTH(DATA_ZAKONCZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating promocja table\Calculating liczba_dni"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calculating liczba_dni"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating promocja table\Calculating liczba_dni.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Calculating liczba_dni.Inputs[Derived Column Input].Columns[DATA_ZAKONCZENIA]"
+                      cachedDataType="dbDate"
+                      cachedName="DATA_ZAKONCZENIA"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Populating promocja table\Calculating liczba_dni.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Output].Columns[liczba_dni]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Output].Columns[liczba_dni]"
+                      name="liczba_dni"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DATEDIFF]("D",#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]},#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEDIFF("D",DATA_ZAKONCZENIA,DATA_ZAKONCZENIA)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Populating promocja table\Calculating liczba_dni.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating promocja table\Calculating upust"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calculating upust"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating promocja table\Calculating upust.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Calculating upust.Inputs[Derived Column Input].Columns[wartosc_procentowa]"
+                      cachedDataType="i4"
+                      cachedName="wartosc_procentowa"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[wartosc_procentowa]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Calculating upust.Inputs[Derived Column Input].Columns[cena_objetego_dania]"
+                      cachedDataType="r8"
+                      cachedName="cena_objetego_dania"
+                      lineageId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Match Output].Columns[cena_objetego_dania]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Populating promocja table\Calculating upust.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Output].Columns[upust]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Output].Columns[upust]"
+                      name="upust"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Match Output].Columns[cena_objetego_dania]} * #{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[wartosc_procentowa]} / 100</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">cena_objetego_dania * wartosc_procentowa / 100</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Populating promocja table\Calculating upust.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating promocja table\Looking up cena_objetego_dania"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Looking up cena_objetego_dania"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DANIA]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DANIA]) [refTable]
+where [refTable].[ID_DANIA] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_DANIA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NAZWA" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="CENA" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[ID_DANIA]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating promocja table\Looking up cena_objetego_dania.Connections[OleDbConnection]"
+                  connectionManagerID="{DD2CA1E7-1830-495F-851F-972443195656}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.baza-zamowien]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating promocja table\Looking up cena_objetego_dania.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Looking up cena_objetego_dania.Inputs[Lookup Input].Columns[ID_DANIA]"
+                      cachedDataType="i4"
+                      cachedName="ID_DANIA"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[ID_DANIA]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ID_DANIA</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up cena_objetego_dania.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Match Output].Columns[cena_objetego_dania]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Match Output].Columns[cena_objetego_dania]"
+                      name="cena_objetego_dania"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CENA</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up cena_objetego_dania.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up cena_objetego_dania.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating promocja table\Looking up id_dania"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Looking up id_dania"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[danie]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[danie]) [refTable]
+where [refTable].[nr_dania] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="przedzial_cenowy" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[ID_DANIA]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating promocja table\Looking up id_dania.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating promocja table\Looking up id_dania.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Looking up id_dania.Inputs[Lookup Input].Columns[id_dania]"
+                      cachedDataType="i4"
+                      cachedName="ID_DANIA"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[ID_DANIA]"
+                      name="id_dania"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">nr_dania</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_dania</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating promocja table\Looking up id_dania.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up id_dania.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Looking up id_dania.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up id_dania.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Looking up id_dania.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up id_dania.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up id_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Looking up id_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up id_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Looking up id_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Looking up id_daty_rozpoczecia"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[data]) [refTable]
+where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[dzien]};#{Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[rok]};#{Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[miesiac]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input].Columns[dzien]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="dzien"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[dzien]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">dzien</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input].Columns[rok]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="rok"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[rok]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">rok</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input].Columns[miesiac]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="miesiac"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[miesiac]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">miesiac</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Match Output].Columns[id_daty_rozpoczecia]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Match Output].Columns[id_daty_rozpoczecia]"
+                      name="id_daty_rozpoczecia"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_daty</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating promocja table\Looking up id_daty_zakonczenia"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Looking up id_daty_zakonczenia"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[data]) [refTable]
+where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[dzien]};#{Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[rok]};#{Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[miesiac]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input].Columns[rok]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="rok"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[rok]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">rok</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input].Columns[miesiac]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="miesiac"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[miesiac]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">miesiac</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input].Columns[dzien]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="dzien"
+                      lineageId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[dzien]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">dzien</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Match Output].Columns[id_daty_zakonczenia]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Match Output].Columns[id_daty_zakonczenia]"
+                      name="id_daty_zakonczenia"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_daty</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populating promocja table.Paths[Derived Column Output]"
+              endId="Package\Populating promocja table\Calculating upust.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[Derived Column Output1]"
+              endId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[Derived Column Output2]"
+              endId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[Derived Column Output3]"
+              endId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[Lookup Match Output]"
+              endId="Package\Populating promocja table\Looking up id_dania.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[Lookup Match Output1]"
+              endId="Package\Populating promocja table\Calculating liczba_dni.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating promocja table\Looking up id_dania.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[Lookup Match Output2]"
+              endId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[OLE DB Source Output]"
+              endId="Package\Populating promocja table\Looking up cena_objetego_dania.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -3478,20 +4838,20 @@ where [refTable].[imie_nazwisko] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating zamowienie table\Calculating Data data"
+              refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Calculating Data data"
+              name="Calculating data_utworzenia d-m-y"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input]"
+                  refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input].Columns[DATA_UTWORZENIA]"
+                      refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Inputs[Derived Column Input].Columns[DATA_UTWORZENIA]"
                       cachedDataType="dbDate"
                       cachedName="DATA_UTWORZENIA"
                       lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]" />
@@ -3501,20 +4861,20 @@ where [refTable].[imie_nazwisko] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output]"
+                  refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]"
+                      refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[dzien]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="2"
-                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]"
+                      lineageId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[dzien]"
                       name="dzien"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -3532,13 +4892,13 @@ where [refTable].[imie_nazwisko] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]"
+                      refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[rok]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="11"
-                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]"
+                      lineageId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[rok]"
                       name="rok"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -3556,13 +4916,13 @@ where [refTable].[imie_nazwisko] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]"
+                      refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[miesiac]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="11"
-                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]"
+                      lineageId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[miesiac]"
                       name="miesiac"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -3583,23 +4943,23 @@ where [refTable].[imie_nazwisko] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output]"
+                  refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4150,7 +5510,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]};#{Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]};#{Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]};</property>
+                  name="ParameterMap">#{Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[dzien]};#{Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[rok]};#{Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[miesiac]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4179,7 +5539,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="dzien"
-                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[dzien]">
+                      lineageId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[dzien]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4197,7 +5557,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="rok"
-                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[rok]">
+                      lineageId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[rok]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4215,7 +5575,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="miesiac"
-                      lineageId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output].Columns[miesiac]">
+                      lineageId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[miesiac]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -5282,7 +6642,7 @@ where [refTable].[ID_DANIA] = ?</property>
               refId="Package\Populating zamowienie table.Paths[Derived Column Output1]"
               endId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Populating zamowienie table\Calculating Data data.Outputs[Derived Column Output]" />
+              startId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Derived Column Output2]"
               endId="Package\Populating zamowienie table\Looking up id_dania.Inputs[Lookup Input]"
@@ -5305,7 +6665,7 @@ where [refTable].[ID_DANIA] = ?</property>
               startId="Package\Populating zamowienie table\Looking up Promocja data.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
-              endId="Package\Populating zamowienie table\Calculating Data data.Inputs[Derived Column Input]"
+              endId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\Populating zamowienie table\Looking up id_dania.Outputs[Lookup Match Output]" />
             <path
@@ -5365,6 +6725,14 @@ where [refTable].[ID_DANIA] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Populating zamowienie table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{74B4EB46-40D6-4422-93E2-24F46C3C0ECE}"
+      DTS:From="Package\Populating danie table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Populating promocja table" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -5454,6 +6822,44 @@ where [refTable].[ID_DANIA] = ?</property>
                     Point3="98.0761991411649,31.737332154497" />
                   <mssgle:LineSegment
                     End="98.0761991411649,39.0764725401328" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="201.6,41.6"
+          Id="Package\Populating promocja table"
+          TopLeft="291.000000255449,141.470590219366" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="453.666666666667,92.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-61.8666664112181,48.8705902193657"
+              Start="0,0"
+              End="-61.8666664112181,41.3705902193657">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.8010150026741" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.8010150026741"
+                    Point2="0,19.8010150026741"
+                    Point3="-4,19.8010150026741" />
+                  <mssgle:LineSegment
+                    End="-57.8666664112181,19.8010150026741" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-57.8666664112181,19.8010150026741"
+                    Point2="-61.8666664112181,19.8010150026741"
+                    Point3="-61.8666664112181,23.8010150026741" />
+                  <mssgle:LineSegment
+                    End="-61.8666664112181,41.3705902193657" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6037,9 +7443,9 @@ where [refTable].[ID_DANIA] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Populating zamowienie table\Calculating Data data"
-          TopLeft="203.846153846154,746.923076923077" />
+          Size="242.4,41.6"
+          Id="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y"
+          TopLeft="170.846153846154,746.923076923077" />
         <NodeLayout
           Size="256.8,41.6"
           Id="Package\Populating zamowienie table\Looking up cena_pojedynczego_dania"
@@ -6280,25 +7686,25 @@ where [refTable].[ID_DANIA] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Lookup Match Output2]"
-          TopLeft="292.923076923077,719">
+          TopLeft="292.223076923077,719">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27.9230769230766"
+              EndConnector="0,27.923076923077"
               Start="0,0"
-              End="0,20.4230769230766">
+              End="0,20.423076923077">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.4230769230766" />
+                    End="0,20.423076923077" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,4.40685096153828,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,4.40685096153851,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6396,18 +7802,18 @@ where [refTable].[ID_DANIA] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating zamowienie table.Paths[Derived Column Output1]"
-          TopLeft="295.223076923077,788.523076923077">
+          TopLeft="294.523076923077,788.523076923077">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,23.276923076923"
+              EndConnector="0,23.2769230769229"
               Start="0,0"
-              End="0,15.776923076923">
+              End="0,15.7769230769229">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.776923076923" />
+                    End="0,15.7769230769229" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6589,6 +7995,324 @@ where [refTable].[ID_DANIA] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populating promocja table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="213.6,41.6"
+          Id="Package\Populating promocja table\BazaZamowien(Zamowienia)"
+          TopLeft="111.307692307692,81.0769230769231" />
+        <NodeLayout
+          Size="233.6,41.6"
+          Id="Package\Populating promocja table\Looking up cena_objetego_dania"
+          TopLeft="95.3846153846154,152.307692307692" />
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[OLE DB Source Output]"
+          TopLeft="215.146153846154,122.676923076923">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.6307692307692"
+              Start="0,0"
+              End="0,22.1307692307692">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.1307692307692" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\Populating promocja table\Looking up id_dania"
+          TopLeft="133.076923076923,226.923076923077" />
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[Lookup Match Output]"
+          TopLeft="215.830769230769,193.907692307692">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.0153846153846"
+              Start="0,0"
+              End="0,25.5153846153846">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5153846153846" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,6.9530048076923,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Populating promocja table\Calculating liczba_dni"
+          TopLeft="133.846153846154,301.846153846154" />
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[Lookup Match Output1]"
+          TopLeft="221.461538461538,268.523076923077">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.3230769230769"
+              Start="0,0"
+              End="0,25.8230769230769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.8230769230769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,7.10685096153847,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Populating promocja table\Calculating upust"
+          TopLeft="144.615384615385,367.230769230769" />
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[Derived Column Output]"
+          TopLeft="223.830769230769,343.446153846154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.7846153846153"
+              Start="0,0"
+              End="0,16.2846153846153">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.2846153846153" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="244.8,41.6"
+          Id="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y"
+          TopLeft="105.384615384615,439.076923076923" />
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[Derived Column Output1]"
+          TopLeft="226,408.830769230769">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.246153846154"
+              Start="0,0"
+              End="0,22.746153846154">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.746153846154" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="228,41.6"
+          Id="Package\Populating promocja table\Looking up id_daty_rozpoczecia"
+          TopLeft="119.230769230769,504.615384615384" />
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[Derived Column Output2]"
+          TopLeft="230.507692307692,480.676923076923">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.9384615384612"
+              Start="0,0"
+              End="0,16.4384615384612">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4384615384612" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="247.2,41.6"
+          Id="Package\Populating promocja table\Calculating data_zakonczenia d-m-y"
+          TopLeft="103.076923076923,571.846153846154" />
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[Lookup Match Output2]"
+          TopLeft="229.953846153846,546.215384615384">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.6307692307696"
+              Start="0,0"
+              End="0,18.1307692307696">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1307692307696" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,3.2606971153848,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="230.4,41.6"
+          Id="Package\Populating promocja table\Looking up id_daty_zakonczenia"
+          TopLeft="113.846153846154,636.923076923077" />
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[Derived Column Output3]"
+          TopLeft="227.861538461538,613.446153846154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.4769230769227"
+              Start="0,0"
+              End="0,15.9769230769227">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.9769230769227" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating promocja table\BazaZamowien(Zamowienia)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating promocja table\Looking up cena_objetego_dania">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DANIA]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating promocja table\Looking up id_dania">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[danie]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating promocja table\Looking up id_daty_rozpoczecia">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating promocja table\Looking up id_daty_zakonczenia">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[data]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
