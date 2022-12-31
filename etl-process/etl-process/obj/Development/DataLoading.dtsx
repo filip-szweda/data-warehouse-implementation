@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="86"
-  DTS:VersionGUID="{A85235EA-DADA-47AF-B419-409BC745CB25}">
+  DTS:VersionBuild="88"
+  DTS:VersionGUID="{EFA2B00B-4AD4-4A6A-B9FF-C0FF94E9BED0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2560,13 +2560,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[DATEDIFF]("D",#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]},#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]})</property>
+                          name="Expression">[DATEDIFF]("dd",(DT_DBTIMESTAMP)#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]},(DT_DBTIMESTAMP)#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEDIFF("D",DATA_ZAKONCZENIA,DATA_ZAKONCZENIA)</property>
+                          name="FriendlyExpression">DATEDIFF("dd",(DT_DBTIMESTAMP)DATA_ZAKONCZENIA,(DT_DBTIMESTAMP)DATA_ZAKONCZENIA)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -3761,7 +3761,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                   dataType="System.Int32"
                   description="Specifies the type of join to perform."
                   name="JoinType"
-                  typeConverter="JoinType">2</property>
+                  typeConverter="JoinType">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
@@ -9514,7 +9514,9 @@ where [refTable].[ID_DANIA] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,3.42794118317352,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
@@ -9540,7 +9542,9 @@ where [refTable].[ID_DANIA] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,3.43382332162048,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10186,7 +10190,7 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-57.0600390625,5.6500000000004,114.120078125,16"
+              BoundingBox="-48.19138671875,7.8453125000004,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
