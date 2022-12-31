@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="89"
-  DTS:VersionGUID="{DB391892-4367-4625-80A7-7C874C93D52F}">
+  DTS:VersionBuild="93"
+  DTS:VersionGUID="{E742CCC8-9B4F-4AFA-B3BF-F79E77DE17FE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1744,37 +1744,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[nr_promocji]"
-                      cachedDataType="i4"
-                      cachedName="nr_promocji"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_promocji]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[cena_objetego_dania]"
-                      cachedDataType="r8"
-                      cachedName="cena_objetego_dania"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[cena_objetego_dania]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[liczba_dni]"
-                      cachedDataType="i4"
-                      cachedName="liczba_dni"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[liczba_dni]" />
-                    <inputColumn
                       refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[wartosc_procentowa]"
                       cachedDataType="i4"
                       cachedName="wartosc_procentowa"
                       lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[wartosc_procentowa]" />
                     <inputColumn
-                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[upust]"
-                      cachedDataType="r8"
-                      cachedName="upust"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[upust]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[nazwa]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="nazwa"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nazwa]" />
+                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[id_dania]"
+                      cachedDataType="i4"
+                      cachedName="id_dania"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_dania]" />
                     <inputColumn
                       refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[id_daty_rozpoczecia]"
                       cachedDataType="i4"
@@ -1786,11 +1765,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedName="id_daty_zakonczenia"
                       lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_daty_zakonczenia]" />
                     <inputColumn
-                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[id_dania]"
+                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[nr_promocji]"
                       cachedDataType="i4"
-                      cachedName="id_dania"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_dania]" />
+                      cachedName="nr_promocji"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_promocji]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[nazwa]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="nazwa"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nazwa]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[upust]"
+                      cachedDataType="r8"
+                      cachedName="upust"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[upust]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[liczba_dni]"
+                      cachedDataType="i4"
+                      cachedName="liczba_dni"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[liczba_dni]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[cena_objetego_dania]"
+                      cachedDataType="r8"
+                      cachedName="cena_objetego_dania"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[cena_objetego_dania]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1].Columns[czy_objete_promocja]"
+                      cachedDataType="i4"
+                      cachedName="czy_objete_promocja"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[czy_objete_promocja]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1811,84 +1816,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="Keys" />
                   </properties>
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_objetych_zamowien]"
-                      dataType="ui8"
-                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_objetych_zamowien]"
-                      name="liczba_objetych_zamowien">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_promocji]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[cena_objetego_dania]"
-                      dataType="r8"
-                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[cena_objetego_dania]"
-                      name="cena_objetego_dania">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[cena_objetego_dania]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_dni]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_dni]"
-                      name="liczba_dni">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[liczba_dni]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[wartosc_procentowa]"
                       dataType="i4"
@@ -1916,44 +1843,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[upust]"
-                      dataType="r8"
-                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[upust]"
-                      name="upust">
+                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[id_dania]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[id_dania]"
+                      name="id_dania">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[upust]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[nazwa]"
-                      codePage="1250"
-                      dataType="str"
-                      length="100"
-                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[nazwa]"
-                      name="nazwa">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nazwa]}</property>
+                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_dania]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -2048,21 +1947,127 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[id_dania]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[id_dania]"
-                      name="id_dania">
+                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[nazwa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[nazwa]"
+                      name="nazwa">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_dania]}</property>
+                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nazwa]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
                           name="AggregationType"
                           typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[upust]"
+                      dataType="r8"
+                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[upust]"
+                      name="upust">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[upust]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_dni]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_dni]"
+                      name="liczba_dni">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[liczba_dni]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[cena_objetego_dania]"
+                      dataType="r8"
+                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[cena_objetego_dania]"
+                      name="cena_objetego_dania">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[cena_objetego_dania]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_objetych_zamowien]"
+                      dataType="i8"
+                      lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_objetych_zamowien]"
+                      name="liczba_objetych_zamowien">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[czy_objete_promocja]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
                         <property
                           dataType="System.Int32"
                           description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
@@ -2535,6 +2540,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedDataType="dbDate"
                       cachedName="DATA_ZAKONCZENIA"
                       lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Calculating liczba_dni.Inputs[Derived Column Input].Columns[DATA_ROZPOCZECIA]"
+                      cachedDataType="dbDate"
+                      cachedName="DATA_ROZPOCZECIA"
+                      lineageId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2560,13 +2570,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[DATEDIFF]("dd",(DT_DBTIMESTAMP)#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]},(DT_DBTIMESTAMP)#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]})</property>
+                          name="Expression">[DATEDIFF]("dd",(DT_DBTIMESTAMP)#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]},(DT_DBTIMESTAMP)#{Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">DATEDIFF("dd",(DT_DBTIMESTAMP)DATA_ZAKONCZENIA,(DT_DBTIMESTAMP)DATA_ZAKONCZENIA)</property>
+                          name="FriendlyExpression">DATEDIFF("dd",(DT_DBTIMESTAMP)DATA_ROZPOCZECIA,(DT_DBTIMESTAMP)DATA_ZAKONCZENIA)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2683,184 +2693,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </outputs>
             </component>
             <component
-              refId="Package\Populating promocja table\Checking if under promotion"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Checking if under promotion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Populating promocja table\Checking if under promotion.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Populating promocja table\Checking if under promotion.Inputs[Conditional Split Input].Columns[czy_objete_promocja]"
-                      cachedDataType="i4"
-                      cachedName="czy_objete_promocja"
-                      lineageId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output].Columns[czy_objete_promocja]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Populating promocja table\Checking if under promotion.Outputs[ObjetePromocja]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="ObjetePromocja"
-                  synchronousInputId="Package\Populating promocja table\Checking if under promotion.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output].Columns[czy_objete_promocja]} == 1</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">czy_objete_promocja == 1</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating promocja table\Checking if under promotion.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\Populating promocja table\Checking if under promotion.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating promocja table\Checking if under promotion.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Populating promocja table\Checking if under promotion.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Checking if under promotion.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Checking if under promotion.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Populating promocja table\Checking if under promotion.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Checking if under promotion.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Populating promocja table\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Populating promocja table\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Populating promocja table\Conditional Split.Inputs[Conditional Split Input].Columns[nr_zamowienia]"
-                      cachedDataType="i4"
-                      cachedName="nr_zamowienia"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_zamowienia]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Populating promocja table\Conditional Split.Outputs[NieMaZamowien]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="NieMaZamowien"
-                  synchronousInputId="Package\Populating promocja table\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_zamowienia]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(nr_zamowienia)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating promocja table\Conditional Split.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\Populating promocja table\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating promocja table\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Populating promocja table\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Populating promocja table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Populating promocja table\Creating nazwa"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -2937,79 +2769,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\Populating promocja table\Creating nazwa.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Populating promocja table\Creating nazwa.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Populating promocja table\Derived Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Populating promocja table\Derived Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Populating promocja table\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Output].Columns[liczba_objetych_zamowien]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Output].Columns[liczba_objetych_zamowien]"
-                      name="liczba_objetych_zamowien"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">0</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">0</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Populating promocja table\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3105,15 +2864,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output].Columns[id_dania]"
                       name="id_dania"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output].Columns[id_daty]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output].ExternalColumns[id_daty]"
-                      lineageId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output].Columns[id_daty]"
-                      name="id_daty"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3187,11 +2937,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="i4"
                       lineageId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Error Output].Columns[id_dania]"
                       name="id_dania" />
-                    <outputColumn
-                      refId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Error Output].Columns[id_daty]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Error Output].Columns[id_daty]"
-                      name="id_daty" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3923,7 +3668,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                   dataType="System.Int32"
                   description="Specifies the type of join to perform."
                   name="JoinType"
-                  typeConverter="JoinType">0</property>
+                  typeConverter="JoinType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
@@ -3950,10 +3695,30 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       cachedSortKeyPosition="1"
                       lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[id_dania]" />
                     <inputColumn
+                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[nr_promocji]"
+                      cachedDataType="i4"
+                      cachedName="nr_promocji"
+                      lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[nr_promocji]" />
+                    <inputColumn
                       refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[wartosc_procentowa]"
                       cachedDataType="i4"
                       cachedName="wartosc_procentowa"
                       lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[wartosc_procentowa]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[cena_objetego_dania]"
+                      cachedDataType="r8"
+                      cachedName="cena_objetego_dania"
+                      lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[cena_objetego_dania]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[liczba_dni]"
+                      cachedDataType="i4"
+                      cachedName="liczba_dni"
+                      lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[liczba_dni]" />
+                    <inputColumn
+                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[upust]"
+                      cachedDataType="r8"
+                      cachedName="upust"
+                      lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[upust]" />
                     <inputColumn
                       refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[id_daty_rozpoczecia]"
                       cachedDataType="i4"
@@ -3965,32 +3730,12 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       cachedName="id_daty_zakonczenia"
                       lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[id_daty_zakonczenia]" />
                     <inputColumn
-                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[nr_promocji]"
-                      cachedDataType="i4"
-                      cachedName="nr_promocji"
-                      lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[nr_promocji]" />
-                    <inputColumn
                       refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[nazwa]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="nazwa"
                       lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[nazwa]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[upust]"
-                      cachedDataType="r8"
-                      cachedName="upust"
-                      lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[upust]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[liczba_dni]"
-                      cachedDataType="i4"
-                      cachedName="liczba_dni"
-                      lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[liczba_dni]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[cena_objetego_dania]"
-                      cachedDataType="r8"
-                      cachedName="cena_objetego_dania"
-                      lineageId="Package\Populating promocja table\Sort.Outputs[Sort Output].Columns[cena_objetego_dania]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4006,15 +3751,10 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       cachedSortKeyPosition="1"
                       lineageId="Package\Populating promocja table\Sort 1.Outputs[Sort Output].Columns[id_dania]" />
                     <inputColumn
-                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Right Input].Columns[id_daty]"
+                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Right Input].Columns[czy_objete_promocja]"
                       cachedDataType="i4"
-                      cachedName="id_daty"
-                      lineageId="Package\Populating promocja table\Sort 1.Outputs[Sort Output].Columns[id_daty]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\Merge Join.Inputs[Merge Join Right Input].Columns[nr_zamowienia]"
-                      cachedDataType="i4"
-                      cachedName="nr_zamowienia"
-                      lineageId="Package\Populating promocja table\Sort 1.Outputs[Sort Output].Columns[nr_zamowienia]" />
+                      cachedName="czy_objete_promocja"
+                      lineageId="Package\Populating promocja table\Sort 1.Outputs[Sort Output].Columns[czy_objete_promocja]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4025,6 +3765,19 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                   isSorted="true"
                   name="Merge Join Output">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_promocji]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_promocji]"
+                      name="nr_promocji">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[nr_promocji]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[wartosc_procentowa]"
                       dataType="i4"
@@ -4039,17 +3792,42 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_dania]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_dania]"
-                      name="id_dania"
-                      sortKeyPosition="1">
+                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[cena_objetego_dania]"
+                      dataType="r8"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[cena_objetego_dania]"
+                      name="cena_objetego_dania">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[id_dania]}</property>
+                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[cena_objetego_dania]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[liczba_dni]"
+                      dataType="i4"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[liczba_dni]"
+                      name="liczba_dni">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[liczba_dni]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[upust]"
+                      dataType="r8"
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[upust]"
+                      name="upust">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[upust]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -4079,19 +3857,6 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_promocji]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_promocji]"
-                      name="nr_promocji">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[nr_promocji]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nazwa]"
                       codePage="1250"
                       dataType="str"
@@ -4107,68 +3872,30 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[upust]"
-                      dataType="r8"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[upust]"
-                      name="upust">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[upust]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[liczba_dni]"
+                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_dania]"
                       dataType="i4"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[liczba_dni]"
-                      name="liczba_dni">
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_dania]"
+                      name="id_dania"
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[liczba_dni]}</property>
+                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[id_dania]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[cena_objetego_dania]"
-                      dataType="r8"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[cena_objetego_dania]"
-                      name="cena_objetego_dania">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Left Input].Columns[cena_objetego_dania]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_daty]"
+                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[czy_objete_promocja]"
                       dataType="i4"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_daty]"
-                      name="id_daty">
+                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[czy_objete_promocja]"
+                      name="czy_objete_promocja">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Right Input].Columns[id_daty]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_zamowienia]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_zamowienia]"
-                      name="nr_zamowienia">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Right Input].Columns[nr_zamowienia]}</property>
+                          name="InputColumnID">#{Package\Populating promocja table\Merge Join.Inputs[Merge Join Right Input].Columns[czy_objete_promocja]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -4268,7 +3995,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_dni]" />
                     <inputColumn
                       refId="Package\Populating promocja table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[liczba_objetych_zamowien]"
-                      cachedDataType="ui8"
+                      cachedDataType="i8"
                       cachedName="liczba_objetych_zamowien"
                       externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_objetych_zamowien]"
                       lineageId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1].Columns[liczba_objetych_zamowien]" />
@@ -4381,219 +4108,6 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                       refId="Package\Populating promocja table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Populating promocja table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Populating promocja table\OLE DB Destination 1"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination 1"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[promocja]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">true</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Populating promocja table\OLE DB Destination 1.Connections[OleDbConnection]"
-                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[id_dania]"
-                      cachedDataType="i4"
-                      cachedName="id_dania"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id_dania]"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_dania]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[cena_objetego_dania]"
-                      cachedDataType="r8"
-                      cachedName="cena_objetego_dania"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[cena_objetego_dania]"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[cena_objetego_dania]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[liczba_dni]"
-                      cachedDataType="i4"
-                      cachedName="liczba_dni"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[liczba_dni]"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[liczba_dni]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[liczba_objetych_zamowien]"
-                      cachedDataType="i4"
-                      cachedName="liczba_objetych_zamowien"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[liczba_objetych_zamowien]"
-                      lineageId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Output].Columns[liczba_objetych_zamowien]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[wartosc_procentowa]"
-                      cachedDataType="i4"
-                      cachedName="wartosc_procentowa"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[wartosc_procentowa]"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[wartosc_procentowa]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[upust]"
-                      cachedDataType="r8"
-                      cachedName="upust"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[upust]"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[upust]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[nazwa]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="nazwa"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nazwa]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[nr_promocji]"
-                      cachedDataType="i4"
-                      cachedName="nr_promocji"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[nr_promocji]"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[nr_promocji]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[id_daty_rozpoczecia]"
-                      cachedDataType="i4"
-                      cachedName="id_daty_rozpoczecia"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id_daty_rozpoczecia]"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_daty_rozpoczecia]" />
-                    <inputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[id_daty_zakonczenia]"
-                      cachedDataType="i4"
-                      cachedName="id_daty_zakonczenia"
-                      externalMetadataColumnId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id_daty_zakonczenia]"
-                      lineageId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output].Columns[id_daty_zakonczenia]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id_dania]"
-                      dataType="i4"
-                      name="id_dania" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id_promocji]"
-                      dataType="i4"
-                      name="id_promocji" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[cena_objetego_dania]"
-                      dataType="cy"
-                      name="cena_objetego_dania" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[liczba_dni]"
-                      dataType="i4"
-                      name="liczba_dni" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[liczba_objetych_zamowien]"
-                      dataType="i4"
-                      name="liczba_objetych_zamowien" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[wartosc_procentowa]"
-                      dataType="numeric"
-                      name="wartosc_procentowa"
-                      precision="18" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[upust]"
-                      dataType="cy"
-                      name="upust" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1250"
-                      dataType="str"
-                      length="100"
-                      name="nazwa" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[nr_promocji]"
-                      dataType="i4"
-                      name="nr_promocji" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id_daty_rozpoczecia]"
-                      dataType="i4"
-                      name="id_daty_rozpoczecia" />
-                    <externalMetadataColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[id_daty_zakonczenia]"
-                      dataType="i4"
-                      name="id_daty_zakonczenia" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Populating promocja table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Populating promocja table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5166,22 +4680,6 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                           name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
-                    <inputColumn
-                      refId="Package\Populating promocja table\Sort 1.Inputs[Sort Input].Columns[id_daty]"
-                      cachedDataType="i4"
-                      cachedName="id_daty"
-                      lineageId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output].Columns[id_daty]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5232,19 +4730,6 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                           name="SortColumnId">#{Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output].Columns[id_dania]}</property>
                       </properties>
                     </outputColumn>
-                    <outputColumn
-                      refId="Package\Populating promocja table\Sort 1.Outputs[Sort Output].Columns[id_daty]"
-                      dataType="i4"
-                      lineageId="Package\Populating promocja table\Sort 1.Outputs[Sort Output].Columns[id_daty]"
-                      name="id_daty">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output].Columns[id_daty]}</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -5258,40 +4743,35 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
               name="Aggregate Output 1"
               startId="Package\Populating promocja table\Aggregate.Outputs[Aggregate Output 1]" />
             <path
-              refId="Package\Populating promocja table.Paths[Conditional Split Default Output]"
-              endId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1]"
-              name="Conditional Split Default Output"
-              startId="Package\Populating promocja table\Conditional Split.Outputs[Conditional Split Default Output]" />
-            <path
               refId="Package\Populating promocja table.Paths[Derived Column Output]"
               endId="Package\Populating promocja table\Calculating upust.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\Populating promocja table\Calculating liczba_dni.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Populating promocja table.Paths[Derived Column Output4]"
-              endId="Package\Populating promocja table\Sort.Inputs[Sort Input]"
+              refId="Package\Populating promocja table.Paths[Derived Column Output1]"
+              endId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\Populating promocja table\Creating nazwa.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Populating promocja table.Paths[Derived Column Output5]"
-              endId="Package\Populating promocja table\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Populating promocja table\Derived Column.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Populating promocja table.Paths[Derived Column Output3]"
-              endId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Outputs[Derived Column Output]" />
+              startId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Output]" />
             <path
               refId="Package\Populating promocja table.Paths[Derived Column Output2]"
               endId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Populating promocja table.Paths[Derived Column Output1]"
-              endId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Inputs[Derived Column Input]"
+              refId="Package\Populating promocja table.Paths[Derived Column Output3]"
+              endId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Populating promocja table\Calculating upust.Outputs[Derived Column Output]" />
+              startId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[Derived Column Output4]"
+              endId="Package\Populating promocja table\Sort.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Populating promocja table\Creating nazwa.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[Lookup Match Output]"
+              endId="Package\Populating promocja table\Looking up id_dania and nazwa_dania.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating promocja table.Paths[Lookup Match Output1]"
               endId="Package\Populating promocja table\Calculating liczba_dni.Inputs[Derived Column Input]"
@@ -5308,25 +4788,10 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
               name="Lookup Match Output"
               startId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Populating promocja table.Paths[Lookup Match Output]"
-              endId="Package\Populating promocja table\Looking up id_dania and nazwa_dania.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Match Output]" />
-            <path
               refId="Package\Populating promocja table.Paths[Merge Join Output]"
-              endId="Package\Populating promocja table\Conditional Split.Inputs[Conditional Split Input]"
+              endId="Package\Populating promocja table\Aggregate.Inputs[Aggregate Input 1]"
               name="Merge Join Output"
               startId="Package\Populating promocja table\Merge Join.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\Populating promocja table.Paths[NieMaZamowien]"
-              endId="Package\Populating promocja table\Derived Column.Inputs[Derived Column Input]"
-              name="NieMaZamowien"
-              startId="Package\Populating promocja table\Conditional Split.Outputs[NieMaZamowien]" />
-            <path
-              refId="Package\Populating promocja table.Paths[ObjetePromocja]"
-              endId="Package\Populating promocja table\Sort 1.Inputs[Sort Input]"
-              name="ObjetePromocja"
-              startId="Package\Populating promocja table\Checking if under promotion.Outputs[ObjetePromocja]" />
             <path
               refId="Package\Populating promocja table.Paths[OLE DB Source Output]"
               endId="Package\Populating promocja table\Looking up cena_objetego_dania.Inputs[Lookup Input]"
@@ -5334,7 +4799,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
               startId="Package\Populating promocja table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Populating promocja table.Paths[OLE DB Source Output1]"
-              endId="Package\Populating promocja table\Checking if under promotion.Inputs[Conditional Split Input]"
+              endId="Package\Populating promocja table\Sort 1.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Populating promocja table\HurtowniaDanych(Zamowienie).Outputs[OLE DB Source Output]" />
             <path
@@ -9466,7 +8931,7 @@ where [refTable].[ID_DANIA] = ?</property>
     design-time-name="Package\Populating promocja table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="244.8,41.6"
           Id="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y"
@@ -9688,7 +9153,7 @@ where [refTable].[ID_DANIA] = ?</property>
         <NodeLayout
           Size="226.4,41.6"
           Id="Package\Populating promocja table\HurtowniaDanych(Zamowienie)"
-          TopLeft="366.96429196365,570.95588783595" />
+          TopLeft="326.488100798154,698.406870015559" />
         <NodeLayout
           Size="151.2,41.6"
           Id="Package\Populating promocja table\Creating nazwa"
@@ -9718,23 +9183,23 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="212,41.6"
-          Id="Package\Populating promocja table\Checking if under promotion"
-          TopLeft="375.000006386212,641.352945627226" />
+          Size="97.6,41.6"
+          Id="Package\Populating promocja table\Sort"
+          TopLeft="183.928574560856,769.352946538826" />
         <EdgeLayout
-          Id="Package\Populating promocja table.Paths[OLE DB Source Output1]"
-          TopLeft="480.582149174931,612.55588783595">
+          Id="Package\Populating promocja table.Paths[Derived Column Output4]"
+          TopLeft="232.289288610889,744.041181806132">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,28.797057791276"
+              EndConnector="0,25.311764732694"
               Start="0,0"
-              End="0,21.297057791276">
+              End="0,17.811764732694">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.297057791276" />
+                    End="0,17.811764732694" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9744,101 +9209,91 @@ where [refTable].[ID_DANIA] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Populating promocja table\Sort"
-          TopLeft="233.928575412351,773.176476004214" />
+          Size="170.4,41.6"
+          Id="Package\Populating promocja table\OLE DB Destination"
+          TopLeft="251.826925099223,983.614710739753" />
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\Populating promocja table\Aggregate"
+          TopLeft="271.428576050972,911.921571487374" />
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[Aggregate Output 1]"
+          TopLeft="335.827750575098,953.521571487374">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.093139252379"
+              Start="0,0"
+              End="0,22.593139252379">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.593139252379" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
           Size="106.4,41.6"
           Id="Package\Populating promocja table\Sort 1"
-          TopLeft="432.142864502206,742.852945171426" />
+          TopLeft="389.285720915211,775.058827461806" />
         <EdgeLayout
-          Id="Package\Populating promocja table.Paths[Derived Column Output4]"
-          TopLeft="231.850002660922,744.041181806132">
+          Id="Package\Populating promocja table.Paths[OLE DB Source Output1]"
+          TopLeft="441.086910856682,740.006870015559">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50.8785727514297,29.1352941980823"
+              EndConnector="0,35.0519574462473"
               Start="0,0"
-              End="50.8785727514297,21.6352941980823">
+              End="0,27.5519574462473">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.5676470990412" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.5676470990412"
-                    Point2="0,14.5676470990412"
-                    Point3="4,14.5676470990412" />
-                  <mssgle:LineSegment
-                    End="46.8785727514297,14.5676470990412" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46.8785727514297,14.5676470990412"
-                    Point2="50.8785727514297,14.5676470990412"
-                    Point3="50.8785727514297,18.5676470990412" />
-                  <mssgle:LineSegment
-                    End="50.8785727514297,21.6352941980823" />
+                    End="0,27.5519574462473" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populating promocja table.Paths[ObjetePromocja]"
-          TopLeft="483.171435444209,682.952945627226">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.8999995441995"
-              Start="0,0"
-              End="0,52.3999995441995">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.3999995441995" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-35.69587890625,20.3684568033498,71.3917578125,11.6630859375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Populating promocja table\Merge Join"
-          TopLeft="336.607148589528,844.176476004214" />
+          TopLeft="270.238099840223,845.156867660591" />
         <EdgeLayout
           Id="Package\Populating promocja table.Paths[Sort Output]"
-          TopLeft="282.728575412351,814.776476004214">
+          TopLeft="232.728574560856,810.952946538826">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98.4119065105103,29.4"
+              EndConnector="82.0428586126995,34.2039211217648"
               Start="0,0"
-              End="98.4119065105103,21.9">
+              End="82.0428586126995,26.7039211217648">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.4248780487805" />
+                    End="0,16.272080079485" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.4248780487805"
-                    Point2="0,17.4248780487805"
-                    Point3="4,17.4248780487805" />
+                    Point1="0,16.272080079485"
+                    Point2="0,20.272080079485"
+                    Point3="4,20.272080079485" />
                   <mssgle:LineSegment
-                    End="94.4119065105103,17.4248780487805" />
+                    End="78.0428586126995,20.272080079485" />
                   <mssgle:CubicBezierSegment
-                    Point1="94.4119065105103,17.4248780487805"
-                    Point2="98.4119065105103,17.4248780487805"
-                    Point3="98.4119065105103,21.4248780487805" />
+                    Point1="78.0428586126995,20.272080079485"
+                    Point2="82.0428586126995,20.272080079485"
+                    Point3="82.0428586126995,24.272080079485" />
                   <mssgle:LineSegment
-                    End="98.4119065105103,21.9" />
+                    End="82.0428586126995,26.7039211217648" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9849,30 +9304,30 @@ where [refTable].[ID_DANIA] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating promocja table.Paths[Sort Output1]"
-          TopLeft="485.342864502206,784.452945171426">
+          TopLeft="442.485720915211,816.658827461806">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-63.6690492460111,59.7235308327889"
+              EndConnector="-87.1809544083214,28.4980401987849"
               Start="0,0"
-              End="-63.6690492460111,52.2235308327889">
+              End="-87.1809544083214,20.9980401987849">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.3971170545554" />
+                    End="0,12.890301873914" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.3971170545554"
-                    Point2="0,35.3971170545554"
-                    Point3="-4,35.3971170545554" />
+                    Point1="0,12.890301873914"
+                    Point2="0,16.890301873914"
+                    Point3="-4,16.890301873914" />
                   <mssgle:LineSegment
-                    End="-59.6690492460111,35.3971170545554" />
+                    End="-83.1809544083214,16.890301873914" />
                   <mssgle:CubicBezierSegment
-                    Point1="-59.6690492460111,35.3971170545554"
-                    Point2="-63.6690492460111,35.3971170545554"
-                    Point3="-63.6690492460111,39.3971170545554" />
+                    Point1="-83.1809544083214,16.890301873914"
+                    Point2="-87.1809544083214,16.890301873914"
+                    Point3="-87.1809544083214,20.890301873914" />
                   <mssgle:LineSegment
-                    End="-63.6690492460111,52.2235308327889" />
+                    End="-87.1809544083214,20.9980401987849" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9881,162 +9336,20 @@ where [refTable].[ID_DANIA] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="126.4,41.6"
-          Id="Package\Populating promocja table\Aggregate"
-          TopLeft="266.964290260661,987.504908391142" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Populating promocja table\OLE DB Destination"
-          TopLeft="269.684068260471,1045.77157445008" />
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Populating promocja table\Conditional Split"
-          TopLeft="323.214291218592,912.102945399326" />
         <EdgeLayout
           Id="Package\Populating promocja table.Paths[Merge Join Output]"
-          TopLeft="400.91071990406,885.776476004214">
+          TopLeft="334.833337945598,886.756867660591">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26.3264693951112"
+              EndConnector="0,25.1647038267832"
               Start="0,0"
-              End="0,18.8264693951112">
+              End="0,17.6647038267832">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.8264693951112" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populating promocja table.Paths[Conditional Split Default Output]"
-          TopLeft="376.014291218592,953.702945399326">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-45.8500009579316,33.8019629918165"
-              Start="0,0"
-              End="-45.8500009579316,26.3019629918165">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.72879727667624" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.72879727667624"
-                    Point2="0,13.7287972766762"
-                    Point3="-4,13.7287972766762" />
-                  <mssgle:LineSegment
-                    End="-41.8500009579316,13.7287972766762" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-41.8500009579316,13.7287972766762"
-                    Point2="-45.8500009579316,13.7287972766762"
-                    Point3="-45.8500009579316,17.7287972766762" />
-                  <mssgle:LineSegment
-                    End="-45.8500009579316,26.3019629918165" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-93.5389067289658,18.7287972766762,141.2278125,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Populating promocja table\Derived Column"
-          TopLeft="484.39286503439,983.441179982931" />
-        <EdgeLayout
-          Id="Package\Populating promocja table.Paths[NieMaZamowien]"
-          TopLeft="400.414291218592,953.702945399326">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="160.378573815798,29.7382345836054"
-              Start="0,0"
-              End="160.378573815798,22.2382345836054">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.8691172918027" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.8691172918027"
-                    Point2="0,14.8691172918027"
-                    Point3="4,14.8691172918027" />
-                  <mssgle:LineSegment
-                    End="156.378573815798,14.8691172918027" />
-                  <mssgle:CubicBezierSegment
-                    Point1="156.378573815798,14.8691172918027"
-                    Point2="160.378573815798,14.8691172918027"
-                    Point3="160.378573815798,18.8691172918027" />
-                  <mssgle:LineSegment
-                    End="160.378573815798,22.2382345836054" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="43.6723533141489,19.8691172918027,73.0338671875,9.470703125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Populating promocja table\OLE DB Destination 1"
-          TopLeft="477.719786089013,1048.59706326088" />
-        <EdgeLayout
-          Id="Package\Populating promocja table.Paths[Aggregate Output 1]"
-          TopLeft="393.364290260661,1008.30490839114">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-38.4802220001894,37.4666660589332"
-              Start="0,0"
-              End="-38.4802220001894,29.9666660589332">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-34.4802220001894,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-34.4802220001894,0"
-                    Point2="-38.4802220001894,0"
-                    Point3="-38.4802220001894,4" />
-                  <mssgle:LineSegment
-                    End="-38.4802220001894,29.9666660589332" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populating promocja table.Paths[Derived Column Output5]"
-          TopLeft="561.856325561702,1025.04117998293">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23.5558832779479"
-              Start="0,0"
-              End="0,16.0558832779479">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.0558832779479" />
+                    End="0,17.6647038267832" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11048,19 +10361,6 @@ where [refTable].[ID_DANIA] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Populating promocja table\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating promocja table\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
