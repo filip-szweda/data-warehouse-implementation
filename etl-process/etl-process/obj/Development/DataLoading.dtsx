@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="116"
-  DTS:VersionGUID="{686B83B6-4A2B-46BE-AA07-FB5750629D0A}">
+  DTS:VersionBuild="124"
+  DTS:VersionGUID="{EDB2E326-562B-4EF6-8A06-B4B338542585}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1689,6 +1689,2035 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               endId="Package\Populating danie table\Calculating PriceRange.Inputs[Input 0]"
               name="Sort Output"
               startId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populating klikniecia table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{BDFDAADF-DA2C-4EEC-96E5-F3841B66804C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populating klikniecia table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populating klikniecia table\Calculate date d-y-m"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calculate date d-y-m"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\Calculate date d-y-m.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Calculate date d-y-m.Inputs[Derived Column Input].Columns[DATA]"
+                      cachedDataType="date"
+                      cachedName="DATA"
+                      lineageId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Populating klikniecia table\Calculate date d-y-m.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[dzien]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[dzien]"
+                      name="dzien"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,2,1252)([DAY](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) &lt; 10 ? "0" + (DT_STR,2,1252)[DAY](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) : (DT_STR,2,1252)[DAY](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,2,1252)(DAY(DATA) &lt; 10 ? "0" + (DT_STR,2,1252)DAY(DATA) : (DT_STR,2,1252)DAY(DATA))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[miesiac]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[miesiac]"
+                      name="miesiac"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA) == 1 ? "styczeń" : (MONTH(DATA) == 2 ? "luty" : (MONTH(DATA) == 3 ? "marzec" : (MONTH(DATA) == 4 ? "kwiecień" : (MONTH(DATA) == 5 ? "maj" : (MONTH(DATA) == 6 ? "czerwiec" : (MONTH(DATA) == 7 ? "lipiec" : (MONTH(DATA) == 8 ? "sierpień" : (MONTH(DATA) == 9 ? "wrzesień" : (MONTH(DATA) == 10 ? "październik" : (MONTH(DATA) == 11 ? "listopad" : (MONTH(DATA) == 12 ? "grudzień" : ""))))))))))))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[rok]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[rok]"
+                      name="rok"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Populating klikniecia table\Calculate date d-y-m.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\Data Conversion to int"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion to int"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\Data Conversion to int.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Data Conversion to int.Inputs[Data Conversion Input].Columns[ad_id]"
+                      cachedDataType="decimal"
+                      cachedName="ad_id"
+                      cachedScale="10"
+                      lineageId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[ad_id]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Data Conversion to int.Inputs[Data Conversion Input].Columns[number_of_clicks]"
+                      cachedDataType="decimal"
+                      cachedName="number_of_clicks"
+                      cachedScale="10"
+                      lineageId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[number_of_clicks]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Data Conversion to int.Inputs[Data Conversion Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="date"
+                      lineageId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Populating klikniecia table\Data Conversion to int.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[numer_reklamy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[numer_reklamy]"
+                      name="numer_reklamy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[ad_id]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[Copy of number_of_clicks]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[Copy of number_of_clicks]"
+                      name="Copy of number_of_clicks"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[number_of_clicks]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]"
+                      name="DATA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[date]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Populating klikniecia table\Data Conversion to int.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\Lookup existing entries"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup existing entries"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[klikniecia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[klikniecia]) [refTable]
+where [refTable].[id_reklamy] = ? and [refTable].[id_daty] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="liczba_klikniec" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_reklamy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Match Output].Columns[id_reklamy]};#{Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Match Output].Columns[id_daty]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating klikniecia table\Lookup existing entries.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\Lookup existing entries.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Lookup existing entries.Inputs[Lookup Input].Columns[id_daty]"
+                      cachedDataType="i4"
+                      cachedName="id_daty"
+                      lineageId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Match Output].Columns[id_daty]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_daty</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Lookup existing entries.Inputs[Lookup Input].Columns[id_reklamy]"
+                      cachedDataType="i4"
+                      cachedName="id_reklamy"
+                      lineageId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Match Output].Columns[id_reklamy]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_reklamy</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\Lookup existing entries.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating klikniecia table\Lookup existing entries.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\Lookup existing entries.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating klikniecia table\Lookup existing entries.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\Lookup existing entries.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating klikniecia table\Lookup existing entries.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Lookup existing entries.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Lookup existing entries.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Lookup existing entries.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Lookup existing entries.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\Lookup id_daty"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup id_daty"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[data]) [refTable]
+where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[dzien]};#{Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[miesiac]};#{Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[rok]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating klikniecia table\Lookup id_daty.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input].Columns[dzien]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="dzien"
+                      lineageId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[dzien]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">dzien</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input].Columns[miesiac]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="miesiac"
+                      lineageId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[miesiac]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">miesiac</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input].Columns[rok]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="rok"
+                      lineageId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[rok]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">rok</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Match Output].Columns[id_daty]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Match Output].Columns[id_daty]"
+                      name="id_daty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_daty</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\Lookup id_reklamy"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup id_reklamy"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[reklama]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[reklama]) [refTable]
+where [refTable].[nr_reklamy] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_reklamy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="koszt" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_reklamy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_rozpoczecia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_zakonczenia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[numer_reklamy]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating klikniecia table\Lookup id_reklamy.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\Lookup id_reklamy.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_reklamy.Inputs[Lookup Input].Columns[numer_reklamy]"
+                      cachedDataType="i4"
+                      cachedName="numer_reklamy"
+                      lineageId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[numer_reklamy]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">nr_reklamy</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating klikniecia table\Lookup id_reklamy.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Match Output].Columns[id_reklamy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Match Output].Columns[id_reklamy]"
+                      name="id_reklamy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_reklamy</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating klikniecia table\Lookup id_reklamy.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating klikniecia table\Lookup id_reklamy.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Left Input].Columns[ad_Id]"
+                      cachedDataType="ui8"
+                      cachedName="ad_Id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Populating klikniecia table\sort ad output.Outputs[Sort Output].Columns[ad_Id]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Left Input].Columns[id]"
+                      cachedDataType="decimal"
+                      cachedName="id"
+                      cachedScale="10"
+                      lineageId="Package\Populating klikniecia table\sort ad output.Outputs[Sort Output].Columns[id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Right Input].Columns[ad_Id]"
+                      cachedDataType="ui8"
+                      cachedName="ad_Id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Populating klikniecia table\sort clicks per day output.Outputs[Sort Output].Columns[ad_Id]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Right Input].Columns[clicksPerDay_Id]"
+                      cachedDataType="ui8"
+                      cachedName="clicksPerDay_Id"
+                      lineageId="Package\Populating klikniecia table\sort clicks per day output.Outputs[Sort Output].Columns[clicksPerDay_Id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output].Columns[ad_id]"
+                      dataType="decimal"
+                      lineageId="Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output].Columns[ad_id]"
+                      name="ad_id"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Left Input].Columns[id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output].Columns[clicksPerDay_Id]"
+                      dataType="ui8"
+                      lineageId="Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output].Columns[clicksPerDay_Id]"
+                      name="clicksPerDay_Id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Right Input].Columns[clicksPerDay_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\Merge Join 1"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Left Input].Columns[clicksPerDay_Id]"
+                      cachedDataType="ui8"
+                      cachedName="clicksPerDay_Id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Populating klikniecia table\Sort.Outputs[Sort Output].Columns[clicksPerDay_Id]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Left Input].Columns[ad_id]"
+                      cachedDataType="decimal"
+                      cachedName="ad_id"
+                      cachedScale="10"
+                      lineageId="Package\Populating klikniecia table\Sort.Outputs[Sort Output].Columns[ad_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Right Input].Columns[clicksPerDay_Id]"
+                      cachedDataType="ui8"
+                      cachedName="clicksPerDay_Id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output].Columns[clicksPerDay_Id]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Right Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="date"
+                      lineageId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output].Columns[date]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Right Input].Columns[text]"
+                      cachedDataType="decimal"
+                      cachedName="text"
+                      cachedScale="10"
+                      lineageId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output].Columns[text]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[ad_id]"
+                      dataType="decimal"
+                      lineageId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[ad_id]"
+                      name="ad_id"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Left Input].Columns[ad_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[date]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[date]"
+                      name="date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Right Input].Columns[date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[number_of_clicks]"
+                      dataType="decimal"
+                      lineageId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output].Columns[number_of_clicks]"
+                      name="number_of_clicks"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Right Input].Columns[text]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[klikniecia]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating klikniecia table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_reklamy]"
+                      cachedDataType="i4"
+                      cachedName="id_reklamy"
+                      externalMetadataColumnId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_reklamy]"
+                      lineageId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Match Output].Columns[id_reklamy]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_daty]"
+                      cachedDataType="i4"
+                      cachedName="id_daty"
+                      externalMetadataColumnId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_daty]"
+                      lineageId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Match Output].Columns[id_daty]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of number_of_clicks]"
+                      cachedDataType="i4"
+                      cachedName="Copy of number_of_clicks"
+                      externalMetadataColumnId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_klikniec]"
+                      lineageId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[Copy of number_of_clicks]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[liczba_klikniec]"
+                      dataType="i4"
+                      name="liczba_klikniec" />
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_daty]"
+                      dataType="i4"
+                      name="id_daty" />
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_reklamy]"
+                      dataType="i4"
+                      name="id_reklamy" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Sort.Inputs[Sort Input].Columns[ad_id]"
+                      cachedDataType="decimal"
+                      cachedName="ad_id"
+                      cachedScale="10"
+                      lineageId="Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output].Columns[ad_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Sort.Inputs[Sort Input].Columns[clicksPerDay_Id]"
+                      cachedDataType="ui8"
+                      cachedName="clicksPerDay_Id"
+                      lineageId="Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output].Columns[clicksPerDay_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Sort.Outputs[Sort Output].Columns[ad_id]"
+                      dataType="decimal"
+                      lineageId="Package\Populating klikniecia table\Sort.Outputs[Sort Output].Columns[ad_id]"
+                      name="ad_id"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output].Columns[ad_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Sort.Outputs[Sort Output].Columns[clicksPerDay_Id]"
+                      dataType="ui8"
+                      lineageId="Package\Populating klikniecia table\Sort.Outputs[Sort Output].Columns[clicksPerDay_Id]"
+                      name="clicksPerDay_Id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output].Columns[clicksPerDay_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\sort ad output"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="sort ad output"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\sort ad output.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\sort ad output.Inputs[Sort Input].Columns[ad_Id]"
+                      cachedDataType="ui8"
+                      cachedName="ad_Id"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[ad].Columns[ad_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\sort ad output.Inputs[Sort Input].Columns[id]"
+                      cachedDataType="decimal"
+                      cachedName="id"
+                      cachedScale="10"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[ad].Columns[id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\sort ad output.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\sort ad output.Outputs[Sort Output].Columns[ad_Id]"
+                      dataType="ui8"
+                      lineageId="Package\Populating klikniecia table\sort ad output.Outputs[Sort Output].Columns[ad_Id]"
+                      name="ad_Id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating klikniecia table\XML Source.Outputs[ad].Columns[ad_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\sort ad output.Outputs[Sort Output].Columns[id]"
+                      dataType="decimal"
+                      lineageId="Package\Populating klikniecia table\sort ad output.Outputs[Sort Output].Columns[id]"
+                      name="id"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating klikniecia table\XML Source.Outputs[ad].Columns[id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\Sort clicks by date output"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort clicks by date output"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\Sort clicks by date output.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Sort clicks by date output.Inputs[Sort Input].Columns[date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="date"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day].Columns[date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Sort clicks by date output.Inputs[Sort Input].Columns[text]"
+                      cachedDataType="decimal"
+                      cachedName="text"
+                      cachedScale="10"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day].Columns[text]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\Sort clicks by date output.Inputs[Sort Input].Columns[clicksPerDay_Id]"
+                      cachedDataType="ui8"
+                      cachedName="clicksPerDay_Id"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day].Columns[clicksPerDay_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output].Columns[date]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output].Columns[date]"
+                      name="date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating klikniecia table\XML Source.Outputs[day].Columns[date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output].Columns[text]"
+                      dataType="decimal"
+                      lineageId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output].Columns[text]"
+                      name="text"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating klikniecia table\XML Source.Outputs[day].Columns[text]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output].Columns[clicksPerDay_Id]"
+                      dataType="ui8"
+                      lineageId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output].Columns[clicksPerDay_Id]"
+                      name="clicksPerDay_Id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating klikniecia table\XML Source.Outputs[day].Columns[clicksPerDay_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\sort clicks per day output"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="sort clicks per day output"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia table\sort clicks per day output.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\sort clicks per day output.Inputs[Sort Input].Columns[clicksPerDay_Id]"
+                      cachedDataType="ui8"
+                      cachedName="clicksPerDay_Id"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].Columns[clicksPerDay_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia table\sort clicks per day output.Inputs[Sort Input].Columns[ad_Id]"
+                      cachedDataType="ui8"
+                      cachedName="ad_Id"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].Columns[ad_Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\sort clicks per day output.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\sort clicks per day output.Outputs[Sort Output].Columns[clicksPerDay_Id]"
+                      dataType="ui8"
+                      lineageId="Package\Populating klikniecia table\sort clicks per day output.Outputs[Sort Output].Columns[clicksPerDay_Id]"
+                      name="clicksPerDay_Id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].Columns[clicksPerDay_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\sort clicks per day output.Outputs[Sort Output].Columns[ad_Id]"
+                      dataType="ui8"
+                      lineageId="Package\Populating klikniecia table\sort clicks per day output.Outputs[Sort Output].Columns[ad_Id]"
+                      name="ad_Id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].Columns[ad_Id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia table\XML Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Extracts data from an XML file. For example, extract catalog data from an XML file that represents catalogs and catalog items. Before using, specify the schema and generate an output for each XML element."
+              name="XML Source"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="The XML data used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLData">C:\Users\MateuszGrzonkas18426\Documents\HD\data-warehouse-implementation\data-warehouse-implementation\etl-process\etl-process\source_xml\ads_t1.xml</property>
+                <property
+                  dataType="System.String"
+                  description="The variable used by the XML source adapter to specify XML data."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how the XML source adapter gets XML data."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The XML schema definition used by the XML source adapter."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">C:\Users\MateuszGrzonkas18426\Documents\HD\data-warehouse-implementation\data-warehouse-implementation\etl-process\etl-process\source_xml\api_ads.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifies whether or not to use inline schema."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Defines how XML integer types are mapped."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia table\XML Source.Outputs[day]"
+                  name="day">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">day</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day].Columns[date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[day].ExternalColumns[date]"
+                      length="255"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day].Columns[date]"
+                      name="date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day].Columns[text]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[day].ExternalColumns[text]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day].Columns[text]"
+                      name="text"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day].Columns[clicksPerDay_Id]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[day].ExternalColumns[clicksPerDay_Id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day].Columns[clicksPerDay_Id]"
+                      name="clicksPerDay_Id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day].ExternalColumns[date]"
+                      dataType="wstr"
+                      length="255"
+                      name="date">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day].ExternalColumns[text]"
+                      dataType="decimal"
+                      name="text"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day].ExternalColumns[clicksPerDay_Id]"
+                      dataType="ui8"
+                      name="clicksPerDay_Id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt64</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output]"
+                  isErrorOut="true"
+                  name="day Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">day</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[date]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].ExternalColumns[date]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[date]"
+                      name="date" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[text]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].ExternalColumns[text]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[text]"
+                      name="text" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[clicksPerDay_Id]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].ExternalColumns[clicksPerDay_Id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[clicksPerDay_Id]"
+                      name="clicksPerDay_Id" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].ExternalColumns[date]"
+                      dataType="nText"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].ExternalColumns[text]"
+                      dataType="nText"
+                      name="text" />
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[day Error Output].ExternalColumns[clicksPerDay_Id]"
+                      dataType="nText"
+                      name="clicksPerDay_Id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay]"
+                  name="clicksPerDay">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">clicksPerDay</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].Columns[clicksPerDay_Id]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].ExternalColumns[clicksPerDay_Id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].Columns[clicksPerDay_Id]"
+                      name="clicksPerDay_Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].Columns[ad_Id]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].ExternalColumns[ad_Id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].Columns[ad_Id]"
+                      name="ad_Id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].ExternalColumns[clicksPerDay_Id]"
+                      dataType="ui8"
+                      name="clicksPerDay_Id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt64</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay].ExternalColumns[ad_Id]"
+                      dataType="ui8"
+                      name="ad_Id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt64</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output]"
+                  isErrorOut="true"
+                  name="clicksPerDay Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">clicksPerDay</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].Columns[clicksPerDay_Id]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].ExternalColumns[clicksPerDay_Id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].Columns[clicksPerDay_Id]"
+                      name="clicksPerDay_Id" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].Columns[ad_Id]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].ExternalColumns[ad_Id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].Columns[ad_Id]"
+                      name="ad_Id" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].ExternalColumns[clicksPerDay_Id]"
+                      dataType="nText"
+                      name="clicksPerDay_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay Error Output].ExternalColumns[ad_Id]"
+                      dataType="nText"
+                      name="ad_Id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\XML Source.Outputs[ad]"
+                  name="ad">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">ad</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad].Columns[ad_Id]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[ad].ExternalColumns[ad_Id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[ad].Columns[ad_Id]"
+                      name="ad_Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad].Columns[id]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[ad].ExternalColumns[id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[ad].Columns[id]"
+                      name="id"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad].ExternalColumns[ad_Id]"
+                      dataType="ui8"
+                      name="ad_Id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt64</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad].ExternalColumns[id]"
+                      dataType="decimal"
+                      name="id"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output]"
+                  isErrorOut="true"
+                  name="ad Error Output">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifies the rowset associated with the output."
+                      name="RowsetID">ad</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].Columns[ad_Id]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].ExternalColumns[ad_Id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].Columns[ad_Id]"
+                      name="ad_Id" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].Columns[id]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].ExternalColumns[id]"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].ExternalColumns[ad_Id]"
+                      dataType="nText"
+                      name="ad_Id" />
+                    <externalMetadataColumn
+                      refId="Package\Populating klikniecia table\XML Source.Outputs[ad Error Output].ExternalColumns[id]"
+                      dataType="nText"
+                      name="id" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populating klikniecia table.Paths[ad]"
+              endId="Package\Populating klikniecia table\sort ad output.Inputs[Sort Input]"
+              name="ad"
+              startId="Package\Populating klikniecia table\XML Source.Outputs[ad]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[clicksPerDay]"
+              endId="Package\Populating klikniecia table\sort clicks per day output.Inputs[Sort Input]"
+              name="clicksPerDay"
+              startId="Package\Populating klikniecia table\XML Source.Outputs[clicksPerDay]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Data Conversion Output]"
+              endId="Package\Populating klikniecia table\Lookup id_reklamy.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[day]"
+              endId="Package\Populating klikniecia table\Sort clicks by date output.Inputs[Sort Input]"
+              name="day"
+              startId="Package\Populating klikniecia table\XML Source.Outputs[day]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Derived Column Output]"
+              endId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Lookup Match Output]"
+              endId="Package\Populating klikniecia table\Calculate date d-y-m.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating klikniecia table\Lookup id_reklamy.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Lookup Match Output1]"
+              endId="Package\Populating klikniecia table\Lookup existing entries.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating klikniecia table\Lookup id_daty.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Lookup No Match Output]"
+              endId="Package\Populating klikniecia table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Populating klikniecia table\Lookup existing entries.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Merge Join Output]"
+              endId="Package\Populating klikniecia table\Sort.Inputs[Sort Input]"
+              name="Merge Join Output"
+              startId="Package\Populating klikniecia table\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Merge Join Output1]"
+              endId="Package\Populating klikniecia table\Data Conversion to int.Inputs[Data Conversion Input]"
+              name="Merge Join Output"
+              startId="Package\Populating klikniecia table\Merge Join 1.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Sort Output]"
+              endId="Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Populating klikniecia table\sort clicks per day output.Outputs[Sort Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Sort Output1]"
+              endId="Package\Populating klikniecia table\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Populating klikniecia table\sort ad output.Outputs[Sort Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Sort Output2]"
+              endId="Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Populating klikniecia table\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Populating klikniecia table.Paths[Sort Output3]"
+              endId="Package\Populating klikniecia table\Merge Join 1.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Populating klikniecia table\Sort clicks by date output.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5065,13 +7094,13 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]})</property>
+                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA_ROZPOCZECIA)</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA_ROZPOCZECIA) == 1 ? "styczeń" : (MONTH(DATA_ROZPOCZECIA) == 2 ? "luty" : (MONTH(DATA_ROZPOCZECIA) == 3 ? "marzec" : (MONTH(DATA_ROZPOCZECIA) == 4 ? "kwiecień" : (MONTH(DATA_ROZPOCZECIA) == 5 ? "maj" : (MONTH(DATA_ROZPOCZECIA) == 6 ? "czerwiec" : (MONTH(DATA_ROZPOCZECIA) == 7 ? "lipiec" : (MONTH(DATA_ROZPOCZECIA) == 8 ? "sierpień" : (MONTH(DATA_ROZPOCZECIA) == 9 ? "wrzesień" : (MONTH(DATA_ROZPOCZECIA) == 10 ? "październik" : (MONTH(DATA_ROZPOCZECIA) == 11 ? "listopad" : (MONTH(DATA_ROZPOCZECIA) == 12 ? "grudzień" : ""))))))))))))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5089,13 +7118,13 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA_ROZPOCZECIA) == 1 ? "styczeń" : (MONTH(DATA_ROZPOCZECIA) == 2 ? "luty" : (MONTH(DATA_ROZPOCZECIA) == 3 ? "marzec" : (MONTH(DATA_ROZPOCZECIA) == 4 ? "kwiecień" : (MONTH(DATA_ROZPOCZECIA) == 5 ? "maj" : (MONTH(DATA_ROZPOCZECIA) == 6 ? "czerwiec" : (MONTH(DATA_ROZPOCZECIA) == 7 ? "lipiec" : (MONTH(DATA_ROZPOCZECIA) == 8 ? "sierpień" : (MONTH(DATA_ROZPOCZECIA) == 9 ? "wrzesień" : (MONTH(DATA_ROZPOCZECIA) == 10 ? "październik" : (MONTH(DATA_ROZPOCZECIA) == 11 ? "listopad" : (MONTH(DATA_ROZPOCZECIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA_ROZPOCZECIA)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5137,13 +7166,13 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]})</property>
+                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA_ZAKONCZENIA)</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA_ZAKONCZENIA) == 1 ? "styczeń" : (MONTH(DATA_ZAKONCZENIA) == 2 ? "luty" : (MONTH(DATA_ZAKONCZENIA) == 3 ? "marzec" : (MONTH(DATA_ZAKONCZENIA) == 4 ? "kwiecień" : (MONTH(DATA_ZAKONCZENIA) == 5 ? "maj" : (MONTH(DATA_ZAKONCZENIA) == 6 ? "czerwiec" : (MONTH(DATA_ZAKONCZENIA) == 7 ? "lipiec" : (MONTH(DATA_ZAKONCZENIA) == 8 ? "sierpień" : (MONTH(DATA_ZAKONCZENIA) == 9 ? "wrzesień" : (MONTH(DATA_ZAKONCZENIA) == 10 ? "październik" : (MONTH(DATA_ZAKONCZENIA) == 11 ? "listopad" : (MONTH(DATA_ZAKONCZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -5161,13 +7190,13 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA_ZAKONCZENIA) == 1 ? "styczeń" : (MONTH(DATA_ZAKONCZENIA) == 2 ? "luty" : (MONTH(DATA_ZAKONCZENIA) == 3 ? "marzec" : (MONTH(DATA_ZAKONCZENIA) == 4 ? "kwiecień" : (MONTH(DATA_ZAKONCZENIA) == 5 ? "maj" : (MONTH(DATA_ZAKONCZENIA) == 6 ? "czerwiec" : (MONTH(DATA_ZAKONCZENIA) == 7 ? "lipiec" : (MONTH(DATA_ZAKONCZENIA) == 8 ? "sierpień" : (MONTH(DATA_ZAKONCZENIA) == 9 ? "wrzesień" : (MONTH(DATA_ZAKONCZENIA) == 10 ? "październik" : (MONTH(DATA_ZAKONCZENIA) == 11 ? "listopad" : (MONTH(DATA_ZAKONCZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA_ZAKONCZENIA)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -10353,6 +12382,14 @@ where [refTable].[nr_zamowienia] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
       DTS:To="Package\Populating reklama table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{D1501F79-76F5-42BA-8CE8-815EB368CDC6}"
+      DTS:From="Package\Populating reklama table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Populating klikniecia table" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -10528,6 +12565,32 @@ where [refTable].[nr_zamowienia] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,115.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="201,42"
+          Id="Package\Populating klikniecia table"
+          TopLeft="128,351" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="228.25,258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,93"
+              Start="0,0"
+              End="0,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12482,7 +14545,7 @@ where [refTable].[nr_zamowienia] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,11.4453125,111.6127734375,11.609375"
+              BoundingBox="-64.6750390625,9.25,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -12627,6 +14690,578 @@ where [refTable].[nr_zamowienia] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populating klikniecia table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Populating klikniecia table\XML Source"
+          TopLeft="364,43" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Populating klikniecia table\sort ad output"
+          TopLeft="312,198" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[ad]"
+          TopLeft="410,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25,113"
+              Start="0,0"
+              End="-25,105.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42"
+                    Point2="0,46"
+                    Point3="-4,46" />
+                  <mssgle:LineSegment
+                    End="-21,46" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21,46"
+                    Point2="-25,46"
+                    Point3="-25,50" />
+                  <mssgle:LineSegment
+                    End="-25,105.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-18.4150390625,51,11.830078125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Populating klikniecia table\sort clicks per day output"
+          TopLeft="464,202" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[clicksPerDay]"
+          TopLeft="452,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="111,117"
+              Start="0,0"
+              End="111,109.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.6283185840708" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.6283185840708"
+                    Point2="0,47.6283185840708"
+                    Point3="4,47.6283185840708" />
+                  <mssgle:LineSegment
+                    End="107,47.6283185840708" />
+                  <mssgle:CubicBezierSegment
+                    Point1="107,47.6283185840708"
+                    Point2="111,47.6283185840708"
+                    Point3="111,51.6283185840708" />
+                  <mssgle:LineSegment
+                    End="111,109.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="27.34845703125,52.6283185840708,56.3030859375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Populating klikniecia table\Merge Join"
+          TopLeft="388,283" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Sort Output]"
+          TopLeft="563,244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-89.6666666666667,39"
+              Start="0,0"
+              End="-89.6666666666667,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.1155015197568" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.1155015197568"
+                    Point2="0,23.1155015197568"
+                    Point3="-4,23.1155015197568" />
+                  <mssgle:LineSegment
+                    End="-85.6666666666667,23.1155015197568" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-85.6666666666667,23.1155015197568"
+                    Point2="-89.6666666666667,23.1155015197568"
+                    Point3="-89.6666666666667,27.1155015197568" />
+                  <mssgle:LineSegment
+                    End="-89.6666666666667,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Sort Output1]"
+          TopLeft="385,240">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.6666666666667,43"
+              Start="0,0"
+              End="47.6666666666667,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4863221884498" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4863221884498"
+                    Point2="0,25.4863221884498"
+                    Point3="4,25.4863221884498" />
+                  <mssgle:LineSegment
+                    End="43.6666666666667,25.4863221884498" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.6666666666667,25.4863221884498"
+                    Point2="47.6666666666667,25.4863221884498"
+                    Point3="47.6666666666667,29.4863221884498" />
+                  <mssgle:LineSegment
+                    End="47.6666666666667,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Populating klikniecia table\Sort clicks by date output"
+          TopLeft="737,360" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[day]"
+          TopLeft="462.5,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="374,275"
+              Start="0,0"
+              End="374,267.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,91.2439024390244" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,91.2439024390244"
+                    Point2="0,95.2439024390244"
+                    Point3="4,95.2439024390244" />
+                  <mssgle:LineSegment
+                    End="370,95.2439024390244" />
+                  <mssgle:CubicBezierSegment
+                    Point1="370,95.2439024390244"
+                    Point2="374,95.2439024390244"
+                    Point3="374,99.2439024390244" />
+                  <mssgle:LineSegment
+                    End="374,267.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="178.27845703125,100.243902439024,17.4430859375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Populating klikniecia table\Sort"
+          TopLeft="402,364" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Merge Join Output]"
+          TopLeft="452,325">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Populating klikniecia table\Merge Join 1"
+          TopLeft="542,472" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Sort Output2]"
+          TopLeft="451,406">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138.666666666667,66"
+              Start="0,0"
+              End="138.666666666667,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.149359886202" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.149359886202"
+                    Point2="0,39.149359886202"
+                    Point3="4,39.149359886202" />
+                  <mssgle:LineSegment
+                    End="134.666666666667,39.149359886202" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134.666666666667,39.149359886202"
+                    Point2="138.666666666667,39.149359886202"
+                    Point3="138.666666666667,43.149359886202" />
+                  <mssgle:LineSegment
+                    End="138.666666666667,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Sort Output3]"
+          TopLeft="836.5,402">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-203.166666666667,70"
+              Start="0,0"
+              End="-203.166666666667,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5220483641536" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.5220483641536"
+                    Point2="0,41.5220483641536"
+                    Point3="-4,41.5220483641536" />
+                  <mssgle:LineSegment
+                    End="-199.166666666667,41.5220483641536" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-199.166666666667,41.5220483641536"
+                    Point2="-203.166666666667,41.5220483641536"
+                    Point3="-203.166666666667,45.5220483641536" />
+                  <mssgle:LineSegment
+                    End="-203.166666666667,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Populating klikniecia table\Data Conversion to int"
+          TopLeft="512,557" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Merge Join Output1]"
+          TopLeft="607.75,514">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Populating klikniecia table\Lookup id_reklamy"
+          TopLeft="527,641" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Data Conversion Output]"
+          TopLeft="607.5,599">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,9.25,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Populating klikniecia table\Calculate date d-y-m"
+          TopLeft="520,728.888888888889" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Lookup Match Output]"
+          TopLeft="609.75,683">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.8888888888889"
+              Start="0,0"
+              End="0,38.3888888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.3888888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,13.3897569444445,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="151,45"
+          Id="Package\Populating klikniecia table\Lookup id_daty"
+          TopLeft="537.777777777778,817.777777777778" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Derived Column Output]"
+          TopLeft="610.888888888889,770.888888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.8888888888888"
+              Start="0,0"
+              End="0,39.3888888888888">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3888888888888" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Populating klikniecia table\Lookup existing entries"
+          TopLeft="544.444444444444,903.333333333333" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Lookup Match Output1]"
+          TopLeft="613.277777777778,862.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24.6666666666665,40.5555555555557"
+              Start="0,0"
+              End="24.6666666666665,33.0555555555557">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.2777777777778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.2777777777778"
+                    Point2="0,20.2777777777778"
+                    Point3="4,20.2777777777778" />
+                  <mssgle:LineSegment
+                    End="20.6666666666665,20.2777777777778" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.6666666666665,20.2777777777778"
+                    Point2="24.6666666666665,20.2777777777778"
+                    Point3="24.6666666666665,24.2777777777778" />
+                  <mssgle:LineSegment
+                    End="24.6666666666665,33.0555555555557" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-35.8580533854167,25.2777777777778,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Populating klikniecia table\OLE DB Destination"
+          TopLeft="538.888888888889,1006.66666666667" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia table.Paths[Lookup No Match Output]"
+          TopLeft="637.944444444444,945.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.5555555555557,61.3333333333336"
+              Start="0,0"
+              End="-13.5555555555557,53.8333333333336">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.6666666666668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.6666666666668"
+                    Point2="0,30.6666666666668"
+                    Point3="-4,30.6666666666668" />
+                  <mssgle:LineSegment
+                    End="-9.55555555555566,30.6666666666668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.55555555555566,30.6666666666668"
+                    Point2="-13.5555555555557,30.6666666666668"
+                    Point3="-13.5555555555557,34.6666666666668" />
+                  <mssgle:LineSegment
+                    End="-13.5555555555557,53.8333333333336" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-71.4528168402778,35.6666666666668,129.350078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating klikniecia table\Lookup id_reklamy">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[reklama]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating klikniecia table\Lookup id_daty">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[data]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating klikniecia table\Lookup existing entries">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[klikniecia]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating klikniecia table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
