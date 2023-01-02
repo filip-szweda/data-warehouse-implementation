@@ -14189,7 +14189,7 @@ where [refTable].[nr_zamowienia] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,17.5453125000005,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,17.5453125200005,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
