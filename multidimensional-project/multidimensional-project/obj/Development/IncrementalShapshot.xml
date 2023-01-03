@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>Default</ProcessingOption>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -26,7 +26,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>Y+3TwLErFvh3hwLjhyHGULDdom4=29/11/2022 16:12:5129/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>AWdwZ0yYOkrBwXjRimuj+TBcTvg=03/01/2023 22:21:4403/01/2023 22:17:06</TimeStamp>
         <ID>
           <String>Hurtownia-danych</String>
         </ID>
@@ -40,7 +40,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>0rATGePpLbFpegXH0OF9XSG86Xk=03/01/2023 18:34:5929/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>Dncm5ZeSxdX7HOq9o3warKjbe90=03/01/2023 22:24:2803/01/2023 22:17:06</TimeStamp>
         <ID>
           <String>Data</String>
         </ID>
@@ -89,7 +89,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>bNraPkoXexQ5IWq/S0+YW9sm8JM=29/11/2022 18:37:0529/11/2022 19:21:141qpmRlll5NviEAVTFduc6AEc778=29/11/2022 18:28:3129/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>RV5nQ7bXDZyzf66+Mt5d4mIMTj0=03/01/2023 22:24:2803/01/2023 22:17:061qpmRlll5NviEAVTFduc6AEc778=29/11/2022 18:28:3129/11/2022 19:21:14</TimeStamp>
         <ID>
           <String>Hurtownia-danych</String>
         </ID>
@@ -106,5 +106,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2023-01-03T17:35:04.25Z</LastDeployed>
+  <LastDeployed>2023-01-03T21:24:55.153333Z</LastDeployed>
 </DeploymentSnapshot>
