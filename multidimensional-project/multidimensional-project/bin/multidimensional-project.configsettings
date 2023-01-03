@@ -3,10 +3,10 @@
     <DataSources>
       <DataSource>
         <ID>Hurtownia-danych</ID>
-        <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-8SQ7ACS;Integrated Security=SSPI;Initial Catalog=hurtownia-danych</ConnectionString>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=localhost;Integrated Security=SSPI;Initial Catalog=hurtownia-danych</ConnectionString>
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
-          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">AzureAD\MateuszGrzonkas18426</Account>
+          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">filip</Account>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
         </ImpersonationInfo>
       </DataSource>
