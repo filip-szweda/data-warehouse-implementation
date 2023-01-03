@@ -11,11 +11,396 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="125"
-  DTS:VersionGUID="{9E8183EE-7785-4E98-8D6F-E458331F1FF3}">
+  DTS:VersionBuild="149"
+  DTS:VersionGUID="{3A45CD2E-4A38-4A08-96F0-2053DBC0860A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">21,7,OnError,19,OnExecStatusChanged,13,OnInformation,27,OnPipelinePostComponentCall,25,OnPipelinePostEndOfRowset,25,OnPipelinePostPrimeOutput,26,OnPipelinePreComponentCall,24,OnPipelinePreEndOfRowset,24,OnPipelinePrePrimeOutput,18,OnPipelineRowsSent,13,OnPostExecute,14,OnPostValidate,12,OnPreExecute,13,OnPreValidate,10,OnProgress,13,OnQueryCancel,12,OnTaskFailed,22,OnVariableValueChanged,9,OnWarning,10,Diagnostic,12,DiagnosticEx</DTS:Property>
+    <DTS:Property
+      DTS:EventName="Diagnostic"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="DiagnosticEx"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnExecStatusChanged"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnInformation"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePostComponentCall"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePostEndOfRowset"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePostPrimeOutput"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePreComponentCall"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePreEndOfRowset"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePrePrimeOutput"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelineRowsSent"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostValidate"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPreExecute"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPreValidate"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnProgress"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnQueryCancel"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnTaskFailed"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnVariableValueChanged"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnWarning"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Populating danie table"
@@ -27,6 +412,8 @@
       DTS:ObjectName="Populating danie table"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -1703,6 +2090,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:ObjectName="Populating klikniecia table"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -1996,7 +2385,7 @@ where [refTable].[id_reklamy] = ? and [refTable].[id_daty] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -3731,10 +4120,289 @@ where [refTable].[nr_reklamy] = ?</property>
       DTS:ObjectName="Populating klikniecia_w_trakcie_promocji table"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Inputs[Conditional Split Input].Columns[DATA_ROZPOCZECIA_REKLAMY]"
+                      cachedDataType="dbDate"
+                      cachedName="DATA_ROZPOCZECIA_REKLAMY"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA_REKLAMY]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Inputs[Conditional Split Input].Columns[DATA_ZAKONCZENIA_PROMOCJI]"
+                      cachedDataType="dbDate"
+                      cachedName="DATA_ZAKONCZENIA_PROMOCJI"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA_PROMOCJI]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Inputs[Conditional Split Input].Columns[DATA_ZAKONCZENIA_REKLAMY]"
+                      cachedDataType="dbDate"
+                      cachedName="DATA_ZAKONCZENIA_REKLAMY"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA_REKLAMY]" />
+                    <inputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Inputs[Conditional Split Input].Columns[DATA_ROZPOCZECIA_PROMOCJI]"
+                      cachedDataType="dbDate"
+                      cachedName="DATA_ROZPOCZECIA_PROMOCJI"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA_PROMOCJI]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Outputs[w trakcie promocji]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="w trakcie promocji"
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[DATEDIFF]("day",#{Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA_REKLAMY]},#{Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA_PROMOCJI]}) &lt;= 0 &amp;&amp; [DATEDIFF]("day",#{Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA_REKLAMY]},#{Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA_PROMOCJI]}) &gt;= 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">DATEDIFF("day",DATA_ROZPOCZECIA_REKLAMY,DATA_ZAKONCZENIA_PROMOCJI) &lt;= 0 &amp;&amp; DATEDIFF("day",DATA_ZAKONCZENIA_REKLAMY,DATA_ROZPOCZECIA_PROMOCJI) &gt;= 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup for existing entries"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[klikniecia_w_trakcie_promocji]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[klikniecia_w_trakcie_promocji]) [refTable]
+where [refTable].[id_daty] = ? and [refTable].[id_reklamy] = ? and [refTable].[id_promocji] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="liczba_klikniec" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_reklamy" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_promocji" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_daty]};#{Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_reklamy]};#{Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji.Outputs[Lookup Match Output].Columns[id_promocji]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Connections[OleDbConnection]"
+                  connectionManagerID="{66C24B54-89EC-4ACE-B457-387B9848839C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hurtownia-danych]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Inputs[Lookup Input].Columns[id_promocji]"
+                      cachedDataType="i4"
+                      cachedName="id_promocji"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji.Outputs[Lookup Match Output].Columns[id_promocji]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_promocji</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Inputs[Lookup Input].Columns[id_reklamy]"
+                      cachedDataType="i4"
+                      cachedName="id_reklamy"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_reklamy]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_reklamy</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Inputs[Lookup Input].Columns[id_daty]"
+                      cachedDataType="i4"
+                      cachedName="id_daty"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_daty]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_daty</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji"
               componentClassID="Microsoft.Lookup"
@@ -3792,7 +4460,7 @@ where [refTable].[nr_promocji] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Match Output].Columns[nr_promocji]};</property>
+                  name="ParameterMap">#{Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[nr_promocji]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3819,7 +4487,7 @@ where [refTable].[nr_promocji] = ?</property>
                       refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji.Inputs[Lookup Input].Columns[nr_promocji]"
                       cachedDataType="i4"
                       cachedName="nr_promocji"
-                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Match Output].Columns[nr_promocji]">
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[nr_promocji]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3894,11 +4562,11 @@ where [refTable].[nr_promocji] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania"
+              refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup nr_dania"
+              name="Lookup nr_dania, data reklamy"
               usesDispositions="true"
               version="6">
               <properties>
@@ -3962,7 +4630,7 @@ where [refTable].[ID_REKLAMY] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Connections[OleDbConnection]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Connections[OleDbConnection]"
                   connectionManagerID="{DD2CA1E7-1830-495F-851F-972443195656}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.baza-zamowien]"
                   description="Connection manager used to access lookup data."
@@ -3970,11 +4638,11 @@ where [refTable].[ID_REKLAMY] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Inputs[Lookup Input]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Inputs[Lookup Input].Columns[id_reklamy]"
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Inputs[Lookup Input].Columns[id_reklamy]"
                       cachedDataType="i4"
                       cachedName="id_reklamy"
                       lineageId="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source.Outputs[OLE DB Source Output].Columns[id_reklamy]">
@@ -3995,18 +4663,18 @@ where [refTable].[ID_REKLAMY] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Match Output]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Match Output].Columns[nr_dania]"
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[nr_dania]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Match Output].Columns[nr_dania]"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[nr_dania]"
                       name="nr_dania"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -4016,34 +4684,62 @@ where [refTable].[ID_REKLAMY] = ?</property>
                           name="CopyFromReferenceColumn">ID_DANIA</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA_REKLAMY]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA_REKLAMY]"
+                      name="DATA_ROZPOCZECIA_REKLAMY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DATA_ROZPOCZECIA</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA_REKLAMY]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA_REKLAMY]"
+                      name="DATA_ZAKONCZENIA_REKLAMY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DATA_ZAKONCZENIA</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup No Match Output]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Error Output]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4052,11 +4748,11 @@ where [refTable].[ID_REKLAMY] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji"
+              refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup nr_promocji"
+              name="Lookup nr_promocji, data promocji"
               usesDispositions="true"
               version="6">
               <properties>
@@ -4108,7 +4804,7 @@ where [refTable].[ID_DANIA] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Match Output].Columns[nr_dania]};</property>
+                  name="ParameterMap">#{Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[nr_dania]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4120,7 +4816,7 @@ where [refTable].[ID_DANIA] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Connections[OleDbConnection]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Connections[OleDbConnection]"
                   connectionManagerID="{DD2CA1E7-1830-495F-851F-972443195656}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.baza-zamowien]"
                   description="Connection manager used to access lookup data."
@@ -4128,14 +4824,14 @@ where [refTable].[ID_DANIA] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Inputs[Lookup Input]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Inputs[Lookup Input].Columns[nr_dania]"
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Inputs[Lookup Input].Columns[nr_dania]"
                       cachedDataType="i4"
                       cachedName="nr_dania"
-                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Match Output].Columns[nr_dania]">
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output].Columns[nr_dania]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4153,17 +4849,17 @@ where [refTable].[ID_DANIA] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Match Output]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Match Output].Columns[nr_promocji]"
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[nr_promocji]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Match Output].Columns[nr_promocji]"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[nr_promocji]"
                       name="nr_promocji"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -4173,34 +4869,62 @@ where [refTable].[ID_DANIA] = ?</property>
                           name="CopyFromReferenceColumn">ID_PROMOCJI</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA_PROMOCJI]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[DATA_ROZPOCZECIA_PROMOCJI]"
+                      name="DATA_ROZPOCZECIA_PROMOCJI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DATA_ROZPOCZECIA</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA_PROMOCJI]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output].Columns[DATA_ZAKONCZENIA_PROMOCJI]"
+                      name="DATA_ZAKONCZENIA_PROMOCJI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DATA_ZAKONCZENIA</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup No Match Output]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Error Output]"
+                  refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4497,24 +5221,34 @@ where [refTable].[ID_DANIA] = ?</property>
           <paths>
             <path
               refId="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup Match Output]"
-              endId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Inputs[Lookup Input]"
+              endId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Outputs[Lookup Match Output]" />
+              startId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup Match Output1]"
               endId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji.Outputs[Lookup Match Output]" />
+              startId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup Match Output2]"
-              endId="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Inputs[Conditional Split Input]"
               name="Lookup Match Output"
               startId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup No Match Output]"
+              endId="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Outputs[Lookup No Match Output]" />
+            <path
               refId="Package\Populating klikniecia_w_trakcie_promocji table.Paths[OLE DB Source Output]"
-              endId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania.Inputs[Lookup Input]"
+              endId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Populating klikniecia_w_trakcie_promocji table.Paths[w trakcie promocji]"
+              endId="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries.Inputs[Lookup Input]"
+              name="w trakcie promocji"
+              startId="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split.Outputs[w trakcie promocji]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -4529,6 +5263,8 @@ where [refTable].[ID_DANIA] = ?</property>
       DTS:ObjectName="Populating promocja table"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -7813,6 +8549,8 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
       DTS:ObjectName="Populating reklama table"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -8055,7 +8793,7 @@ where [refTable].[nr_reklamy] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -8589,7 +9327,7 @@ where [refTable].[nazwa] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -9346,6 +10084,8 @@ where [refTable].[nazwa] = ?</property>
       DTS:ObjectName="Populating serwis_reklamowy table"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -9381,7 +10121,7 @@ where [refTable].[nazwa] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -9532,7 +10272,7 @@ where [refTable].[nazwa] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -9540,11 +10280,11 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -9851,6 +10591,8 @@ where [refTable].[nazwa] = ?</property>
       DTS:ObjectName="Populating user table"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -10108,7 +10850,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -10713,6 +11455,8 @@ where [refTable].[imie_nazwisko] = ?</property>
       DTS:ObjectName="Populating zamowienie table"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -12660,7 +13404,7 @@ where [refTable].[nr_zamowienia] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -13225,6 +13969,10 @@ where [refTable].[nr_zamowienia] = ?</property>
           Id="Package\Populating klikniecia table"
           TopLeft="70,369" />
         <NodeLayout
+          Size="298,42"
+          Id="Package\Populating klikniecia_w_trakcie_promocji table"
+          TopLeft="162,525" />
+        <NodeLayout
           Size="202,42"
           Id="Package\Populating promocja table"
           TopLeft="381.71428751459,234.000003281762" />
@@ -13424,10 +14172,6 @@ where [refTable].[nr_zamowienia] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="298,42"
-          Id="Package\Populating klikniecia_w_trakcie_promocji table"
-          TopLeft="162,525" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
           TopLeft="482.71428751459,276.000003281762">
@@ -13547,9 +14291,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13571,9 +14313,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13595,9 +14335,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13838,9 +14576,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13874,9 +14610,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13910,9 +14644,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13946,9 +14678,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13970,9 +14700,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13994,9 +14722,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14031,7 +14757,7 @@ where [refTable].[nr_zamowienia] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-71.4528168402778,35.6666666666668,129.350078125,16"
+              BoundingBox="-71.4528168402778,35.6666666666668,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14114,9 +14840,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14325,6 +15049,279 @@ where [refTable].[nr_zamowienia] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Populating klikniecia table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy"
+          TopLeft="283,202" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Destination"
+          TopLeft="311,731" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji"
+          TopLeft="309,437" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji"
+          TopLeft="276,326" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source"
+          TopLeft="315,61" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[OLE DB Source Output]"
+          TopLeft="392.75,103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,99"
+              Start="0,0"
+              End="0,91.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,91.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup Match Output1]"
+          TopLeft="396.25,368">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69"
+              Start="0,0"
+              End="0,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,24.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup Match Output]"
+          TopLeft="396.75,244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82"
+              Start="0,0"
+              End="0,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,31.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Populating klikniecia_w_trakcie_promocji table\Conditional Split"
+          TopLeft="319,538" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup Match Output2]"
+          TopLeft="395.5,479">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,19.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries"
+          TopLeft="296,631" />
+        <EdgeLayout
+          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[w trakcie promocji]"
+          TopLeft="397.25,580">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-41.17427734375,15.91845703125,82.3485546875,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup No Match Output]"
+          TopLeft="397.25,673">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,19.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania, data reklamy">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[REKLAMY]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji, data promocji">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[PROMOCJE]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[promocja]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15066,9 +16063,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15090,9 +16085,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15114,9 +16107,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15139,7 +16130,7 @@ where [refTable].[nr_zamowienia] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-64.6750390625,9.25,129.350078125,16"
+              BoundingBox="-55.80638671875,11.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15247,7 +16238,7 @@ where [refTable].[nr_zamowienia] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -15257,7 +16248,7 @@ where [refTable].[nr_zamowienia] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15304,9 +16295,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15328,9 +16317,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16242,143 +17229,8 @@ where [refTable].[nr_zamowienia] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source"
-          TopLeft="315,61" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania"
-          TopLeft="312,202" />
-        <EdgeLayout
-          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[OLE DB Source Output]"
-          TopLeft="390.25,103">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,99"
-              Start="0,0"
-              End="0,91.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,91.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji"
-          TopLeft="308,328" />
-        <EdgeLayout
-          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup Match Output]"
-          TopLeft="392.5,244">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,84"
-              Start="0,0"
-              End="0,76.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,76.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,32.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji"
-          TopLeft="309,437" />
-        <EdgeLayout
-          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup Match Output1]"
-          TopLeft="394.5,370">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,67"
-              Start="0,0"
-              End="0,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,23.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Destination"
-          TopLeft="308,559" />
-        <EdgeLayout
-          Id="Package\Populating klikniecia_w_trakcie_promocji table.Paths[Lookup Match Output2]"
-          TopLeft="394,479">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,80"
-              Start="0,0"
-              End="0,72.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,72.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,30.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_dania">
+    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\Lookup for existing entries">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -16388,7 +17240,7 @@ where [refTable].[nr_zamowienia] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[REKLAMY]</Value>
+          type="q3:string">[dbo].[klikniecia_w_trakcie_promocji]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -16397,65 +17249,6 @@ where [refTable].[nr_zamowienia] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\Lookup nr_promocji">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[PROMOCJE]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\Lookup id_promocji">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[promocja]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating klikniecia_w_trakcie_promocji table\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
