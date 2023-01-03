@@ -451,7 +451,7 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -499,7 +499,7 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Output].Columns[NAZWA]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -517,7 +517,7 @@
                       name="ID_DANIA" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Output].ExternalColumns[NAZWA]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="NAZWA" />
@@ -556,7 +556,7 @@
                       name="ID_DANIA" />
                     <outputColumn
                       refId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Error Output].Columns[NAZWA]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\BazaZamowien(Dania).Outputs[OLE DB Source Error Output].Columns[NAZWA]"
@@ -1469,7 +1469,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\Calculating PriceRange.Outputs[Output 0].Columns[przedzial_cenowy]"
@@ -1508,7 +1508,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -1560,7 +1560,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NR_DANIA]" />
                     <inputColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].Columns[NAZWA]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1568,7 +1568,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]" />
                     <inputColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].Columns[przedzial_cenowy]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="przedzial_cenowy"
@@ -1587,13 +1587,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="nr_dania" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="nazwa" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[przedzial_cenowy]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="przedzial_cenowy" />
@@ -1647,7 +1647,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
               </properties>
               <connections>
                 <connection
@@ -1667,7 +1667,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].Columns[NAZWA]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1685,7 +1685,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Populating danie table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="Param_0">
@@ -1787,7 +1787,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
               </properties>
               <connections>
                 <connection
@@ -1804,7 +1804,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[NAZWA]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -1833,7 +1833,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[przedzial_cenowy]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="przedzial_cenowy"
@@ -1851,7 +1851,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="nazwa" />
@@ -1861,7 +1861,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       name="nr_dania" />
                     <externalMetadataColumn
                       refId="Package\Populating danie table\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[przedzial_cenowy]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="przedzial_cenowy" />
@@ -1976,7 +1976,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating danie table\Sort by nr dania.Inputs[Sort Input].Columns[NAZWA]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="NAZWA"
@@ -2031,7 +2031,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating danie table\Sort by nr dania.Outputs[Sort Output].Columns[NAZWA]"
@@ -2128,7 +2128,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[dzien]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2141,18 +2141,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,2,1250)([DAY](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) &lt; 10 ? "0" + (DT_STR,2,1250)[DAY](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) : (DT_STR,2,1250)[DAY](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}))</property>
+                          name="Expression">(DT_STR,2,1252)([DAY](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) &lt; 10 ? "0" + (DT_STR,2,1252)[DAY](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) : (DT_STR,2,1252)[DAY](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,2,1250)(DAY(DATA) &lt; 10 ? "0" + (DT_STR,2,1250)DAY(DATA) : (DT_STR,2,1250)DAY(DATA))</property>
+                          name="FriendlyExpression">(DT_STR,2,1252)(DAY(DATA) &lt; 10 ? "0" + (DT_STR,2,1252)DAY(DATA) : (DT_STR,2,1252)DAY(DATA))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[miesiac]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2165,18 +2165,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]}) == 12 ? "grudzień" : ""))))))))))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)(MONTH(DATA) == 1 ? "styczeń" : (MONTH(DATA) == 2 ? "luty" : (MONTH(DATA) == 3 ? "marzec" : (MONTH(DATA) == 4 ? "kwiecień" : (MONTH(DATA) == 5 ? "maj" : (MONTH(DATA) == 6 ? "czerwiec" : (MONTH(DATA) == 7 ? "lipiec" : (MONTH(DATA) == 8 ? "sierpień" : (MONTH(DATA) == 9 ? "wrzesień" : (MONTH(DATA) == 10 ? "październik" : (MONTH(DATA) == 11 ? "listopad" : (MONTH(DATA) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA) == 1 ? "styczeń" : (MONTH(DATA) == 2 ? "luty" : (MONTH(DATA) == 3 ? "marzec" : (MONTH(DATA) == 4 ? "kwiecień" : (MONTH(DATA) == 5 ? "maj" : (MONTH(DATA) == 6 ? "czerwiec" : (MONTH(DATA) == 7 ? "lipiec" : (MONTH(DATA) == 8 ? "sierpień" : (MONTH(DATA) == 9 ? "wrzesień" : (MONTH(DATA) == 10 ? "październik" : (MONTH(DATA) == 11 ? "listopad" : (MONTH(DATA) == 12 ? "grudzień" : ""))))))))))))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating klikniecia table\Calculate date d-y-m.Outputs[Derived Column Output].Columns[rok]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2189,13 +2189,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)[YEAR](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]})</property>
+                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating klikniecia table\Data Conversion to int.Outputs[Data Conversion Output].Columns[DATA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)YEAR(DATA)</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2415,7 +2415,7 @@ where [refTable].[id_reklamy] = ? and [refTable].[id_daty] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -2563,7 +2563,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -2572,7 +2572,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -2593,7 +2593,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input].Columns[dzien]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="dzien"
@@ -2611,7 +2611,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input].Columns[miesiac]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="miesiac"
@@ -2629,7 +2629,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating klikniecia table\Lookup id_daty.Inputs[Lookup Input].Columns[rok]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="rok"
@@ -2768,7 +2768,7 @@ where [refTable].[nr_reklamy] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -3124,7 +3124,7 @@ where [refTable].[nr_reklamy] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -4286,7 +4286,7 @@ where [refTable].[id_daty] = ? and [refTable].[id_reklamy] = ? and [refTable].[i
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -4450,7 +4450,7 @@ where [refTable].[nr_promocji] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_promocji" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="cena_objetego_dania" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="liczba_dni" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="liczba_objetych_zamowien" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="wartosc_procentowa" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="upust" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_promocji" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_rozpoczecia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_zakonczenia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_promocji" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="cena_objetego_dania" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="liczba_dni" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="liczba_objetych_zamowien" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="wartosc_procentowa" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="upust" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_promocji" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_rozpoczecia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_zakonczenia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4459,7 +4459,7 @@ where [refTable].[nr_promocji] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -4636,7 +4636,7 @@ where [refTable].[ID_REKLAMY] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_REKLAMY" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="KOSZT" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SERWIS_REKLAMOWY" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="DATA_ROZPOCZECIA" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_ZAKONCZENIA" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_DANIA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_REKLAMY" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="KOSZT" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SERWIS_REKLAMOWY" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DATA_ROZPOCZECIA" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATA_ZAKONCZENIA" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ID_DANIA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -4645,7 +4645,7 @@ where [refTable].[ID_REKLAMY] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -4803,7 +4803,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -4928,7 +4928,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -5075,7 +5075,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -5299,7 +5299,7 @@ where [refTable].[ID_DANIA] = ?</property>
                       lineageId="Package\Populating promocja table\Merging Promocje with Zamowienie.Outputs[Merge Join Output].Columns[upust]" />
                     <inputColumn
                       refId="Package\Populating promocja table\Aggregating to get liczba_objetych_zamowien.Inputs[Aggregate Input 1].Columns[nazwa]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="nazwa"
@@ -5477,7 +5477,7 @@ where [refTable].[ID_DANIA] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Aggregating to get liczba_objetych_zamowien.Outputs[Aggregate Output 1].Columns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating promocja table\Aggregating to get liczba_objetych_zamowien.Outputs[Aggregate Output 1].Columns[nazwa]"
@@ -5645,7 +5645,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -5917,7 +5917,7 @@ where [refTable].[ID_DANIA] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[dzien]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -5930,18 +5930,18 @@ where [refTable].[ID_DANIA] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,2,1250)([DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) &lt; 10 ? "0" + (DT_STR,2,1250)[DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) : (DT_STR,2,1250)[DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}))</property>
+                          name="Expression">(DT_STR,2,1252)([DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) &lt; 10 ? "0" + (DT_STR,2,1252)[DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) : (DT_STR,2,1252)[DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,2,1250)(DAY(DATA_ROZPOCZECIA) &lt; 10 ? "0" + (DT_STR,2,1250)DAY(DATA_ROZPOCZECIA) : (DT_STR,2,1250)DAY(DATA_ROZPOCZECIA))</property>
+                          name="FriendlyExpression">(DT_STR,2,1252)(DAY(DATA_ROZPOCZECIA) &lt; 10 ? "0" + (DT_STR,2,1252)DAY(DATA_ROZPOCZECIA) : (DT_STR,2,1252)DAY(DATA_ROZPOCZECIA))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[rok]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -5954,18 +5954,18 @@ where [refTable].[ID_DANIA] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)[YEAR](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]})</property>
+                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)YEAR(DATA_ROZPOCZECIA)</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA_ROZPOCZECIA)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Calculating data_rozpoczecia d-m-y.Outputs[Derived Column Output].Columns[miesiac]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -5978,13 +5978,13 @@ where [refTable].[ID_DANIA] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ROZPOCZECIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)(MONTH(DATA_ROZPOCZECIA) == 1 ? "styczeń" : (MONTH(DATA_ROZPOCZECIA) == 2 ? "luty" : (MONTH(DATA_ROZPOCZECIA) == 3 ? "marzec" : (MONTH(DATA_ROZPOCZECIA) == 4 ? "kwiecień" : (MONTH(DATA_ROZPOCZECIA) == 5 ? "maj" : (MONTH(DATA_ROZPOCZECIA) == 6 ? "czerwiec" : (MONTH(DATA_ROZPOCZECIA) == 7 ? "lipiec" : (MONTH(DATA_ROZPOCZECIA) == 8 ? "sierpień" : (MONTH(DATA_ROZPOCZECIA) == 9 ? "wrzesień" : (MONTH(DATA_ROZPOCZECIA) == 10 ? "październik" : (MONTH(DATA_ROZPOCZECIA) == 11 ? "listopad" : (MONTH(DATA_ROZPOCZECIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA_ROZPOCZECIA) == 1 ? "styczeń" : (MONTH(DATA_ROZPOCZECIA) == 2 ? "luty" : (MONTH(DATA_ROZPOCZECIA) == 3 ? "marzec" : (MONTH(DATA_ROZPOCZECIA) == 4 ? "kwiecień" : (MONTH(DATA_ROZPOCZECIA) == 5 ? "maj" : (MONTH(DATA_ROZPOCZECIA) == 6 ? "czerwiec" : (MONTH(DATA_ROZPOCZECIA) == 7 ? "lipiec" : (MONTH(DATA_ROZPOCZECIA) == 8 ? "sierpień" : (MONTH(DATA_ROZPOCZECIA) == 9 ? "wrzesień" : (MONTH(DATA_ROZPOCZECIA) == 10 ? "październik" : (MONTH(DATA_ROZPOCZECIA) == 11 ? "listopad" : (MONTH(DATA_ROZPOCZECIA) == 12 ? "grudzień" : ""))))))))))))</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -6035,7 +6035,7 @@ where [refTable].[ID_DANIA] = ?</property>
                       lineageId="Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]" />
                     <inputColumn
                       refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input].Columns[dzien]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="dzien"
@@ -6049,18 +6049,18 @@ where [refTable].[ID_DANIA] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,2,1250)([DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) &lt; 10 ? "0" + (DT_STR,2,1250)[DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) : (DT_STR,2,1250)[DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}))</property>
+                          name="Expression">(DT_STR,2,1252)([DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) &lt; 10 ? "0" + (DT_STR,2,1252)[DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) : (DT_STR,2,1252)[DAY](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,2,1250)(DAY(DATA_ZAKONCZENIA) &lt; 10 ? "0" + (DT_STR,2,1250)DAY(DATA_ZAKONCZENIA) : (DT_STR,2,1250)DAY(DATA_ZAKONCZENIA))</property>
+                          name="FriendlyExpression">(DT_STR,2,1252)(DAY(DATA_ZAKONCZENIA) &lt; 10 ? "0" + (DT_STR,2,1252)DAY(DATA_ZAKONCZENIA) : (DT_STR,2,1252)DAY(DATA_ZAKONCZENIA))</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input].Columns[rok]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="rok"
@@ -6074,18 +6074,18 @@ where [refTable].[ID_DANIA] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)[YEAR](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]})</property>
+                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)YEAR(DATA_ZAKONCZENIA)</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA_ZAKONCZENIA)</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input].Columns[miesiac]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="miesiac"
@@ -6099,13 +6099,13 @@ where [refTable].[ID_DANIA] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating promocja table\BazaZamowien(Promocje).Outputs[OLE DB Source Output].Columns[DATA_ZAKONCZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)(MONTH(DATA_ZAKONCZENIA) == 1 ? "styczeń" : (MONTH(DATA_ZAKONCZENIA) == 2 ? "luty" : (MONTH(DATA_ZAKONCZENIA) == 3 ? "marzec" : (MONTH(DATA_ZAKONCZENIA) == 4 ? "kwiecień" : (MONTH(DATA_ZAKONCZENIA) == 5 ? "maj" : (MONTH(DATA_ZAKONCZENIA) == 6 ? "czerwiec" : (MONTH(DATA_ZAKONCZENIA) == 7 ? "lipiec" : (MONTH(DATA_ZAKONCZENIA) == 8 ? "sierpień" : (MONTH(DATA_ZAKONCZENIA) == 9 ? "wrzesień" : (MONTH(DATA_ZAKONCZENIA) == 10 ? "październik" : (MONTH(DATA_ZAKONCZENIA) == 11 ? "listopad" : (MONTH(DATA_ZAKONCZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA_ZAKONCZENIA) == 1 ? "styczeń" : (MONTH(DATA_ZAKONCZENIA) == 2 ? "luty" : (MONTH(DATA_ZAKONCZENIA) == 3 ? "marzec" : (MONTH(DATA_ZAKONCZENIA) == 4 ? "kwiecień" : (MONTH(DATA_ZAKONCZENIA) == 5 ? "maj" : (MONTH(DATA_ZAKONCZENIA) == 6 ? "czerwiec" : (MONTH(DATA_ZAKONCZENIA) == 7 ? "lipiec" : (MONTH(DATA_ZAKONCZENIA) == 8 ? "sierpień" : (MONTH(DATA_ZAKONCZENIA) == 9 ? "wrzesień" : (MONTH(DATA_ZAKONCZENIA) == 10 ? "październik" : (MONTH(DATA_ZAKONCZENIA) == 11 ? "listopad" : (MONTH(DATA_ZAKONCZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -6331,7 +6331,7 @@ where [refTable].[ID_DANIA] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating promocja table\Creating nazwa.Inputs[Derived Column Input].Columns[nazwa_dania]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="nazwa_dania"
@@ -6350,7 +6350,7 @@ where [refTable].[ID_DANIA] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating promocja table\Creating nazwa.Outputs[Derived Column Output].Columns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -6363,13 +6363,13 @@ where [refTable].[ID_DANIA] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,100,1250)("Promocja na " + #{Package\Populating promocja table\Looking up id_dania and nazwa_dania.Outputs[Lookup Match Output].Columns[nazwa_dania]})</property>
+                          name="Expression">(DT_STR,100,1252)("Promocja na " + #{Package\Populating promocja table\Looking up id_dania and nazwa_dania.Outputs[Lookup Match Output].Columns[nazwa_dania]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,100,1250)("Promocja na " + nazwa_dania)</property>
+                          name="FriendlyExpression">(DT_STR,100,1252)("Promocja na " + nazwa_dania)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -6433,7 +6433,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -6632,7 +6632,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_DANIA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NAZWA" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="CENA" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_DANIA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NAZWA" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CENA" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -6641,7 +6641,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -6790,7 +6790,7 @@ where [refTable].[nr_dania] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="przedzial_cenowy" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="przedzial_cenowy" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -6799,7 +6799,7 @@ where [refTable].[nr_dania] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -6853,7 +6853,7 @@ where [refTable].[nr_dania] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating promocja table\Looking up id_dania and nazwa_dania.Outputs[Lookup Match Output].Columns[nazwa_dania]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Copy Column"
                       length="100"
@@ -6954,7 +6954,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -6963,7 +6963,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -6984,7 +6984,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input].Columns[dzien]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="dzien"
@@ -7002,7 +7002,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input].Columns[rok]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="rok"
@@ -7020,7 +7020,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Inputs[Lookup Input].Columns[miesiac]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="miesiac"
@@ -7150,7 +7150,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="11" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -7159,7 +7159,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -7180,7 +7180,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input].Columns[rok]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="rok"
@@ -7198,7 +7198,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input].Columns[miesiac]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="miesiac"
@@ -7216,7 +7216,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Inputs[Lookup Input].Columns[dzien]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="dzien"
@@ -7346,7 +7346,7 @@ where [refTable].[nr_promocji] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_promocji" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="cena_objetego_dania" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="liczba_dni" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="liczba_objetych_zamowien" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="wartosc_procentowa" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="upust" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_promocji" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_rozpoczecia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_zakonczenia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_promocji" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="cena_objetego_dania" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="liczba_dni" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="liczba_objetych_zamowien" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="wartosc_procentowa" dataType="DT_NUMERIC" length="0" precision="18" scale="0" codePage="0"/&gt;&lt;referenceColumn name="upust" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_promocji" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_rozpoczecia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_daty_zakonczenia" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -7510,7 +7510,7 @@ where [refTable].[nr_promocji] = ?</property>
                       lineageId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[id_daty_zakonczenia]" />
                     <inputColumn
                       refId="Package\Populating promocja table\Merging Promocje with Zamowienie.Inputs[Merge Join Left Input].Columns[nazwa]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="nazwa"
@@ -7656,7 +7656,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Merging Promocje with Zamowienie.Outputs[Merge Join Output].Columns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating promocja table\Merging Promocje with Zamowienie.Outputs[Merge Join Output].Columns[nazwa]"
@@ -7729,7 +7729,7 @@ where [refTable].[nr_promocji] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -7810,7 +7810,7 @@ where [refTable].[nr_promocji] = ?</property>
                       lineageId="Package\Populating promocja table\Aggregating to get liczba_objetych_zamowien.Outputs[Aggregate Output 1].Columns[upust]" />
                     <inputColumn
                       refId="Package\Populating promocja table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nazwa]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="nazwa"
@@ -7868,7 +7868,7 @@ where [refTable].[nr_promocji] = ?</property>
                       name="upust" />
                     <externalMetadataColumn
                       refId="Package\Populating promocja table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="nazwa" />
@@ -8033,7 +8033,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Inputs[Sort Input].Columns[nazwa_dania]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="nazwa_dania"
@@ -8083,7 +8083,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Inputs[Sort Input].Columns[dzien]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="dzien"
@@ -8101,7 +8101,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Inputs[Sort Input].Columns[rok]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="rok"
@@ -8119,7 +8119,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Inputs[Sort Input].Columns[miesiac]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="miesiac"
@@ -8169,7 +8169,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Inputs[Sort Input].Columns[nazwa]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="nazwa"
@@ -8276,7 +8276,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[nazwa_dania]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[nazwa_dania]"
@@ -8317,7 +8317,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[dzien]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="2"
                       lineageId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[dzien]"
@@ -8332,7 +8332,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[rok]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="11"
                       lineageId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[rok]"
@@ -8347,7 +8347,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[miesiac]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="11"
                       lineageId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[miesiac]"
@@ -8388,7 +8388,7 @@ where [refTable].[nr_promocji] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating promocja table\Sort by id_dania (1).Outputs[Sort Output].Columns[nazwa]"
@@ -8705,7 +8705,7 @@ where [refTable].[nr_promocji] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating reklama table\Calculate dates d-m-y.Outputs[Derived Column Output].Columns[dzien_data_rozpoczecia]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -8718,18 +8718,18 @@ where [refTable].[nr_promocji] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,2,1250)([DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) &lt; 10 ? "0" + (DT_STR,2,1250)[DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) : (DT_STR,2,1250)[DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}))</property>
+                          name="Expression">(DT_STR,2,1252)([DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) &lt; 10 ? "0" + (DT_STR,2,1252)[DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) : (DT_STR,2,1252)[DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,2,1250)(DAY(DATA_ROZPOCZECIA) &lt; 10 ? "0" + (DT_STR,2,1250)DAY(DATA_ROZPOCZECIA) : (DT_STR,2,1250)DAY(DATA_ROZPOCZECIA))</property>
+                          name="FriendlyExpression">(DT_STR,2,1252)(DAY(DATA_ROZPOCZECIA) &lt; 10 ? "0" + (DT_STR,2,1252)DAY(DATA_ROZPOCZECIA) : (DT_STR,2,1252)DAY(DATA_ROZPOCZECIA))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating reklama table\Calculate dates d-m-y.Outputs[Derived Column Output].Columns[miesiac_data_rozpoczecia]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -8742,18 +8742,18 @@ where [refTable].[nr_promocji] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)(MONTH(DATA_ROZPOCZECIA) == 1 ? "styczeń" : (MONTH(DATA_ROZPOCZECIA) == 2 ? "luty" : (MONTH(DATA_ROZPOCZECIA) == 3 ? "marzec" : (MONTH(DATA_ROZPOCZECIA) == 4 ? "kwiecień" : (MONTH(DATA_ROZPOCZECIA) == 5 ? "maj" : (MONTH(DATA_ROZPOCZECIA) == 6 ? "czerwiec" : (MONTH(DATA_ROZPOCZECIA) == 7 ? "lipiec" : (MONTH(DATA_ROZPOCZECIA) == 8 ? "sierpień" : (MONTH(DATA_ROZPOCZECIA) == 9 ? "wrzesień" : (MONTH(DATA_ROZPOCZECIA) == 10 ? "październik" : (MONTH(DATA_ROZPOCZECIA) == 11 ? "listopad" : (MONTH(DATA_ROZPOCZECIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA_ROZPOCZECIA) == 1 ? "styczeń" : (MONTH(DATA_ROZPOCZECIA) == 2 ? "luty" : (MONTH(DATA_ROZPOCZECIA) == 3 ? "marzec" : (MONTH(DATA_ROZPOCZECIA) == 4 ? "kwiecień" : (MONTH(DATA_ROZPOCZECIA) == 5 ? "maj" : (MONTH(DATA_ROZPOCZECIA) == 6 ? "czerwiec" : (MONTH(DATA_ROZPOCZECIA) == 7 ? "lipiec" : (MONTH(DATA_ROZPOCZECIA) == 8 ? "sierpień" : (MONTH(DATA_ROZPOCZECIA) == 9 ? "wrzesień" : (MONTH(DATA_ROZPOCZECIA) == 10 ? "październik" : (MONTH(DATA_ROZPOCZECIA) == 11 ? "listopad" : (MONTH(DATA_ROZPOCZECIA) == 12 ? "grudzień" : ""))))))))))))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating reklama table\Calculate dates d-m-y.Outputs[Derived Column Output].Columns[rok_data_rozpoczecia]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -8766,18 +8766,18 @@ where [refTable].[nr_promocji] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)[YEAR](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]})</property>
+                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ROZPOCZECIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)YEAR(DATA_ROZPOCZECIA)</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA_ROZPOCZECIA)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating reklama table\Calculate dates d-m-y.Outputs[Derived Column Output].Columns[dzien_data_zakonczenia]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -8790,18 +8790,18 @@ where [refTable].[nr_promocji] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,2,1250)([DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) &lt; 10 ? "0" + (DT_STR,2,1250)[DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) : (DT_STR,2,1250)[DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}))</property>
+                          name="Expression">(DT_STR,2,1252)([DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) &lt; 10 ? "0" + (DT_STR,2,1252)[DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) : (DT_STR,2,1252)[DAY](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,2,1250)(DAY(DATA_ZAKONCZENIA) &lt; 10 ? "0" + (DT_STR,2,1250)DAY(DATA_ZAKONCZENIA) : (DT_STR,2,1250)DAY(DATA_ZAKONCZENIA))</property>
+                          name="FriendlyExpression">(DT_STR,2,1252)(DAY(DATA_ZAKONCZENIA) &lt; 10 ? "0" + (DT_STR,2,1252)DAY(DATA_ZAKONCZENIA) : (DT_STR,2,1252)DAY(DATA_ZAKONCZENIA))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating reklama table\Calculate dates d-m-y.Outputs[Derived Column Output].Columns[miesiac_data_zakonczenia]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -8814,18 +8814,18 @@ where [refTable].[nr_promocji] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)(MONTH(DATA_ZAKONCZENIA) == 1 ? "styczeń" : (MONTH(DATA_ZAKONCZENIA) == 2 ? "luty" : (MONTH(DATA_ZAKONCZENIA) == 3 ? "marzec" : (MONTH(DATA_ZAKONCZENIA) == 4 ? "kwiecień" : (MONTH(DATA_ZAKONCZENIA) == 5 ? "maj" : (MONTH(DATA_ZAKONCZENIA) == 6 ? "czerwiec" : (MONTH(DATA_ZAKONCZENIA) == 7 ? "lipiec" : (MONTH(DATA_ZAKONCZENIA) == 8 ? "sierpień" : (MONTH(DATA_ZAKONCZENIA) == 9 ? "wrzesień" : (MONTH(DATA_ZAKONCZENIA) == 10 ? "październik" : (MONTH(DATA_ZAKONCZENIA) == 11 ? "listopad" : (MONTH(DATA_ZAKONCZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA_ZAKONCZENIA) == 1 ? "styczeń" : (MONTH(DATA_ZAKONCZENIA) == 2 ? "luty" : (MONTH(DATA_ZAKONCZENIA) == 3 ? "marzec" : (MONTH(DATA_ZAKONCZENIA) == 4 ? "kwiecień" : (MONTH(DATA_ZAKONCZENIA) == 5 ? "maj" : (MONTH(DATA_ZAKONCZENIA) == 6 ? "czerwiec" : (MONTH(DATA_ZAKONCZENIA) == 7 ? "lipiec" : (MONTH(DATA_ZAKONCZENIA) == 8 ? "sierpień" : (MONTH(DATA_ZAKONCZENIA) == 9 ? "wrzesień" : (MONTH(DATA_ZAKONCZENIA) == 10 ? "październik" : (MONTH(DATA_ZAKONCZENIA) == 11 ? "listopad" : (MONTH(DATA_ZAKONCZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating reklama table\Calculate dates d-m-y.Outputs[Derived Column Output].Columns[rok_data_zakonczenia]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -8838,13 +8838,13 @@ where [refTable].[nr_promocji] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)[YEAR](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]})</property>
+                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[DATA_ZAKONCZENIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)YEAR(DATA_ZAKONCZENIA)</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA_ZAKONCZENIA)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -8936,7 +8936,7 @@ where [refTable].[nr_reklamy] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -9069,7 +9069,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -9078,7 +9078,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -9099,7 +9099,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating reklama table\Lookup id_daty_rozpoczecia.Inputs[Lookup Input].Columns[dzien_data_rozpoczecia]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="dzien_data_rozpoczecia"
@@ -9117,7 +9117,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating reklama table\Lookup id_daty_rozpoczecia.Inputs[Lookup Input].Columns[miesiac_data_rozpoczecia]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="miesiac_data_rozpoczecia"
@@ -9135,7 +9135,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating reklama table\Lookup id_daty_rozpoczecia.Inputs[Lookup Input].Columns[rok_data_rozpoczecia]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="rok_data_rozpoczecia"
@@ -9265,7 +9265,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -9274,7 +9274,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -9295,7 +9295,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating reklama table\Lookup id_daty_zakonczenia.Inputs[Lookup Input].Columns[dzien_data_zakonczenia]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="dzien_data_zakonczenia"
@@ -9313,7 +9313,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating reklama table\Lookup id_daty_zakonczenia.Inputs[Lookup Input].Columns[miesiac_data_zakonczenia]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="miesiac_data_zakonczenia"
@@ -9331,7 +9331,7 @@ where [refTable].[dzien] = ? and [refTable].[miesiac] = ? and [refTable].[rok] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating reklama table\Lookup id_daty_zakonczenia.Inputs[Lookup Input].Columns[rok_data_zakonczenia]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="rok_data_zakonczenia"
@@ -9461,7 +9461,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -9470,7 +9470,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -9491,7 +9491,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating reklama table\Lookup id_serwisu_reklamowego.Inputs[Lookup Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -9598,7 +9598,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -9760,7 +9760,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -9808,7 +9808,7 @@ where [refTable].[nazwa] = ?</property>
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Populating reklama table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -9857,7 +9857,7 @@ where [refTable].[nazwa] = ?</property>
                       name="KOSZT" />
                     <externalMetadataColumn
                       refId="Package\Populating reklama table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="SERWIS_REKLAMOWY" />
@@ -9892,7 +9892,7 @@ where [refTable].[nazwa] = ?</property>
                       name="KOSZT" />
                     <outputColumn
                       refId="Package\Populating reklama table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating reklama table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
@@ -9986,7 +9986,7 @@ where [refTable].[nazwa] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating reklama table\Sort by id.Inputs[Sort Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -10089,7 +10089,7 @@ where [refTable].[nazwa] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating reklama table\Sort by id.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
@@ -10255,7 +10255,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_serwisu_reklamowego" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -10264,7 +10264,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -10285,7 +10285,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\Droping old values.Inputs[Lookup Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -10376,7 +10376,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -10421,7 +10421,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -10437,7 +10437,7 @@ where [refTable].[nazwa] = ?</property>
                       name="id_serwisu_reklamowego" />
                     <externalMetadataColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nazwa]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="nazwa" />
@@ -10502,7 +10502,7 @@ where [refTable].[nazwa] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -10532,7 +10532,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -10554,7 +10554,7 @@ where [refTable].[nazwa] = ?</property>
                       name="KOSZT" />
                     <externalMetadataColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="SERWIS_REKLAMOWY" />
@@ -10591,7 +10591,7 @@ where [refTable].[nazwa] = ?</property>
                       specialFlags="2" />
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating serwis_reklamowy table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SERWIS_REKLAMOWY]"
@@ -10626,7 +10626,7 @@ where [refTable].[nazwa] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating serwis_reklamowy table\Sort.Inputs[Sort Input].Columns[SERWIS_REKLAMOWY]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SERWIS_REKLAMOWY"
@@ -10654,7 +10654,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating serwis_reklamowy table\Sort.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       lineageId="Package\Populating serwis_reklamowy table\Sort.Outputs[Sort Output].Columns[SERWIS_REKLAMOWY]"
@@ -10841,7 +10841,7 @@ where [refTable].[nazwa] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating uzytkownik table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_kierunkowy]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -10863,7 +10863,7 @@ where [refTable].[nazwa] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating uzytkownik table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_telefonu]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -10885,7 +10885,7 @@ where [refTable].[nazwa] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating uzytkownik table\Convert to unicode.Outputs[Data Conversion Output].Columns[imie_nazwisko]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -10984,7 +10984,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -10993,7 +10993,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -11014,7 +11014,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating uzytkownik table\Droping old values.Inputs[Lookup Input].Columns[imie_nazwisko]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
                       cachedName="imie_nazwisko"
@@ -11104,7 +11104,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -11149,7 +11149,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating uzytkownik table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nr_kierunkowy]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="nr_kierunkowy"
@@ -11157,7 +11157,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       lineageId="Package\Populating uzytkownik table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_kierunkowy]" />
                     <inputColumn
                       refId="Package\Populating uzytkownik table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[nr_telefonu]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="nr_telefonu"
@@ -11165,7 +11165,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       lineageId="Package\Populating uzytkownik table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_telefonu]" />
                     <inputColumn
                       refId="Package\Populating uzytkownik table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[imie_nazwisko]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
                       cachedName="imie_nazwisko"
@@ -11180,19 +11180,19 @@ where [refTable].[imie_nazwisko] = ?</property>
                       name="id_uzytkownika" />
                     <externalMetadataColumn
                       refId="Package\Populating uzytkownik table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[imie_nazwisko]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="100"
                       name="imie_nazwisko" />
                     <externalMetadataColumn
                       refId="Package\Populating uzytkownik table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_kierunkowy]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="10"
                       name="nr_kierunkowy" />
                     <externalMetadataColumn
                       refId="Package\Populating uzytkownik table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[nr_telefonu]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="10"
                       name="nr_telefonu" />
@@ -11607,7 +11607,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -11767,7 +11767,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -11815,7 +11815,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].Columns[NR_TELEFONU]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -11837,7 +11837,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       name="DATA_UTWORZENIA" />
                     <externalMetadataColumn
                       refId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Output].ExternalColumns[NR_TELEFONU]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="10"
                       name="NR_TELEFONU" />
@@ -11860,7 +11860,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                       name="DATA_UTWORZENIA" />
                     <outputColumn
                       refId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[NR_TELEFONU]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="10"
                       lineageId="Package\Populating zamowienie table\BazaZamowien(Zamowienia).Outputs[OLE DB Source Error Output].Columns[NR_TELEFONU]"
@@ -12009,7 +12009,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[dzien]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -12022,18 +12022,18 @@ where [refTable].[imie_nazwisko] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,2,1250)([DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) &lt; 10 ? "0" + (DT_STR,2,1250)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) : (DT_STR,2,1250)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}))</property>
+                          name="Expression">(DT_STR,2,1252)([DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) &lt; 10 ? "0" + (DT_STR,2,1252)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) : (DT_STR,2,1252)[DAY](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,2,1250)(DAY(DATA_UTWORZENIA) &lt; 10 ? "0" + (DT_STR,2,1250)DAY(DATA_UTWORZENIA) : (DT_STR,2,1250)DAY(DATA_UTWORZENIA))</property>
+                          name="FriendlyExpression">(DT_STR,2,1252)(DAY(DATA_UTWORZENIA) &lt; 10 ? "0" + (DT_STR,2,1252)DAY(DATA_UTWORZENIA) : (DT_STR,2,1252)DAY(DATA_UTWORZENIA))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[rok]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -12046,18 +12046,18 @@ where [refTable].[imie_nazwisko] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)[YEAR](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]})</property>
+                          name="Expression">(DT_STR,11,1252)[YEAR](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)YEAR(DATA_UTWORZENIA)</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)YEAR(DATA_UTWORZENIA)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating zamowienie table\Calculating data_utworzenia d-m-y.Outputs[Derived Column Output].Columns[miesiac]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -12070,13 +12070,13 @@ where [refTable].[imie_nazwisko] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,11,1250)([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="Expression">(DT_STR,11,1252)([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 1 ? "styczeń" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 2 ? "luty" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 3 ? "marzec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 4 ? "kwiecień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 5 ? "maj" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 6 ? "czerwiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 7 ? "lipiec" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 8 ? "sierpień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 9 ? "wrzesień" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 10 ? "październik" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 11 ? "listopad" : ([MONTH](#{Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[DATA_UTWORZENIA]}) == 12 ? "grudzień" : ""))))))))))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,11,1250)(MONTH(DATA_UTWORZENIA) == 1 ? "styczeń" : (MONTH(DATA_UTWORZENIA) == 2 ? "luty" : (MONTH(DATA_UTWORZENIA) == 3 ? "marzec" : (MONTH(DATA_UTWORZENIA) == 4 ? "kwiecień" : (MONTH(DATA_UTWORZENIA) == 5 ? "maj" : (MONTH(DATA_UTWORZENIA) == 6 ? "czerwiec" : (MONTH(DATA_UTWORZENIA) == 7 ? "lipiec" : (MONTH(DATA_UTWORZENIA) == 8 ? "sierpień" : (MONTH(DATA_UTWORZENIA) == 9 ? "wrzesień" : (MONTH(DATA_UTWORZENIA) == 10 ? "październik" : (MONTH(DATA_UTWORZENIA) == 11 ? "listopad" : (MONTH(DATA_UTWORZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
+                          name="FriendlyExpression">(DT_STR,11,1252)(MONTH(DATA_UTWORZENIA) == 1 ? "styczeń" : (MONTH(DATA_UTWORZENIA) == 2 ? "luty" : (MONTH(DATA_UTWORZENIA) == 3 ? "marzec" : (MONTH(DATA_UTWORZENIA) == 4 ? "kwiecień" : (MONTH(DATA_UTWORZENIA) == 5 ? "maj" : (MONTH(DATA_UTWORZENIA) == 6 ? "czerwiec" : (MONTH(DATA_UTWORZENIA) == 7 ? "lipiec" : (MONTH(DATA_UTWORZENIA) == 8 ? "sierpień" : (MONTH(DATA_UTWORZENIA) == 9 ? "wrzesień" : (MONTH(DATA_UTWORZENIA) == 10 ? "październik" : (MONTH(DATA_UTWORZENIA) == 11 ? "listopad" : (MONTH(DATA_UTWORZENIA) == 12 ? "grudzień" : ""))))))))))))</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -12329,7 +12329,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_DANIA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NAZWA" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="CENA" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID_DANIA" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NAZWA" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CENA" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -12338,7 +12338,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -12487,7 +12487,7 @@ where [refTable].[nr_dania] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="przedzial_cenowy" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nr_dania" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nazwa" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="przedzial_cenowy" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -12496,7 +12496,7 @@ where [refTable].[nr_dania] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -12645,7 +12645,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_daty" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rok" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="miesiac" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="dzien" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -12654,7 +12654,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -12675,7 +12675,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[dzien]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="2"
                       cachedName="dzien"
@@ -12693,7 +12693,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[rok]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="rok"
@@ -12711,7 +12711,7 @@ where [refTable].[dzien] = ? and [refTable].[rok] = ? and [refTable].[miesiac] =
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating zamowienie table\Looking up id_daty.Inputs[Lookup Input].Columns[miesiac]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="11"
                       cachedName="miesiac"
@@ -12850,7 +12850,7 @@ where [refTable].[ID_DANIA] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -13027,7 +13027,7 @@ where [refTable].[nr_telefonu] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_uzytkownika" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="imie_nazwisko" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_kierunkowy" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nr_telefonu" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -13036,7 +13036,7 @@ where [refTable].[nr_telefonu] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -13057,7 +13057,7 @@ where [refTable].[nr_telefonu] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Populating zamowienie table\Looking up id_uzytkownika.Inputs[Lookup Input].Columns[NR_TELEFONU]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="15"
                       cachedName="NR_TELEFONU"
@@ -13180,7 +13180,7 @@ where [refTable].[nr_telefonu] = ?</property>
                       lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[DATA_UTWORZENIA]" />
                     <inputColumn
                       refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Inputs[Merge Join Left Input].Columns[NR_TELEFONU]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="NR_TELEFONU"
@@ -13248,7 +13248,7 @@ where [refTable].[nr_telefonu] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[NR_TELEFONU]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="15"
                       lineageId="Package\Populating zamowienie table\Merge Joining Zamowienia with PrzedmiotyZamowien.Outputs[Merge Join Output].Columns[NR_TELEFONU]"
@@ -13321,7 +13321,7 @@ where [refTable].[nr_telefonu] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Forces the use of the DefaultCodePage property value when describing character data."
@@ -13547,7 +13547,7 @@ where [refTable].[nr_zamowienia] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
+                  name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
                   description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
@@ -13685,7 +13685,7 @@ where [refTable].[nr_zamowienia] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Inputs[Sort Input].Columns[NR_TELEFONU]"
-                      cachedCodepage="1250"
+                      cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="NR_TELEFONU"
@@ -13740,7 +13740,7 @@ where [refTable].[nr_zamowienia] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[NR_TELEFONU]"
-                      codePage="1250"
+                      codePage="1252"
                       dataType="str"
                       length="10"
                       lineageId="Package\Populating zamowienie table\Sorting by id_zamowienia (1).Outputs[Sort Output].Columns[NR_TELEFONU]"
@@ -17023,7 +17023,7 @@ where [refTable].[nr_zamowienia] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,8.54531250000048,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,8.54531252000048,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
