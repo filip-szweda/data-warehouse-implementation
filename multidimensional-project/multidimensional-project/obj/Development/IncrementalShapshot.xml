@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>Default</ProcessingOption>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -54,14 +54,14 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kUiY2ImqM8X4e7VsOydnTcQ0bMQ=29/11/2022 16:16:5303/01/2023 22:27:12</TimeStamp>
+        <TimeStamp>suVH/0oOVU0NwkS8Fqqn+7z318c=07/01/2023 21:12:3603/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Danie</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>4/evkdISAMzB5qYmQBd73pbNAQg=29/11/2022 16:16:5303/01/2023 22:27:12</TimeStamp>
+        <TimeStamp>nd49aOnHds8727ycgIJNWk/+nBw=07/01/2023 21:12:5203/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Serwis Reklamowy</String>
         </ID>
@@ -89,7 +89,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>RV5nQ7bXDZyzf66+Mt5d4mIMTj0=07/01/2023 16:01:5907/01/2023 16:01:591qpmRlll5NviEAVTFduc6AEc778=29/11/2022 18:28:3103/01/2023 22:27:12</TimeStamp>
+        <TimeStamp>rFtJO1LaJQ+Cy9kw4wy182+5VNo=07/01/2023 21:13:3507/01/2023 20:55:521qpmRlll5NviEAVTFduc6AEc778=29/11/2022 18:28:3103/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Hurtownia-danych</String>
         </ID>
@@ -106,5 +106,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2023-01-07T15:22:04.056667Z</LastDeployed>
+  <LastDeployed>2023-01-07T20:13:44.883333Z</LastDeployed>
 </DeploymentSnapshot>
