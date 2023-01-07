@@ -160,7 +160,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-609" scrolltop="-4463" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="110" x="8043" y="9546" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-609" scrolltop="-4463" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="110" x="10202" y="10499" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01ee00009001b0300100065461686f6d61" />
                 </font>
@@ -694,9 +694,9 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4399" scrolltop="-9631" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5207" y="9546" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4399" scrolltop="-9631" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11986" y="21987" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
-                  <ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" />
+                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
                 <mouseicon>
                   <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -705,7 +705,7 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="uzytkownik" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3149" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="uzytkownik" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3149" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e00004d0c0000a50a0000" />
                 </control>
@@ -2649,7 +2649,7 @@ CALCULATE; </Text>
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="38" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="9860" scrolltop="-3051" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="12234" y="10837" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="38" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="9860" scrolltop="-3051" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="12234" y="11790" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="01ee00009001b0300100065461686f6d61" />
                       </font>
@@ -2762,7 +2762,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="4652" top="5811" logicalid="24" controlid="24" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2782,7 +2782,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="987" top="8514" logicalid="25" controlid="25" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2800,7 +2800,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="4652" top="1304" logicalid="26" controlid="26" masterid="0" hint1="0" hint2="0" width="11867" height="4107" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2820,7 +2820,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="25768" top="10327" logicalid="27" controlid="27" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2838,7 +2838,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="18919" top="1304" logicalid="28" controlid="28" masterid="0" hint1="0" hint2="0" width="6997" height="7559" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2858,7 +2858,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="18919" top="754" logicalid="29" controlid="29" masterid="0" hint1="0" hint2="0" width="6997" height="7559" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2878,7 +2878,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="16770" top="1808" logicalid="30" controlid="30" masterid="0" hint1="0" hint2="0" width="799" height="5193" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2898,7 +2898,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="16220" top="1808" logicalid="31" controlid="31" masterid="0" hint1="0" hint2="0" width="799" height="5193" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2918,7 +2918,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="10502" top="6361" logicalid="32" controlid="32" masterid="0" hint1="0" hint2="0" width="3000" height="853" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2938,7 +2938,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="18420" top="1808" logicalid="33" controlid="33" masterid="0" hint1="0" hint2="0" width="2496" height="6452" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2958,7 +2958,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="17516" top="8165" logicalid="34" controlid="34" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2978,7 +2978,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="22916" top="8164" logicalid="35" controlid="35" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -2996,7 +2996,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="18919" top="204" logicalid="36" controlid="36" masterid="0" hint1="0" hint2="0" width="13800" height="8659" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -3016,7 +3016,7 @@ CALCULATE; </Text>
                     <ddscontrol controlprogid="MSDDS.Polyline" left="29719" top="8164" logicalid="37" controlid="37" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
-                          <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                         </ddsxmlobj>
                       </control>
                       <layoutobject>
@@ -3032,7 +3032,7 @@ CALCULATE; </Text>
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>9860</DiagramViewPortLeft>
@@ -3262,61 +3262,61 @@ CALCULATE; </Text>
               <xs:field xpath="id_uzytkownika" />
               <xs:field xpath="id_daty" />
             </xs:unique>
-            <xs:keyref name="FK__zamowieni__id_da__477C86E9" refer="dbo_data_Constraint1">
+            <xs:keyref name="FK__zamowieni__id_da__45943E77" refer="Constraint1">
               <xs:selector xpath=".//dbo_zamowienie" />
-              <xs:field xpath="id_daty" />
+              <xs:field xpath="id_dania" />
             </xs:keyref>
             <xs:keyref name="FK__zamowieni__id_uz__468862B0" refer="dbo_uzytkownik_Constraint1">
               <xs:selector xpath=".//dbo_zamowienie" />
               <xs:field xpath="id_uzytkownika" />
             </xs:keyref>
-            <xs:keyref name="FK__zamowieni__id_da__45943E77" refer="Constraint1">
+            <xs:keyref name="FK__zamowieni__id_da__477C86E9" refer="dbo_data_Constraint1">
               <xs:selector xpath=".//dbo_zamowienie" />
-              <xs:field xpath="id_dania" />
-            </xs:keyref>
-            <xs:keyref name="FK__reklama__id_daty__43ABF605" refer="dbo_data_Constraint1">
-              <xs:selector xpath=".//dbo_reklama" />
-              <xs:field xpath="id_daty_zakonczenia" />
-            </xs:keyref>
-            <xs:keyref name="FK__reklama__id_daty__42B7D1CC" refer="dbo_data_Constraint1">
-              <xs:selector xpath=".//dbo_reklama" />
-              <xs:field xpath="id_daty_rozpoczecia" />
+              <xs:field xpath="id_daty" />
             </xs:keyref>
             <xs:keyref name="FK__reklama__id_serw__44A01A3E" refer="dbo_serwis_reklamowy_Constraint1">
               <xs:selector xpath=".//dbo_reklama" />
               <xs:field xpath="id_serwisu_reklamowego" />
             </xs:keyref>
-            <xs:keyref name="FK__promocja__id_dan__3FDB6521" refer="Constraint1">
-              <xs:selector xpath=".//dbo_promocja" />
-              <xs:field xpath="id_dania" />
-            </xs:keyref>
-            <xs:keyref name="FK__promocja__id_dat__3DF31CAF" refer="dbo_data_Constraint1">
-              <xs:selector xpath=".//dbo_promocja" />
+            <xs:keyref name="FK__reklama__id_daty__42B7D1CC" refer="dbo_data_Constraint1">
+              <xs:selector xpath=".//dbo_reklama" />
               <xs:field xpath="id_daty_rozpoczecia" />
+            </xs:keyref>
+            <xs:keyref name="FK__reklama__id_daty__43ABF605" refer="dbo_data_Constraint1">
+              <xs:selector xpath=".//dbo_reklama" />
+              <xs:field xpath="id_daty_zakonczenia" />
             </xs:keyref>
             <xs:keyref name="FK__promocja__id_dat__3EE740E8" refer="dbo_data_Constraint1">
               <xs:selector xpath=".//dbo_promocja" />
               <xs:field xpath="id_daty_zakonczenia" />
             </xs:keyref>
-            <xs:keyref name="FK__kliknieci__id_re__4964CF5B" refer="dbo_reklama_Constraint1">
-              <xs:selector xpath=".//dbo_klikniecia_w_trakcie_promocji" />
-              <xs:field xpath="id_reklamy" />
+            <xs:keyref name="FK__promocja__id_dat__3DF31CAF" refer="dbo_data_Constraint1">
+              <xs:selector xpath=".//dbo_promocja" />
+              <xs:field xpath="id_daty_rozpoczecia" />
             </xs:keyref>
-            <xs:keyref name="FK__kliknieci__id_pr__4A58F394" refer="dbo_promocja_Constraint1">
-              <xs:selector xpath=".//dbo_klikniecia_w_trakcie_promocji" />
-              <xs:field xpath="id_promocji" />
+            <xs:keyref name="FK__promocja__id_dan__3FDB6521" refer="Constraint1">
+              <xs:selector xpath=".//dbo_promocja" />
+              <xs:field xpath="id_dania" />
             </xs:keyref>
             <xs:keyref name="FK__kliknieci__id_da__4870AB22" refer="dbo_data_Constraint1">
               <xs:selector xpath=".//dbo_klikniecia_w_trakcie_promocji" />
               <xs:field xpath="id_daty" />
             </xs:keyref>
-            <xs:keyref name="FK__kliknieci__id_re__41C3AD93" refer="dbo_reklama_Constraint1">
-              <xs:selector xpath=".//dbo_klikniecia" />
+            <xs:keyref name="FK__kliknieci__id_pr__4A58F394" refer="dbo_promocja_Constraint1">
+              <xs:selector xpath=".//dbo_klikniecia_w_trakcie_promocji" />
+              <xs:field xpath="id_promocji" />
+            </xs:keyref>
+            <xs:keyref name="FK__kliknieci__id_re__4964CF5B" refer="dbo_reklama_Constraint1">
+              <xs:selector xpath=".//dbo_klikniecia_w_trakcie_promocji" />
               <xs:field xpath="id_reklamy" />
             </xs:keyref>
             <xs:keyref name="FK__kliknieci__id_da__40CF895A" refer="dbo_data_Constraint1">
               <xs:selector xpath=".//dbo_klikniecia" />
               <xs:field xpath="id_daty" />
+            </xs:keyref>
+            <xs:keyref name="FK__kliknieci__id_re__41C3AD93" refer="dbo_reklama_Constraint1">
+              <xs:selector xpath=".//dbo_klikniecia" />
+              <xs:field xpath="id_reklamy" />
             </xs:keyref>
           </xs:element>
         </xs:schema>

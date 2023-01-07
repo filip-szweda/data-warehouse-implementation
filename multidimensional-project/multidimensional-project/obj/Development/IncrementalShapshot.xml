@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <ProcessingOption>Default</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -19,77 +19,77 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>txw5/Aj9rnGyw/q6GIDv+Z50X2g=03/01/2023 18:34:2903/01/2023 18:06:54</TimeStamp>
+        <TimeStamp>txw5/Aj9rnGyw/q6GIDv+Z50X2g=03/01/2023 18:34:2903/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Hurtownia-danych</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>AWdwZ0yYOkrBwXjRimuj+TBcTvg=03/01/2023 22:21:4403/01/2023 22:17:06</TimeStamp>
+        <TimeStamp>AWdwZ0yYOkrBwXjRimuj+TBcTvg=07/01/2023 16:01:5907/01/2023 16:01:59</TimeStamp>
         <ID>
           <String>Hurtownia-danych</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>dc2z2IsNqRfClHWwLdtBMMXD7B8=29/11/2022 16:16:5329/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>dc2z2IsNqRfClHWwLdtBMMXD7B8=29/11/2022 16:16:5303/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Reklama</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>Dncm5ZeSxdX7HOq9o3warKjbe90=03/01/2023 22:24:2803/01/2023 22:17:06</TimeStamp>
+        <TimeStamp>Dncm5ZeSxdX7HOq9o3warKjbe90=07/01/2023 16:01:5907/01/2023 16:01:59</TimeStamp>
         <ID>
           <String>Data</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>aTte1vdiWBcX5sk894WtmXPKOgA=29/11/2022 16:16:5329/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>aTte1vdiWBcX5sk894WtmXPKOgA=29/11/2022 16:16:5303/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Promocja</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kUiY2ImqM8X4e7VsOydnTcQ0bMQ=29/11/2022 16:16:5329/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>kUiY2ImqM8X4e7VsOydnTcQ0bMQ=29/11/2022 16:16:5303/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Danie</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>4/evkdISAMzB5qYmQBd73pbNAQg=29/11/2022 16:16:5329/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>4/evkdISAMzB5qYmQBd73pbNAQg=29/11/2022 16:16:5303/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Serwis Reklamowy</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kQfinH0kifJox79ZaZ3zDb57Qeg=29/11/2022 16:33:3929/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>kQfinH0kifJox79ZaZ3zDb57Qeg=29/11/2022 16:33:3903/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Uzytkownik</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kZajtn2mQAcgvO3QLW4PGOURY4U=29/11/2022 18:07:1829/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>kZajtn2mQAcgvO3QLW4PGOURY4U=29/11/2022 18:07:1803/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Zdegenrowana Promocja</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>iQ5SKnf/OfhuCKg0BE5/UDxyTLQ=29/11/2022 18:13:3029/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>iQ5SKnf/OfhuCKg0BE5/UDxyTLQ=29/11/2022 18:13:3003/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Zamowienie</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>RV5nQ7bXDZyzf66+Mt5d4mIMTj0=03/01/2023 22:24:2803/01/2023 22:17:061qpmRlll5NviEAVTFduc6AEc778=29/11/2022 18:28:3129/11/2022 19:21:14</TimeStamp>
+        <TimeStamp>RV5nQ7bXDZyzf66+Mt5d4mIMTj0=07/01/2023 16:01:5907/01/2023 16:01:591qpmRlll5NviEAVTFduc6AEc778=29/11/2022 18:28:3103/01/2023 22:27:12</TimeStamp>
         <ID>
           <String>Hurtownia-danych</String>
         </ID>
@@ -97,7 +97,7 @@
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>felenasddE0eXjXyI1YabRzZnxI=29/11/2022 15:41:4529/11/2022 19:21:14</TimeStamp>
+      <TimeStamp>felenasddE0eXjXyI1YabRzZnxI=29/11/2022 15:41:4503/01/2023 22:27:12</TimeStamp>
       <ID>
         <String>multidimensional-project</String>
       </ID>
@@ -106,5 +106,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2023-01-03T21:24:55.153333Z</LastDeployed>
+  <LastDeployed>2023-01-07T15:22:04.056667Z</LastDeployed>
 </DeploymentSnapshot>
