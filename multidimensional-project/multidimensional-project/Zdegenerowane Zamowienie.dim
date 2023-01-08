@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fa4268ce-dbbf-4b6a-bded-27e3207de824" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4f7c3bdf-2ee3-48de-b00e-9bc7e69de61c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Zamowienie</ID>
   <Name>Zdegenerowane Zamowienie</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -42,24 +42,25 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="29f60e6e-fcaf-43c6-a63e-c1580bb1e638">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a4cacfdb-6b23-4966-9ae4-50f594f11baf">
     <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="23a22e73-1996-43c4-9974-7951164b2866">
+  <ErrorConfiguration dwd:design-time-name="5e63f0ab-280c-465f-81b9-8e9cc42e2529">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="3ce1d318-e42a-45e9-9fab-fb684a30b943">
+    <Attribute dwd:design-time-name="ae939301-eec9-4c91-aa93-957a3d409403">
       <ID>Nr Zamowienia</ID>
       <Name>Nr Zamowienia</Name>
       <Usage>Key</Usage>
+      <EstimatedCount>2000</EstimatedCount>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c7ecd365-d112-48dc-8e7d-60c707bd5214">
+        <KeyColumn dwd:design-time-name="7c357921-f7bd-49a9-a28b-aed1ae41c6f3">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f453b059-5c0d-44c1-bc0d-7f5c2c5de04e">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f0accba0-426b-4c5a-ab97-1be915e86d4c">
             <TableID>dbo_zamowienie</TableID>
             <ColumnID>nr_zamowienia</ColumnID>
           </Source>

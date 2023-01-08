@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3a0e2d3e-c3f7-4613-b430-1bc9d443b710" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0f6e145f-6242-4cf5-b20d-5a9ead97bc8a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Danie</ID>
   <Name>Danie</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -68,35 +68,36 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="0e391be5-9176-4600-be39-c46e66e63782">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2d17f4bc-42a4-466d-b567-d4fd0c993b7c">
     <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="2659395f-01fe-461b-9d4d-962d27f42734">
+  <ErrorConfiguration dwd:design-time-name="7fa4cf24-7d54-4e4e-9d23-bb830ee28723">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="a5c473be-7917-469a-ac62-d87db0e22ad7">
+    <Attribute dwd:design-time-name="8598b524-5562-4d74-9efe-daefa84b6073">
       <ID>Id Dania</ID>
       <Name>Id Dania</Name>
       <Usage>Key</Usage>
+      <EstimatedCount>6000</EstimatedCount>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="1fac793a-d79c-451f-b67f-c476a45e246e">
+        <KeyColumn dwd:design-time-name="20b1aee3-e0d8-4137-b93f-959741c37066">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a9a8267-3f15-446d-83b5-e6e2794e6bdc">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a1970354-27cb-4edb-b995-1fc50e6f42bd">
             <TableID>dbo_danie</TableID>
             <ColumnID>id_dania</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="840ab8b3-fb61-42ac-9b84-19a15a1d99d5">
+        <AttributeRelationship dwd:design-time-name="a1a0242b-e675-45a1-8873-8ce3c9648a64">
           <AttributeID>Przedzial Cenowy</AttributeID>
           <Name>Przedzial Cenowy</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="507b2d00-9173-435b-95d9-ed5e107cce1d">
+        <AttributeRelationship dwd:design-time-name="a62c408f-bcc3-4c42-8c76-cc364180e6ad">
           <AttributeID>Nazwa</AttributeID>
           <Name>Nazwa</Name>
         </AttributeRelationship>
@@ -105,14 +106,15 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="b4e2075e-2009-4416-ac24-7db51ad3c140">
+    <Attribute dwd:design-time-name="7b8d615e-16a8-4581-9b63-bdc0c084d0ce">
       <ID>Przedzial Cenowy</ID>
       <Name>Przedzial Cenowy</Name>
+      <EstimatedCount>4</EstimatedCount>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="729a9761-1e36-4092-ae08-23a9bf5ad663">
+        <KeyColumn dwd:design-time-name="0e106086-fb9a-4bb6-9db8-a605631c2822">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3c3a504-1418-45aa-9a31-4fc1fc7a69c2">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f00c6cce-c27d-48d1-af91-bbe5f40eb01b">
             <TableID>dbo_danie</TableID>
             <ColumnID>przedzial_cenowy</ColumnID>
           </Source>
@@ -121,14 +123,15 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="4da51199-812b-4d5c-a132-d0f40d0608b0">
+    <Attribute dwd:design-time-name="2bfdc993-875f-4acd-83bc-d19710f2f42b">
       <ID>Nazwa</ID>
       <Name>Nazwa</Name>
+      <EstimatedCount>4219</EstimatedCount>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="e3997cd3-5c57-421d-9807-3023d26e06a2">
+        <KeyColumn dwd:design-time-name="b01f486c-7d3f-4ffb-ba36-3eaaca8b3c6d">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2d765cbb-5b66-4de1-aeb4-686d7fb2fb20">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1c19f67c-69f8-4ab5-b902-2e333aaab98d">
             <TableID>dbo_danie</TableID>
             <ColumnID>nazwa</ColumnID>
           </Source>
