@@ -1,61 +1,1136 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="149dd4a2-6588-4513-a69d-c7e836b6f4c4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a76214f9-d9a7-4a63-9682-cc8c954387e7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Hurtownia-danych</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Klikniecia</ID>
       <Partitions>
-        <Partition dwd:design-time-name="043d4918-6027-45c9-9385-fb33d642a8c5">
+        <Partition dwd:design-time-name="21d18408-7e05-4af6-a16c-3f35d37ad4a6">
           <ID>Klikniecia</ID>
           <Name>Klikniecia</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="6b2a8920-e4eb-4555-ac3e-51aa5e229305">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0098c7cb-4772-43eb-b87c-33018b3ca8d0">
             <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
             <TableID>dbo_klikniecia</TableID>
           </Source>
-          <StorageMode>Molap</StorageMode>
+          <StorageMode>Holap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="d7bfe229-c1bc-4bcf-8643-f4d5c9547b9f">
+            <SilenceInterval>PT0S</SilenceInterval>
+            <Latency>PT0S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Enabled>true</Enabled>
+            <AggregationStorage>MolapOnly</AggregationStorage>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="4ee84c51-51ab-42c0-8ca7-f9c993aa13c0">
+              <NotificationTechnique>Server</NotificationTechnique>
+            </Source>
+          </ProactiveCaching>
+          <EstimatedRows>1073557</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
       </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2023-01-08T18:42:25.716667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2023-01-08T19:05:23.986667Z</LastSchemaUpdate>
+          <EstimatedRows>1073557</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Reklama</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Reklamy</AttributeID>
+                  <EstimatedCount>11921</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Id Daty Zakonczenia</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Id Daty Rozpoczecia</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Id Serwisu Reklamowego</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Data</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Daty</AttributeID>
+                  <EstimatedCount>1827</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rok</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miesiac</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Dzien</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Kwartal</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Daty</AttributeID>
+                  <EstimatedCount>1827</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rok</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miesiac</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Dzien</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Kwartal</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Daty</AttributeID>
+                  <EstimatedCount>1827</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Rok</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Miesiac</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Dzien</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Kwartal</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Id Serwisu Reklamowego</AttributeID>
+                  <EstimatedCount>10137</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nazwa</AttributeID>
+                  <EstimatedCount>10137</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Serwisu Reklamowego</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 5</ID>
+              <Name>Aggregation 5</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Serwisu Reklamowego</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 6</ID>
+              <Name>Aggregation 6</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Serwisu Reklamowego</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 7</ID>
+              <Name>Aggregation 7</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 8</ID>
+              <Name>Aggregation 8</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 9</ID>
+              <Name>Aggregation 9</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation a</ID>
+              <Name>Aggregation a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation b</ID>
+              <Name>Aggregation b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation c</ID>
+              <Name>Aggregation c</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation d</ID>
+              <Name>Aggregation d</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation e</ID>
+              <Name>Aggregation e</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation f</ID>
+              <Name>Aggregation f</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 10</ID>
+              <Name>Aggregation 10</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 11</ID>
+              <Name>Aggregation 11</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 12</ID>
+              <Name>Aggregation 12</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 13</ID>
+              <Name>Aggregation 13</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 14</ID>
+              <Name>Aggregation 14</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 15</ID>
+              <Name>Aggregation 15</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 16</ID>
+              <Name>Aggregation 16</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Daty</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 17</ID>
+              <Name>Aggregation 17</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Serwisu Reklamowego</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 18</ID>
+              <Name>Aggregation 18</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Reklamy</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 19</ID>
+              <Name>Aggregation 19</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Reklamy</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1a</ID>
+              <Name>Aggregation 1a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Reklamy</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1b</ID>
+              <Name>Aggregation 1b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Reklama</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Id Reklamy</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Data</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Kwartal</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Zakonczenia</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Rok</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Reklama - Id Daty Rozpoczecia</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Serwis Reklamowy</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
     </MeasureGroup>
     <MeasureGroup>
       <ID>Klikniecia w Trakcie Promocji</ID>
       <Partitions>
-        <Partition dwd:design-time-name="a31a2bd7-bd44-4e4f-b288-f1d1fa01080b">
+        <Partition dwd:design-time-name="82550ad7-4c87-4baf-afd1-789fb4452da7">
           <ID>Klikniecia w Trakcie Promocji</ID>
           <Name>Klikniecia w Trakcie Promocji</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a2f7044c-8381-450f-b91e-1c5db8b2abc7">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="88945176-a342-47ab-a484-b93af646291f">
             <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
             <TableID>dbo_klikniecia_w_trakcie_promocji</TableID>
           </Source>
-          <StorageMode>Molap</StorageMode>
+          <StorageMode>Holap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="b0f024e1-1748-4f71-89fc-bb1e63003289">
+            <SilenceInterval>PT0S</SilenceInterval>
+            <Latency>PT0S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Enabled>true</Enabled>
+            <AggregationStorage>MolapOnly</AggregationStorage>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="ed52aab8-3a3d-4043-b759-ea149e2b554f">
+              <NotificationTechnique>Server</NotificationTechnique>
+            </Source>
+          </ProactiveCaching>
         </Partition>
       </Partitions>
     </MeasureGroup>
     <MeasureGroup>
       <ID>Promocja</ID>
       <Partitions>
-        <Partition dwd:design-time-name="cc9ca355-4706-46c5-b6d1-697454eed078">
+        <Partition dwd:design-time-name="44307585-b750-40fb-bc1a-a8570b329660">
           <ID>Promocja</ID>
           <Name>Promocja</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8b7c3012-838f-47df-ad5a-b15dcc334948">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ce61122d-2135-46a4-9446-c259899b7513">
             <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
             <TableID>dbo_promocja</TableID>
           </Source>
-          <StorageMode>Molap</StorageMode>
+          <StorageMode>Holap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
@@ -64,18 +1139,18 @@
     <MeasureGroup>
       <ID>Reklama</ID>
       <Partitions>
-        <Partition dwd:design-time-name="1a291607-42f0-4eda-b153-7737d2bc0f87">
+        <Partition dwd:design-time-name="25ac4a8a-2c1a-4b57-b7c4-32da4daa1ffb">
           <ID>Reklama</ID>
           <Name>Reklama</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="16c9c69b-9335-4b44-8f08-43b7b1ecfbff">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e820a9e9-07f1-4f64-9b38-d9da36beb736">
             <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
             <TableID>dbo_reklama</TableID>
           </Source>
-          <StorageMode>Molap</StorageMode>
+          <StorageMode>Holap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>
@@ -84,18 +1159,18 @@
     <MeasureGroup>
       <ID>Zamowienie</ID>
       <Partitions>
-        <Partition dwd:design-time-name="2996ecbc-b4c1-455a-a7f4-e3d8a00ac18e">
+        <Partition dwd:design-time-name="2b580970-c98f-4682-b132-76e5993835f4">
           <ID>Zamowienie</ID>
           <Name>Zamowienie</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8e49ce32-5beb-491b-9f89-6fae70031128">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="dd882422-1b6c-49b3-a10f-9284fbe422a8">
             <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
             <TableID>dbo_zamowienie</TableID>
           </Source>
-          <StorageMode>Molap</StorageMode>
+          <StorageMode>Holap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
         </Partition>

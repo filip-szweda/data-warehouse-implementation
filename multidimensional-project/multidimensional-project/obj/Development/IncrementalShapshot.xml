@@ -33,63 +33,63 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>dc2z2IsNqRfClHWwLdtBMMXD7B8=29/11/2022 16:16:5303/01/2023 22:27:12</TimeStamp>
+        <TimeStamp>iQ5SKnf/OfhuCKg0BE5/UDxyTLQ=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
         <ID>
-          <String>Reklama</String>
+          <String>Zamowienie</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>Dncm5ZeSxdX7HOq9o3warKjbe90=07/01/2023 16:01:5907/01/2023 16:01:59</TimeStamp>
-        <ID>
-          <String>Data</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>aTte1vdiWBcX5sk894WtmXPKOgA=29/11/2022 16:16:5303/01/2023 22:27:12</TimeStamp>
-        <ID>
-          <String>Promocja</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>suVH/0oOVU0NwkS8Fqqn+7z318c=07/01/2023 21:12:3603/01/2023 22:27:12</TimeStamp>
-        <ID>
-          <String>Danie</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>nd49aOnHds8727ycgIJNWk/+nBw=07/01/2023 21:12:5203/01/2023 22:27:12</TimeStamp>
-        <ID>
-          <String>Serwis Reklamowy</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kQfinH0kifJox79ZaZ3zDb57Qeg=29/11/2022 16:33:3903/01/2023 22:27:12</TimeStamp>
-        <ID>
-          <String>Uzytkownik</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kZajtn2mQAcgvO3QLW4PGOURY4U=29/11/2022 18:07:1803/01/2023 22:27:12</TimeStamp>
+        <TimeStamp>kZajtn2mQAcgvO3QLW4PGOURY4U=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
         <ID>
           <String>Zdegenrowana Promocja</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>iQ5SKnf/OfhuCKg0BE5/UDxyTLQ=29/11/2022 18:13:3003/01/2023 22:27:12</TimeStamp>
+        <TimeStamp>kQfinH0kifJox79ZaZ3zDb57Qeg=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
         <ID>
-          <String>Zamowienie</String>
+          <String>Uzytkownik</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>QczrdZnZ4XHH6Bwf3pfgXaiu09M=08/01/2023 19:42:2308/01/2023 19:37:49</TimeStamp>
+        <ID>
+          <String>Serwis Reklamowy</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>suVH/0oOVU0NwkS8Fqqn+7z318c=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
+        <ID>
+          <String>Danie</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>aTte1vdiWBcX5sk894WtmXPKOgA=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
+        <ID>
+          <String>Promocja</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>2JiRm+tIWNq6WCNOBjR6l6CaRbk=08/01/2023 20:05:4408/01/2023 19:37:49</TimeStamp>
+        <ID>
+          <String>Data</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>YeARUPvmlWSCidPUcjgast9aeTI=08/01/2023 19:42:2308/01/2023 19:37:49</TimeStamp>
+        <ID>
+          <String>Reklama</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>rFtJO1LaJQ+Cy9kw4wy182+5VNo=07/01/2023 21:13:3507/01/2023 20:55:521qpmRlll5NviEAVTFduc6AEc778=29/11/2022 18:28:3103/01/2023 22:27:12</TimeStamp>
+        <TimeStamp>FcZ+JKE8eFr07El4GkLJ04HwHQw=08/01/2023 20:05:4408/01/2023 19:37:49xl25fDY3f9OC1lcSEXBlV3EX0NQ=08/01/2023 20:05:4408/01/2023 19:37:49</TimeStamp>
         <ID>
           <String>Hurtownia-danych</String>
         </ID>
@@ -106,5 +106,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2023-01-07T20:13:44.883333Z</LastDeployed>
+  <LastDeployed>2023-01-08T19:06:07.133333Z</LastDeployed>
 </DeploymentSnapshot>

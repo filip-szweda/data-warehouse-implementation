@@ -13,28 +13,28 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Reklama</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Data</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Promocja</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Danie</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Serwis Reklamowy</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Uzytkownik</ID>
+        <ID>Zamowienie</ID>
       </Dimension>
       <Dimension>
         <ID>Zdegenrowana Promocja</ID>
       </Dimension>
       <Dimension>
-        <ID>Zamowienie</ID>
+        <ID>Uzytkownik</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Serwis Reklamowy</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Danie</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Promocja</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Data</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Reklama</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
