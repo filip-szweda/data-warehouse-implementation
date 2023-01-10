@@ -33,37 +33,16 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>iQ5SKnf/OfhuCKg0BE5/UDxyTLQ=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
+        <TimeStamp>YeARUPvmlWSCidPUcjgast9aeTI=08/01/2023 20:11:4108/01/2023 20:11:41</TimeStamp>
         <ID>
-          <String>Zamowienie</String>
+          <String>Reklama</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kZajtn2mQAcgvO3QLW4PGOURY4U=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
+        <TimeStamp>2JiRm+tIWNq6WCNOBjR6l6CaRbk=08/01/2023 20:11:4108/01/2023 20:11:41</TimeStamp>
         <ID>
-          <String>Zdegenrowana Promocja</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kQfinH0kifJox79ZaZ3zDb57Qeg=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
-        <ID>
-          <String>Uzytkownik</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>QczrdZnZ4XHH6Bwf3pfgXaiu09M=08/01/2023 19:42:2308/01/2023 19:37:49</TimeStamp>
-        <ID>
-          <String>Serwis Reklamowy</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>suVH/0oOVU0NwkS8Fqqn+7z318c=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
-        <ID>
-          <String>Danie</String>
+          <String>Data</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
@@ -75,21 +54,42 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>2JiRm+tIWNq6WCNOBjR6l6CaRbk=08/01/2023 20:05:4408/01/2023 19:37:49</TimeStamp>
+        <TimeStamp>zgqgQxorMbGAZiq/FRvjeTo5W/U=08/01/2023 20:12:3508/01/2023 19:37:49</TimeStamp>
         <ID>
-          <String>Data</String>
+          <String>Danie</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>YeARUPvmlWSCidPUcjgast9aeTI=08/01/2023 19:42:2308/01/2023 19:37:49</TimeStamp>
+        <TimeStamp>QczrdZnZ4XHH6Bwf3pfgXaiu09M=08/01/2023 20:11:4108/01/2023 20:11:41</TimeStamp>
         <ID>
-          <String>Reklama</String>
+          <String>Serwis Reklamowy</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>6hWW9OYsxL4e7fLiKQ4uRNUG1+Y=08/01/2023 20:12:3508/01/2023 19:37:49</TimeStamp>
+        <ID>
+          <String>Uzytkownik</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>kZajtn2mQAcgvO3QLW4PGOURY4U=08/01/2023 19:37:4908/01/2023 19:37:49</TimeStamp>
+        <ID>
+          <String>Zdegenrowana Promocja</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0JOZ3FK6/wrV1Z9c3yVlsxTbA+c=08/01/2023 20:12:3508/01/2023 19:37:49</TimeStamp>
+        <ID>
+          <String>Zamowienie</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>FcZ+JKE8eFr07El4GkLJ04HwHQw=08/01/2023 20:05:4408/01/2023 19:37:49xl25fDY3f9OC1lcSEXBlV3EX0NQ=08/01/2023 20:05:4408/01/2023 19:37:49</TimeStamp>
+        <TimeStamp>4W//TvQ3egxtkbJ2OyVw/hdraO0=10/01/2023 17:17:5310/01/2023 17:17:301XDqDffFDZAakCVAfZwA4U2OLIA=10/01/2023 17:17:3010/01/2023 17:17:30</TimeStamp>
         <ID>
           <String>Hurtownia-danych</String>
         </ID>
@@ -106,5 +106,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2023-01-08T19:06:07.133333Z</LastDeployed>
+  <LastDeployed>2023-01-10T16:18:09.403333Z</LastDeployed>
 </DeploymentSnapshot>
