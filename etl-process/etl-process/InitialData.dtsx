@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{43BF2910-8F95-495B-B6E4-9046F03E9433}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{E92591DB-A04A-4E86-B145-421FC5BAA45B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -224,7 +224,7 @@
 DECLARE @AllDates table
 		(data datetime)
 
-SELECT @Start = '2020-01-01', @End = '2024-12-31';
+SELECT @Start = '2018-01-01', @End = '2021-12-31';
 
 WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
      Nbrs_2( n ) AS ( SELECT 1 FROM Nbrs_3 n1 CROSS JOIN Nbrs_3 n2 ),
@@ -447,13 +447,13 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Create and insert into date\OLE DB Source"
-          TopLeft="288,103" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Create and insert into date\OLE DB Destination"
           TopLeft="275,242" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Create and insert into date\OLE DB Source"
+          TopLeft="288,103" />
         <EdgeLayout
           Id="Package\Create and insert into date.Paths[OLE DB Source Output]"
           TopLeft="361.9,144.6">
