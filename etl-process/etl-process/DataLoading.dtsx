@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="164"
-  DTS:VersionGUID="{F83C2AA8-E88D-46DE-95BF-C9625C6105FD}">
+  DTS:VersionBuild="165"
+  DTS:VersionGUID="{B60CE606-21AD-46BB-8E58-5B492BCF1BC3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -8630,24 +8630,24 @@ where [refTable].[nr_promocji] = ?</property>
               startId="Package\Populating promocja table\Calculating czy_objete_ta_promocja.Outputs[Derived Column Output]" />
             <path
               refId="Package\Populating promocja table.Paths[Lookup Match Output3]"
-              endId="Package\Populating promocja table\Creating nazwa.Inputs[Derived Column Input]"
+              endId="Package\Populating promocja table\Calculating liczba_dni.Inputs[Derived Column Input]"
               name="Lookup Match Output"
-              startId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Match Output]" />
+              startId="Package\Populating promocja table\Looking up id_dania and nazwa_dania.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating promocja table.Paths[Lookup Match Output2]"
-              endId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input]"
-              name="Lookup Match Output"
-              startId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Populating promocja table.Paths[Lookup Match Output1]"
               endId="Package\Populating promocja table\Looking up id_dania and nazwa_dania.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Populating promocja table\Looking up cena_objetego_dania.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Populating promocja table.Paths[Lookup Match Output]"
-              endId="Package\Populating promocja table\Calculating liczba_dni.Inputs[Derived Column Input]"
+              refId="Package\Populating promocja table.Paths[Lookup Match Output1]"
+              endId="Package\Populating promocja table\Calculating data_zakonczenia d-m-y.Inputs[Derived Column Input]"
               name="Lookup Match Output"
-              startId="Package\Populating promocja table\Looking up id_dania and nazwa_dania.Outputs[Lookup Match Output]" />
+              startId="Package\Populating promocja table\Looking up id_daty_rozpoczecia.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Populating promocja table.Paths[Lookup Match Output]"
+              endId="Package\Populating promocja table\Creating nazwa.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Populating promocja table\Looking up id_daty_zakonczenia.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Populating promocja table.Paths[Lookup No Match Output]"
               endId="Package\Populating promocja table\OLE DB Destination.Inputs[OLE DB Destination Input]"
@@ -10983,7 +10983,7 @@ where [refTable].[nazwa] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[uzytkownik]) [refTable]
-where [refTable].[imie_nazwisko] = ?</property>
+where [refTable].[nr_telefonu] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -11019,7 +11019,7 @@ where [refTable].[imie_nazwisko] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Populating uzytkownik table\Convert to unicode.Outputs[Data Conversion Output].Columns[imie_nazwisko]};</property>
+                  name="ParameterMap">#{Package\Populating uzytkownik table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_telefonu]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -11043,17 +11043,17 @@ where [refTable].[imie_nazwisko] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Populating uzytkownik table\Droping old values.Inputs[Lookup Input].Columns[imie_nazwisko]"
+                      refId="Package\Populating uzytkownik table\Droping old values.Inputs[Lookup Input].Columns[nr_telefonu]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="60"
-                      cachedName="imie_nazwisko"
-                      lineageId="Package\Populating uzytkownik table\Convert to unicode.Outputs[Data Conversion Output].Columns[imie_nazwisko]">
+                      cachedLength="255"
+                      cachedName="nr_telefonu"
+                      lineageId="Package\Populating uzytkownik table\Convert to unicode.Outputs[Data Conversion Output].Columns[nr_telefonu]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">imie_nazwisko</property>
+                          name="JoinToReferenceColumn">nr_telefonu</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -14112,6 +14112,10 @@ where [refTable].[nr_zamowienia] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="236,41.6"
+          Id="Package\Analysis Services Processing Task"
+          TopLeft="190.714288962131,441.02353347643" />
+        <NodeLayout
           Size="184,41.6"
           Id="Package\Populating danie table"
           TopLeft="391,51" />
@@ -14379,10 +14383,6 @@ where [refTable].[nr_zamowienia] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="236,41.6"
-          Id="Package\Analysis Services Processing Task"
-          TopLeft="190.714288962131,441.02353347643" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
           TopLeft="312.257144481065,399.1">
@@ -14408,33 +14408,37 @@ where [refTable].[nr_zamowienia] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[localhost]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
   <TaskHost
     design-time-name="Package\Populating danie table">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="166,42"
+          Size="166.4,41.6"
           Id="Package\Populating danie table\OLE DB Command"
           TopLeft="229,415.5" />
         <NodeLayout
-          Size="209,42"
+          Size="208.8,41.6"
           Id="Package\Populating danie table\Slowly Changing Dimension"
           TopLeft="207.5,313.5" />
         <NodeLayout
-          Size="186,42"
+          Size="185.6,41.6"
           Id="Package\Populating danie table\Calculating PriceRange"
           TopLeft="219,211.5" />
         <NodeLayout
-          Size="163,42"
+          Size="163.2,41.6"
           Id="Package\Populating danie table\Insert Destination"
           TopLeft="5.50000000000006,415.5" />
         <NodeLayout
-          Size="155,44"
+          Size="155.2,44"
           Id="Package\Populating danie table\Sort by nr dania"
           TopLeft="234.5,107.5" />
         <NodeLayout
-          Size="184,42"
+          Size="184,41.6"
           Id="Package\Populating danie table\BazaZamowien(Dania)"
           TopLeft="220,5.49999999999989" />
         <EdgeLayout
@@ -14456,9 +14460,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14480,9 +14482,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14504,9 +14504,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15790,54 +15788,30 @@ where [refTable].[nr_zamowienia] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating promocja table.Paths[Lookup Match Output3]"
-          TopLeft="230.448078253538,678.523076923077">
+          TopLeft="220.540109509978,270.434841655771">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,23.9181048830551"
+              EndConnector="0,31.4113121903828"
               Start="0,0"
-              End="0,16.4181048830551">
+              End="0,23.9113121903828">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.4181048830551" />
+                    End="0,23.9113121903828" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,2.40436494152755,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,6.1509685951914,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating promocja table.Paths[Lookup Match Output2]"
-          TopLeft="229.953846153846,546.215384615384">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25.6307692307696"
-              Start="0,0"
-              End="0,18.1307692307696">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.1307692307696" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,3.2606971153848,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Populating promocja table.Paths[Lookup Match Output1]"
           TopLeft="214.909340279209,193.907692307692">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15861,26 +15835,50 @@ where [refTable].[nr_zamowienia] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Populating promocja table.Paths[Lookup Match Output]"
-          TopLeft="220.540109509978,270.434841655771">
+          Id="Package\Populating promocja table.Paths[Lookup Match Output1]"
+          TopLeft="229.953846153846,546.215384615384">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31.4113121903828"
+              EndConnector="0,25.6307692307696"
               Start="0,0"
-              End="0,23.9113121903828">
+              End="0,18.1307692307696">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.9113121903828" />
+                    End="0,18.1307692307696" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.1509685951914,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,3.2606971153848,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating promocja table.Paths[Lookup Match Output]"
+          TopLeft="230.448078253538,678.523076923077">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.9181048830551"
+              Start="0,0"
+              End="0,16.4181048830551">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4181048830551" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,2.40436494152755,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16715,9 +16713,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16739,9 +16735,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16787,9 +16781,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16811,9 +16803,7 @@ where [refTable].[nr_zamowienia] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16825,7 +16815,7 @@ where [refTable].[nr_zamowienia] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -17488,9 +17478,5 @@ where [refTable].[nr_zamowienia] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <ConnectionManager
-    design-time-name="Package.ConnectionManagers[localhost]">
-    <ProjectReferenceName></ProjectReferenceName>
-  </ConnectionManager>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

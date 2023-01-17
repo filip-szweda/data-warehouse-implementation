@@ -54,8 +54,10 @@ GO
 CREATE TABLE [data] (
 	[id_daty] int PRIMARY KEY IDENTITY(1, 1) NOT NULL,
 	[rok] varchar(10) NOT NULL,
+	[kwartal] varchar(2) NOT NULL,
 	[miesiac] varchar(11) NOT NULL,
 	[dzien] varchar(2) NOT NULL,
+	CHECK ([kwartal] in ('Q1', 'Q2', 'Q3', 'Q4')),
 	CHECK ([miesiac] in ('styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień')),
 	CHECK ([dzien] in ('01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16',
 						'17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'))

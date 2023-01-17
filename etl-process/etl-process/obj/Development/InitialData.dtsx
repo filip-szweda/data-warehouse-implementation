@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{17C936A3-4BD6-43EF-A952-97048BFE81CE}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{43BF2910-8F95-495B-B6E4-9046F03E9433}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -77,7 +77,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
@@ -127,6 +127,14 @@
                       cachedName="dzien"
                       externalMetadataColumnId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dzien]"
                       lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[dzien]" />
+                    <inputColumn
+                      refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[kwartal]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="kwartal"
+                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[kwartal]"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[kwartal]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -144,7 +152,7 @@
                       refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[miesiac]"
                       codePage="1250"
                       dataType="str"
-                      length="10"
+                      length="11"
                       name="miesiac" />
                     <externalMetadataColumn
                       refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dzien]"
@@ -152,6 +160,12 @@
                       dataType="str"
                       length="2"
                       name="dzien" />
+                    <externalMetadataColumn
+                      refId="Package\Create and insert into date\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[kwartal]"
+                      codePage="1250"
+                      dataType="str"
+                      length="2"
+                      name="kwartal" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -220,6 +234,7 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
 
 	SELECT
 	CAST(YEAR(@Start+n-1) AS VARCHAR(4)) as rok,
+	'Q' + CAST(DATEPART(QUARTER, @Start+n-1) as VARCHAR(1)) AS kwartal,
 	CASE MONTH(@Start+n-1)
 		WHEN 1 THEN 'styczeń'
 		WHEN 2 THEN 'luty'
@@ -305,6 +320,17 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
                       lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[dzien]"
                       name="dzien"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[kwartal]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[kwartal]"
+                      length="2"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].Columns[kwartal]"
+                      name="kwartal"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -326,6 +352,12 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
                       dataType="str"
                       length="3"
                       name="dzien" />
+                    <externalMetadataColumn
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[kwartal]"
+                      codePage="1250"
+                      dataType="str"
+                      length="2"
+                      name="kwartal" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -340,6 +372,13 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
                       length="4"
                       lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rok]"
                       name="rok" />
+                    <outputColumn
+                      refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[kwartal]"
+                      codePage="1250"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[kwartal]"
+                      name="kwartal" />
                     <outputColumn
                       refId="Package\Create and insert into date\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[miesiac]"
                       codePage="1250"
@@ -396,7 +435,7 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="205,42"
+          Size="204.8,41.6"
           Id="Package\Create and insert into date"
           TopLeft="386,129" />
       </GraphLayout>
@@ -408,11 +447,11 @@ WITH Nbrs_3( n ) AS ( SELECT 1 UNION SELECT 0 ),
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\Create and insert into date\OLE DB Source"
           TopLeft="288,103" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Create and insert into date\OLE DB Destination"
           TopLeft="275,242" />
         <EdgeLayout

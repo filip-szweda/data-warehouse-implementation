@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1f22d1e5-f2fb-4ae8-abc2-f97b0012c6ef" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="40de6de7-e4c5-4c42-b5ea-fb184cded4f0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Reklama</ID>
   <Name>Reklama</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -42,39 +42,40 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8379cfb2-ed6b-42cc-a909-f39530aad58b">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5eac7859-9370-445c-9fa4-f6dc6a8c944a">
     <DataSourceViewID>Hurtownia-danych</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="c1d6b687-64a7-498a-a2d4-50af47d8b58f">
+  <ErrorConfiguration dwd:design-time-name="fcbd980f-5237-4755-8c48-2322147ea99e">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="81c08268-3b81-45ce-9dc6-02463b580445">
+    <Attribute dwd:design-time-name="7bbd623c-052d-4b92-aebe-5d633b75598e">
       <ID>Id Reklamy</ID>
       <Name>Id Reklamy</Name>
       <Usage>Key</Usage>
+      <EstimatedCount>11921</EstimatedCount>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="44050adf-eba9-4ee3-9d5d-315a520530b1">
+        <KeyColumn dwd:design-time-name="13a535fa-dc59-4006-bc0a-023e6304db5e">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="7ba1e196-0b07-4b88-8cbe-dfa19561a479">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7eb42ed1-a50f-440f-8f19-fc9947302f61">
             <TableID>dbo_reklama</TableID>
             <ColumnID>id_reklamy</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="d0ff9cc4-99a5-4800-bece-741540afb810">
+        <AttributeRelationship dwd:design-time-name="9bcc30d8-fd0c-4cbc-b5c6-9b6f9ae0eb29">
           <AttributeID>Id Daty Zakonczenia</AttributeID>
           <Name>Id Daty Zakonczenia</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="fd74c42c-2004-4d9f-9e6b-1caa40cf55e4">
+        <AttributeRelationship dwd:design-time-name="3c741d72-d3b0-4e64-b840-77996997c6e2">
           <AttributeID>Id Daty Rozpoczecia</AttributeID>
           <Name>Id Daty Rozpoczecia</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="b28d09fa-7495-4695-93d1-4da01afcccb2">
+        <AttributeRelationship dwd:design-time-name="00bbe7cc-a4c3-442c-a17e-debe51d3dcc7">
           <AttributeID>Id Serwisu Reklamowego</AttributeID>
           <Name>Id Serwisu Reklamowego</Name>
         </AttributeRelationship>
@@ -83,13 +84,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="ad9b27f8-16cb-439d-abce-e2cfc49bc65d">
+    <Attribute dwd:design-time-name="92f9c01a-80fc-4bfc-a4e6-abcb9e5c77d1">
       <ID>Id Daty Zakonczenia</ID>
       <Name>Id Daty Zakonczenia</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="cd468fb3-34e0-464a-90ed-d88fed4dca5b">
+        <KeyColumn dwd:design-time-name="662d42cd-cdc0-4c14-a5cf-4b0836c7d5da">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="b5f4dcdd-8d84-429b-9434-f7271c1c74fc">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="82ca031f-957c-4886-a7f1-533052f0df3a">
             <TableID>dbo_reklama</TableID>
             <ColumnID>id_daty_zakonczenia</ColumnID>
           </Source>
@@ -100,13 +101,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="30c192b9-eda6-43d2-9e26-44b026df294f">
+    <Attribute dwd:design-time-name="9ef4196c-4bb8-490a-8217-887f121d60fa">
       <ID>Id Daty Rozpoczecia</ID>
       <Name>Id Daty Rozpoczecia</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="7b62d4b7-a2fc-4a22-a0a7-0e09ab1920a1">
+        <KeyColumn dwd:design-time-name="ab8c9919-1282-4b9f-9e40-9de15ae62b75">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="0a124b91-b309-41be-b0d0-fcdcea014ce5">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f33eba11-c4c9-48f7-90e1-fd364e44aa27">
             <TableID>dbo_reklama</TableID>
             <ColumnID>id_daty_rozpoczecia</ColumnID>
           </Source>
@@ -117,13 +118,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="36818be9-484c-47a8-a2b0-e06c568fdc18">
+    <Attribute dwd:design-time-name="7eddd73d-9249-4e57-a6b8-23373ab77406">
       <ID>Id Serwisu Reklamowego</ID>
       <Name>Id Serwisu Reklamowego</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="1945f309-e2da-4891-9fe3-2cf53f664d03">
+        <KeyColumn dwd:design-time-name="6b6bc9b7-2964-4a50-83ec-9111ca219a84">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f28aefd3-a7ae-460b-8f38-a78a0a12fd97">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9da8ba6d-a828-4567-afc7-3ccd1d4ed2c5">
             <TableID>dbo_reklama</TableID>
             <ColumnID>id_serwisu_reklamowego</ColumnID>
           </Source>
